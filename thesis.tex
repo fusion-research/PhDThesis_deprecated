@@ -2,55 +2,18 @@
 % !TEX TS-program = lualatex
 % !BIB TS-program = biber
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%% This version of toptesi-scudo-example. tex and its subsidiary %%%%%
-%%%%% file are typeset with version 6.2.09 of the TOPtesi bundle.   %%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-%%%%%%% The above first line is used to auto-configure those LaTeX
-%%%%%%% friendly editors, such as TeXShop, TeXworks, TeXstudio 
-%%%%%%% so as to use the UTF-8 encoding for editing the source
-%%%%%%% files and to save them.
-
-%%%%%%% For the same editors the second line specifies which 
-%%%%%%% typesetting engine is to be used when hitting the editor's
-%%%%%%% button that launches the typesetting job.
-%%%%%%% You can chose between pdflatex, lualatex or xelatex; in general
-%%%%%%% it is better to avoid using xelatex and to prefer lualatex.
-
-
-
 \documentclass[%
    corpo=12pt, % optional; default:= 10pt
    twoside, % recommended
    tipotesi=scudo,
    mybibliostyle, % only if biblio is typeset with a personal style
-%  numerazioneromana, % not necessary in a real thesis
+  numerazioneromana, % not necessary in a real thesis
    ]{toptesi}
    
-%%%%%%% If and only if you want to produce an archivable document
-%%%%%%% according to the ISO regulation 19005:2005-1b add the
-%%%%%%% following code after the statement \documentclass, and
-%%%%%%% adapt its contents to your particular thesis.
-%%%%%%% -----------------------------------------------------------
-%%%%%%% This environment should be here, after the class has been
-%%%%%%% specified and before the pdfx package is loaded.
-%%%%%%% Previous versions of TOPtesi required the environment to be
-%%%%%%% before the \documentclass statement; it is possible to maintain
-%%%%%%% this habit for backwards compatibility, but by doing so, you
-%%%%%%% give up the facility of overwriting a previous version of
-%%%%%%% the .xmpdata file when you modify its contents, and you have
-%%%%%%% to delete any previous version in advance. If you set this
-%%%%%%% environment after the \documentclass statement, it overwrites
-%%%%%%% any previous version of the .xmpdata file and you don't need
-%%%%%%% to remember to delete it in advance.
-%%%%%%%
-%%%%%%% Do not worry if some Warnings are output at \begin{document}
-%%%%%%% time about certain options being already been used.
 
 \begin{filecontents*}{\jobname.xmpdata}
-\Author{Mario Rossi}
-\Title{Writing Your Ph.D. Thesis with LaTeX}
+\Author{Michele Cocca}
+\Title{Conversion of FFCS ICE fleet to EV: a data-driven approach}
 \Subject{Doctoral dissertations in the SCUDO doctoral school}
 \Keywords{PDF\sep
           PDF/A\sep
@@ -168,7 +131,7 @@
 \includeonly{%
 Chapter1/1_introduction,%
 Chapter2/2_datacollection,%
-%Chapter3/chapter3,%
+Chapter3/3_cs_comparison,%
 %Appendix1/appendix1,
 %Appendix2/appendix2,%
 }
@@ -197,23 +160,23 @@ Chapter2/2_datacollection,%
 % dissertations supported by the INRiM, this institution logo may
 % be added. Such logos (in PDF format) may be obtained from the
 % ScuDo web server.
-\PhDschoolLogo{TiTDocScCropped}% Fake logo for this example
+\PhDschoolLogo{scudo}% Fake logo for this example
 %\PhDschoolLogo{Logo-ScuDo-blu} % just the ScuDo logo
 %\PhDschoolLogo{Logo-ScuDo-blu,Logo-INRIM} %for dissertations made in cooperation with INRIM
 %\PhDschoolLogo{Logo-ScuDo-blu,Logo-INFN} %for dissertations made in cooperation with INFN
 %\PhDschoolLogo{Logo-ScuDo-blu,Logo-UniTo} %for dissertations made in cooperation with the University of Turin
 % Doctorate course name; mandatory
-\ProgramName{Energy Engineering}
+\ProgramName{Electronic and Telecommunication Engineering}
 % Cycle ordinal number; optional.
 % You can write 29.th, or 29\ap{th}, or 29\textsuperscript{th}, or ...
-\CycleNumber{29.th}
+\CycleNumber{33.th}
 % PhD candidate name; mandatory
-\author{Mario Rossi}
+\author{Michele Cocca}
 % Dissertation title; mandatory
-\title{Writing your Doctoral~Thesis\\with \LaTeX}
+\title{Conversion of FFCS ICE fleet to EV}
 % Dissertation subtitle: optional.
 % It might be useful only if the actual full title is too long.
-\subtitle{This document is an example of what you can do\\with~the~TOPtesi class}
+\subtitle{a data-driven approach}
 % The supervisor(s) label; optional; default value "Supervisor:".
 % You can change it to plural as in this example, where the colon has
 % been eliminated.
@@ -224,12 +187,12 @@ Chapter2/2_datacollection,%
 % over the supervisor(s) list; if 1 is specified then the singular
 % form is used: if any value higher than 1 is specified, the plural
 % form is used.
-\SupervisorNumber{2}
+\SupervisorNumber{1}
 % List of supervisors with academic title, name(s), surname(s),
 % and function; mandatory
 \SupervisorList{%
-    Prof.~A.B., Supervisor\\
-    Prof.~C.D. Co-supervisor}
+    Prof.~Marco Mellia, Supervisor\\
+    }
 % Name of the examining committee: optional. 
 % Default value "Doctoral Examination Committee"
 %\Nexaminationcommittee{Doctoral examination committee}
@@ -245,7 +208,7 @@ Prof.~I.J., University of \dots}
 % Default value: "Politecnico di Torino"
 %\Nlocation{Politecnico di Torino}
 % Examination date: mandatory, although the way to write it is free.
-\ExaminationDate{February 29, 2123}
+\ExaminationDate{\today}
 % Disclaimer with signature; optional. Default text as
 % in the following lines. 
 \Disclaimer{%
@@ -318,7 +281,7 @@ The sentence used above clearly is an example of something very common, but it i
 
 \include{Chapter1/1_introduction}
 \include{Chapter2/2_datacollection}
-%\include{Chapter3/chapter3}
+\include{Chapter3/3_cs_comparison}
 %% Numbered appendices remain in the main matter...
 %\appendix
 %\include{Appendix1/appendix1}

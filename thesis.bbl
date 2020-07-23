@@ -19,6 +19,125 @@
 
 \refsection{0}
   \datalist[entry]{nyt/global//global/global}
+    \entry{becker2017comparing}{article}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=1acdcc3f269880d3aac4a1d8644650a8}{%
+           family={Becker},
+           familyi={B\bibinitperiod},
+           given={Henrik},
+           giveni={H\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=26042d183470b998e67e63b375e57c0e}{%
+           family={Ciari},
+           familyi={C\bibinitperiod},
+           given={Francesco},
+           giveni={F\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=a6714cff9b29857a4c9c40a8d29c1d4b}{%
+           family={Axhausen},
+           familyi={A\bibinitperiod},
+           given={Kay\bibnamedelima W},
+           giveni={K\bibinitperiod\bibinitdelim W\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Elsevier}%
+      }
+      \strng{namehash}{b412a7f8496f9ce3f5347945a625b334}
+      \strng{fullhash}{d196dc6baab472e86e5b96788b3fc613}
+      \strng{bibnamehash}{d196dc6baab472e86e5b96788b3fc613}
+      \strng{authorbibnamehash}{d196dc6baab472e86e5b96788b3fc613}
+      \strng{authornamehash}{b412a7f8496f9ce3f5347945a625b334}
+      \strng{authorfullhash}{d196dc6baab472e86e5b96788b3fc613}
+      \field{sortinit}{B}
+      \field{sortinithash}{8de16967003c7207dae369d874f1456e}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Transportation Research Part A: Policy and Practice}
+      \field{title}{Comparing car-sharing schemes in Switzerland: User groups and usage patterns}
+      \field{volume}{97}
+      \field{year}{2017}
+      \field{pages}{17\bibrangedash 29}
+      \range{pages}{13}
+    \endentry
+    \entry{boldrini:16}{inproceedings}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=6cfe9d6586a40a7a2594b70a73067ece}{%
+           family={Boldrini},
+           familyi={B\bibinitperiod},
+           given={Chiara},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=dae86e139b9e3a37623a894336778e21}{%
+           family={Bruno},
+           familyi={B\bibinitperiod},
+           given={Raffaele},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=cc886de9f051cfd5463607df434f5a9c}{%
+           family={Conti},
+           familyi={C\bibinitperiod},
+           given={Marco},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{2dcc277cb5ba6216ef64de2e1c57e8aa}
+      \strng{fullhash}{5669a2236fc81744fcf8e180e5273288}
+      \strng{bibnamehash}{5669a2236fc81744fcf8e180e5273288}
+      \strng{authorbibnamehash}{5669a2236fc81744fcf8e180e5273288}
+      \strng{authornamehash}{2dcc277cb5ba6216ef64de2e1c57e8aa}
+      \strng{authorfullhash}{5669a2236fc81744fcf8e180e5273288}
+      \field{sortinit}{B}
+      \field{sortinithash}{8de16967003c7207dae369d874f1456e}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{proceedings of the IEEE Conference on Computer Communications Workshops (INFOCOM WKSHPS)}
+      \field{title}{Characterising demand and usage patterns in a large station-based car sharing system}
+      \field{year}{2016}
+      \field{pages}{572\bibrangedash 577}
+      \range{pages}{6}
+    \endentry
+    \entry{burkhardt2006attracted}{article}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=2655f6cad79d08f76441e972a0d35beb}{%
+           family={Burkhardt},
+           familyi={B\bibinitperiod},
+           given={Jon},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=a7c6eb77bd9de5af0f15906ac5364a53}{%
+           family={Millard-Ball},
+           familyi={M\bibinithyphendelim B\bibinitperiod},
+           given={Adam},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Transportation Research Board of the National Academies}%
+      }
+      \strng{namehash}{2abe83a0a07fa270a4d377915b7458cd}
+      \strng{fullhash}{2abe83a0a07fa270a4d377915b7458cd}
+      \strng{bibnamehash}{2abe83a0a07fa270a4d377915b7458cd}
+      \strng{authorbibnamehash}{2abe83a0a07fa270a4d377915b7458cd}
+      \strng{authornamehash}{2abe83a0a07fa270a4d377915b7458cd}
+      \strng{authorfullhash}{2abe83a0a07fa270a4d377915b7458cd}
+      \field{sortinit}{B}
+      \field{sortinithash}{8de16967003c7207dae369d874f1456e}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Transportation Research Record: Journal of the Transportation Research Board}
+      \field{number}{1986}
+      \field{title}{Who is attracted to carsharing?}
+      \field{year}{2006}
+      \field{pages}{98\bibrangedash 105}
+      \range{pages}{8}
+    \endentry
     \entry{car2goAPI}{misc}{}
       \field{sortinit}{c}
       \field{sortinithash}{4c244ceae61406cdc0cc2ce1cb1ff703}
@@ -28,14 +147,51 @@
       \field{note}{Accessed: 10/03/2017}
       \field{title}{car2go API}
     \endentry
+    \entry{cervero2004city}{article}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=6b4b21cb4a9f57cdb95221a4a669cf85}{%
+           family={Cervero},
+           familyi={C\bibinitperiod},
+           given={Robert},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=1b975bcff33fbf16bcbad1cc5573f71f}{%
+           family={Tsai},
+           familyi={T\bibinitperiod},
+           given={Yuhsin},
+           giveni={Y\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Transportation Research Board of the National Academies}%
+      }
+      \strng{namehash}{38f686c667cb49f531f5ee00684e805e}
+      \strng{fullhash}{38f686c667cb49f531f5ee00684e805e}
+      \strng{bibnamehash}{38f686c667cb49f531f5ee00684e805e}
+      \strng{authorbibnamehash}{38f686c667cb49f531f5ee00684e805e}
+      \strng{authornamehash}{38f686c667cb49f531f5ee00684e805e}
+      \strng{authorfullhash}{38f686c667cb49f531f5ee00684e805e}
+      \field{sortinit}{C}
+      \field{sortinithash}{4c244ceae61406cdc0cc2ce1cb1ff703}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Transportation Research Record: Journal of the Transportation Research Board}
+      \field{number}{1887}
+      \field{title}{City CarShare in San Francisco, California: second-year travel demand and car ownership impacts}
+      \field{year}{2004}
+      \field{pages}{117\bibrangedash 127}
+      \range{pages}{11}
+    \endentry
     \entry{Ciari2013}{article}{}
       \name{author}{3}{}{%
-        {{un=0,uniquepart=base,hash=2477511e246639e5c1fe1834024bf1ca}{%
+        {{un=2,uniquepart=given,hash=2477511e246639e5c1fe1834024bf1ca}{%
            family={Ciari},
            familyi={C\bibinitperiod},
            given={F.},
            giveni={F\bibinitperiod},
-           givenun=0}}%
+           givenun=2}}%
         {{un=0,uniquepart=base,hash=4af4ba1d5a3a34843872747b5c0d38b9}{%
            family={Schuessler},
            familyi={S\bibinitperiod},
@@ -71,6 +227,223 @@
       \field{year}{2013}
       \field{pages}{70\bibrangedash 84}
       \range{pages}{15}
+    \endentry
+    \entry{ciari2014modeling}{article}{}
+      \name{author}{3}{}{%
+        {{un=2,uniquepart=given,hash=26042d183470b998e67e63b375e57c0e}{%
+           family={Ciari},
+           familyi={C\bibinitperiod},
+           given={Francesco},
+           giveni={F\bibinitperiod},
+           givenun=2}}%
+        {{un=0,uniquepart=base,hash=30fb35971863af024d9c12699e2a8a7b}{%
+           family={Bock},
+           familyi={B\bibinitperiod},
+           given={Benno},
+           giveni={B\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=e3790668bd926d13c0933c390acf0bac}{%
+           family={Balmer},
+           familyi={B\bibinitperiod},
+           given={Michael},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Transportation Research Board of the National Academies}%
+      }
+      \strng{namehash}{459be1849883eeadd0c83800ce89874a}
+      \strng{fullhash}{7ffa1f2fb6c1e9568a2be69e7cf95a77}
+      \strng{bibnamehash}{7ffa1f2fb6c1e9568a2be69e7cf95a77}
+      \strng{authorbibnamehash}{7ffa1f2fb6c1e9568a2be69e7cf95a77}
+      \strng{authornamehash}{459be1849883eeadd0c83800ce89874a}
+      \strng{authorfullhash}{7ffa1f2fb6c1e9568a2be69e7cf95a77}
+      \field{sortinit}{C}
+      \field{sortinithash}{4c244ceae61406cdc0cc2ce1cb1ff703}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Transportation Research Record: Journal of the Transportation Research Board}
+      \field{number}{2416}
+      \field{title}{Modeling station-based and free-floating carsharing demand: test case study for Berlin}
+      \field{year}{2014}
+      \field{pages}{37\bibrangedash 47}
+      \range{pages}{11}
+    \endentry
+    \entry{ciociolaumap}{inproceedings}{}
+      \name{author}{7}{}{%
+        {{un=0,uniquepart=base,hash=033c2cb0d4373631dbbd826055e80d19}{%
+           family={Ciociola},
+           familyi={C\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=fbb676ac1c1ab82875b39334a4d78f95}{%
+           family={Cocca},
+           familyi={C\bibinitperiod},
+           given={M.},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=35b6c93ad001718f2f8ac62cdd8a4d12}{%
+           family={Giordano},
+           familyi={G\bibinitperiod},
+           given={D.},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=d08ddd4d8ef38269f21571f44c26ce60}{%
+           family={Mellia},
+           familyi={M\bibinitperiod},
+           given={M.},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=a42e7552c6d5fc4e4414cefdd46cbdfe}{%
+           family={Morichetta},
+           familyi={M\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=806cbb8e7398ad6cf65e8b73553fe261}{%
+           family={Putina},
+           familyi={P\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=dba48f447db15943f147cafd2f85127c}{%
+           family={Salutari},
+           familyi={S\bibinitperiod},
+           given={F.},
+           giveni={F\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{59bb7c5bceac780808138100290d566e}
+      \strng{fullhash}{20204acd98c8182c9f1935d12d3103b9}
+      \strng{bibnamehash}{20204acd98c8182c9f1935d12d3103b9}
+      \strng{authorbibnamehash}{20204acd98c8182c9f1935d12d3103b9}
+      \strng{authornamehash}{59bb7c5bceac780808138100290d566e}
+      \strng{authorfullhash}{20204acd98c8182c9f1935d12d3103b9}
+      \field{sortinit}{C}
+      \field{sortinithash}{4c244ceae61406cdc0cc2ce1cb1ff703}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{proceedings of the IEEE Conference on SmartWorld, Ubiquitous Intelligence Computing, Advanced Trusted Computed, Scalable Computing Communications, Cloud Big Data Computing, Internet of People and Smart City Innovation (SmartWorld/SCALCOM/UIC/ATC/CBDCom/IOP/SCI)}
+      \field{month}{8}
+      \field{title}{UMAP: Urban mobility analysis platform to harvest car sharing data}
+      \field{year}{2017}
+      \field{pages}{1\bibrangedash 8}
+      \range{pages}{8}
+      \verb{doi}
+      \verb 10.1109/UIC-ATC.2017.8397566
+      \endverb
+      \keyw{automobiles;data analysis;data mining;Internet;mobile computing;smart cities;smart phones;traffic engineering computing;smart cities;smartphone app;car sharing platforms;advanced information;usage data;smart city planners;Web platforms;urban mobility analysis platform;car sharing data harvesting;Web-based backend;information exchange;driving habit extraction;information extraction;analytics modules;Turin City;temporal properties;spatial properties;rentals;customer habit characterization;public transportation;driving style;Automobiles;Urban areas;Data mining;Crawlers;Google;Tools;Data acquisition}
+    \endentry
+    \entry{coccacar}{article}{}
+      \name{author}{4}{}{%
+        {{un=2,uniquepart=given,hash=fbb676ac1c1ab82875b39334a4d78f95}{%
+           family={{Cocca}},
+           familyi={C\bibinitperiod},
+           given={M.},
+           giveni={M\bibinitperiod},
+           givenun=2}}%
+        {{un=0,uniquepart=base,hash=35b6c93ad001718f2f8ac62cdd8a4d12}{%
+           family={{Giordano}},
+           familyi={G\bibinitperiod},
+           given={D.},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=d08ddd4d8ef38269f21571f44c26ce60}{%
+           family={{Mellia}},
+           familyi={M\bibinitperiod},
+           given={M.},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=eb2ba3f0512bea4605f5bbf7c6e0eb39}{%
+           family={{Vassio}},
+           familyi={V\bibinitperiod},
+           given={L.},
+           giveni={L\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{e34ddbfbf33b1898e146ca98becbb615}
+      \strng{fullhash}{36506e12aff38b000ab454b1ca7ff063}
+      \strng{bibnamehash}{36506e12aff38b000ab454b1ca7ff063}
+      \strng{authorbibnamehash}{36506e12aff38b000ab454b1ca7ff063}
+      \strng{authornamehash}{e34ddbfbf33b1898e146ca98becbb615}
+      \strng{authorfullhash}{36506e12aff38b000ab454b1ca7ff063}
+      \field{sortinit}{C}
+      \field{sortinithash}{4c244ceae61406cdc0cc2ce1cb1ff703}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IEEE Transactions on Intelligent Transportation Systems}
+      \field{title}{Free Floating Electric Car Sharing: A Data Driven Approach for System Design}
+      \field{year}{2019}
+      \field{pages}{1\bibrangedash 13}
+      \range{pages}{13}
+      \verb{doi}
+      \verb 10.1109/TITS.2019.2932809
+      \endverb
+      \keyw{Car sharing;electric vehicle;data driven optimization;charging station;free floating.}
+    \endentry
+    \entry{coccaopt}{article}{}
+      \name{author}{4}{}{%
+        {{un=2,uniquepart=given,hash=1f45dd40d27becda801878bf43d84c05}{%
+           family={Cocca},
+           familyi={C\bibinitperiod},
+           given={Michele},
+           giveni={M\bibinitperiod},
+           givenun=2}}%
+        {{un=0,uniquepart=base,hash=d03e1070dfdbf6d69803e6cbbbbe09fa}{%
+           family={Giordano},
+           familyi={G\bibinitperiod},
+           given={Danilo},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=eb9a294b3de43f233bed8a0892fcf225}{%
+           family={Mellia},
+           familyi={M\bibinitperiod},
+           given={Marco},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=69362c68b3c52789c8d71483f5891d86}{%
+           family={Vassio},
+           familyi={V\bibinitperiod},
+           given={Luca},
+           giveni={L\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{476a5f81ca751c12cd656f1986928bf6}
+      \strng{fullhash}{c11d795b7179963ef766cb25be4dc33a}
+      \strng{bibnamehash}{c11d795b7179963ef766cb25be4dc33a}
+      \strng{authorbibnamehash}{c11d795b7179963ef766cb25be4dc33a}
+      \strng{authornamehash}{476a5f81ca751c12cd656f1986928bf6}
+      \strng{authorfullhash}{c11d795b7179963ef766cb25be4dc33a}
+      \field{sortinit}{C}
+      \field{sortinithash}{4c244ceae61406cdc0cc2ce1cb1ff703}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{1574-1192}
+      \field{journaltitle}{Pervasive and Mobile Computing}
+      \field{title}{Free floating electric car sharing design: Data driven optimisation}
+      \field{volume}{55}
+      \field{year}{2019}
+      \field{pages}{59\bibrangedash 75}
+      \range{pages}{17}
+      \verb{doi}
+      \verb 10.1016/j.pmcj.2019.02.007
+      \endverb
+      \verb{urlraw}
+      \verb http://www.sciencedirect.com/science/article/pii/S1574119218305170
+      \endverb
+      \verb{url}
+      \verb http://www.sciencedirect.com/science/article/pii/S1574119218305170
+      \endverb
+      \keyw{Car sharing,Electric vehicle,Data driven optimisation,Charging station placement,Free floating}
     \endentry
     \entry{Ferrero2016}{article}{}
       \name{author}{4}{}{%
@@ -202,6 +575,99 @@
       \verb http://www.sciencedirect.com/science/article/pii/S0921800911001030
       \endverb
       \keyw{Car-sharing,Environmental effect,Free-floating system,Public-private transportation",Product-service system}
+    \endentry
+    \entry{harms1998emergence}{article}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=14621f08236ee400deaa337540a59e7a}{%
+           family={Harms},
+           familyi={H\bibinitperiod},
+           given={Sylvia},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=cad06db6b4d67a72f061de8e5ea20961}{%
+           family={Truffer},
+           familyi={T\bibinitperiod},
+           given={Bernard},
+           giveni={B\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{0133c6884a95a0b56eb992adbb4c87ad}
+      \strng{fullhash}{0133c6884a95a0b56eb992adbb4c87ad}
+      \strng{bibnamehash}{0133c6884a95a0b56eb992adbb4c87ad}
+      \strng{authorbibnamehash}{0133c6884a95a0b56eb992adbb4c87ad}
+      \strng{authornamehash}{0133c6884a95a0b56eb992adbb4c87ad}
+      \strng{authorfullhash}{0133c6884a95a0b56eb992adbb4c87ad}
+      \field{sortinit}{H}
+      \field{sortinithash}{6db6145dae8dc9e1271a8d556090b50a}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{A case-study for the EC-supported rsearch project “Strategic Niche Management as a tool for transition to a sustainable transport system”, EAWAG: Z{ü}rich}
+      \field{title}{The emergence of a nation-wide carsharing co-operative in Switzerland}
+      \field{year}{1998}
+    \endentry
+    \entry{herrera:10}{article}{}
+      \name{author}{6}{}{%
+        {{un=0,uniquepart=base,hash=2e4ec601d0ebf175c07207732809ff72}{%
+           family={Herrera},
+           familyi={H\bibinitperiod},
+           given={Juan\bibnamedelima C},
+           giveni={J\bibinitperiod\bibinitdelim C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=6f2e7b1216098a84a23b6462d346c8c8}{%
+           family={Work},
+           familyi={W\bibinitperiod},
+           given={Daniel\bibnamedelima B},
+           giveni={D\bibinitperiod\bibinitdelim B\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=24c8990632c0c2a0970bd792c73fa4f2}{%
+           family={Herring},
+           familyi={H\bibinitperiod},
+           given={Ryan},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=fc642149a8a003f30cd6fec83b95353e}{%
+           family={Ban},
+           familyi={B\bibinitperiod},
+           given={Xuegang\bibnamedelima Jeff},
+           giveni={X\bibinitperiod\bibinitdelim J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=f9b801f5b59c686f27484a0f96968878}{%
+           family={Jacobson},
+           familyi={J\bibinitperiod},
+           given={Quinn},
+           giveni={Q\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=22fce57660cf7cfb60f22c85ea5ceeb5}{%
+           family={Bayen},
+           familyi={B\bibinitperiod},
+           given={Alexandre\bibnamedelima M},
+           giveni={A\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Elsevier}%
+      }
+      \strng{namehash}{c055bf68410a715f355c6ad69bf74ee5}
+      \strng{fullhash}{486dc62e23fe143b00ab0d5346105ab3}
+      \strng{bibnamehash}{486dc62e23fe143b00ab0d5346105ab3}
+      \strng{authorbibnamehash}{486dc62e23fe143b00ab0d5346105ab3}
+      \strng{authornamehash}{c055bf68410a715f355c6ad69bf74ee5}
+      \strng{authorfullhash}{486dc62e23fe143b00ab0d5346105ab3}
+      \field{sortinit}{H}
+      \field{sortinithash}{6db6145dae8dc9e1271a8d556090b50a}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Transportation Research Part C: Emerging Technologies}
+      \field{number}{4}
+      \field{title}{Evaluation of traffic data obtained via GPS-enabled mobile phones: The Mobile Century field experiment}
+      \field{volume}{18}
+      \field{year}{2010}
+      \field{pages}{568\bibrangedash 583}
+      \range{pages}{16}
     \endentry
     \entry{Herrmann2014}{inproceedings}{}
       \name{author}{3}{}{%
@@ -339,6 +805,237 @@
       \field{pages}{328\bibrangedash 340}
       \range{pages}{13}
     \endentry
+    \entry{Ma:2013}{inproceedings}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=5e538d7c5ab3d9762c299955fb081ce2}{%
+           family={Ma},
+           familyi={M\bibinitperiod},
+           given={S.},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=ca5d8c01ece6364a02e9fe2849da33ed}{%
+           family={Zheng},
+           familyi={Z\bibinitperiod},
+           given={Y.},
+           giveni={Y\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=89a0646a23232bd9e43c5df847bc6628}{%
+           family={Wolfson},
+           familyi={W\bibinitperiod},
+           given={O.},
+           giveni={O\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{c6c4d323073500265a4aadd7672dc203}
+      \strng{fullhash}{55b40eff9829ee80134ba8f9c479fd75}
+      \strng{bibnamehash}{55b40eff9829ee80134ba8f9c479fd75}
+      \strng{authorbibnamehash}{55b40eff9829ee80134ba8f9c479fd75}
+      \strng{authornamehash}{c6c4d323073500265a4aadd7672dc203}
+      \strng{authorfullhash}{55b40eff9829ee80134ba8f9c479fd75}
+      \field{sortinit}{M}
+      \field{sortinithash}{2e5c2f51f7fa2d957f3206819bf86dc3}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{proceedings of the IEEE Conference on Data Engineering (ICDE), 29th International Conference}
+      \field{issn}{1063-6382}
+      \field{month}{4}
+      \field{title}{T-share: A large-scale dynamic taxi ridesharing service}
+      \field{year}{2013}
+      \field{pages}{410\bibrangedash 421}
+      \range{pages}{12}
+      \verb{doi}
+      \verb 10.1109/ICDE.2013.6544843
+      \endverb
+      \keyw{Global Positioning System;graph theory;mobile computing;road traffic;traffic engineering computing;GPS trajectory dataset;T-share;energy consumption;large-scale dynamic taxi ridesharing service;lazy shortest path calculation;scheduling algorithm;spatio-temporal distribution;spatio-temporal index;taxi searching algorithm;travel distance;Dynamic scheduling;Energy consumption;Heuristic algorithms;Indexes;Real-time systems;Roads;Schedules}
+    \endentry
+    \entry{martin2011impact}{article}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=091b773a880e0f8adb27e11ccb352702}{%
+           family={Martin},
+           familyi={M\bibinitperiod},
+           given={Elliot},
+           giveni={E\bibinitperiod},
+           givenun=0}}%
+        {{un=1,uniquepart=given,hash=282db80d46ce05d352e5aaca70314ab9}{%
+           family={Shaheen},
+           familyi={S\bibinitperiod},
+           given={Susan},
+           giveni={S\bibinitperiod},
+           givenun=1}}%
+      }
+      \list{publisher}{1}{%
+        {Molecular Diversity Preservation International}%
+      }
+      \strng{namehash}{76678481af13ea911d77c12abe2bde35}
+      \strng{fullhash}{76678481af13ea911d77c12abe2bde35}
+      \strng{bibnamehash}{76678481af13ea911d77c12abe2bde35}
+      \strng{authorbibnamehash}{76678481af13ea911d77c12abe2bde35}
+      \strng{authornamehash}{76678481af13ea911d77c12abe2bde35}
+      \strng{authorfullhash}{76678481af13ea911d77c12abe2bde35}
+      \field{sortinit}{M}
+      \field{sortinithash}{2e5c2f51f7fa2d957f3206819bf86dc3}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Energies}
+      \field{number}{11}
+      \field{title}{The impact of carsharing on public transit and non-motorized travel: an exploration of North American carsharing survey data}
+      \field{volume}{4}
+      \field{year}{2011}
+      \field{pages}{2094\bibrangedash 2114}
+      \range{pages}{21}
+    \endentry
+    \entry{millard2005car}{book}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=a7c6eb77bd9de5af0f15906ac5364a53}{%
+           family={Millard-Ball},
+           familyi={M\bibinithyphendelim B\bibinitperiod},
+           given={Adam},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Transportation Research Board}%
+      }
+      \strng{namehash}{a7c6eb77bd9de5af0f15906ac5364a53}
+      \strng{fullhash}{a7c6eb77bd9de5af0f15906ac5364a53}
+      \strng{bibnamehash}{a7c6eb77bd9de5af0f15906ac5364a53}
+      \strng{authorbibnamehash}{a7c6eb77bd9de5af0f15906ac5364a53}
+      \strng{authornamehash}{a7c6eb77bd9de5af0f15906ac5364a53}
+      \strng{authorfullhash}{a7c6eb77bd9de5af0f15906ac5364a53}
+      \field{sortinit}{M}
+      \field{sortinithash}{2e5c2f51f7fa2d957f3206819bf86dc3}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Car-sharing: Where and how it succeeds}
+      \field{volume}{108}
+      \field{year}{2005}
+    \endentry
+    \entry{rooke:19}{inproceedings}{}
+      \name{author}{5}{ul=2}{%
+        {{un=0,uniquepart=base,hash=b4e963e5091169119cb81ed196175635}{%
+           family={Rooke},
+           familyi={R\bibinitperiod},
+           given={Felipe},
+           giveni={F\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=e44e7101902fbb9bdb9c6e167097c3fb}{%
+           family={Alencar},
+           familyi={A\bibinitperiod},
+           given={Victor\bibnamedelima A.},
+           giveni={V\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=4c8c39764ee3cb0c5c73ccbb45c6b146}{%
+           family={Vieira},
+           familyi={V\bibinitperiod},
+           given={Alex\bibnamedelima B.},
+           giveni={A\bibinitperiod\bibinitdelim B\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=6bc6ceb6a7c592430bd49d63b09b65d8}{%
+           family={Almeida},
+           familyi={A\bibinitperiod},
+           given={Jussara\bibnamedelima M.},
+           giveni={J\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=4d08b36aeded935d505213b71c9691ac}{%
+           family={Idilio},
+           familyi={I\bibinitperiod},
+           given={Drago},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Springer Nature Switzerland AG}%
+      }
+      \strng{namehash}{3d3d49d76b3b2cc327b50f61bfd3b89d}
+      \strng{fullhash}{245bbe0a7f42d6bfab88b4e8b14c3485}
+      \strng{bibnamehash}{245bbe0a7f42d6bfab88b4e8b14c3485}
+      \strng{authorbibnamehash}{245bbe0a7f42d6bfab88b4e8b14c3485}
+      \strng{authornamehash}{3d3d49d76b3b2cc327b50f61bfd3b89d}
+      \strng{authorfullhash}{245bbe0a7f42d6bfab88b4e8b14c3485}
+      \field{sortinit}{R}
+      \field{sortinithash}{b9c68a358aea118dfa887b6e902414a7}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Big Social Data and Urban Computing}
+      \field{title}{Characterizing Usage Patterns and Service Demand of a Two-Way Car-Sharing System}
+      \field{year}{2019}
+      \field{pages}{01\bibrangedash 15}
+      \range{pages}{15}
+    \endentry
+    \entry{rooke2018caracterizacao}{article}{}
+      \name{author}{6}{ul=2}{%
+        {{un=0,uniquepart=base,hash=b4e963e5091169119cb81ed196175635}{%
+           family={Rooke},
+           familyi={R\bibinitperiod},
+           given={Felipe},
+           giveni={F\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=46202db93d301d9b5deab9c0e61f2efd}{%
+           family={Aquiles},
+           familyi={A\bibinitperiod},
+           given={Victor},
+           giveni={V\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=b0db2d88785c6b5669c7fe6a5695086a}{%
+           family={Vieira},
+           familyi={V\bibinitperiod},
+           given={Alex\bibnamedelima Borges},
+           giveni={A\bibinitperiod\bibinitdelim B\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=3e7de35c9f6c3ed9173adcfc8e128ddc}{%
+           family={Couto\bibnamedelima Teixeira},
+           familyi={C\bibinitperiod\bibinitdelim T\bibinitperiod},
+           given={Douglas},
+           giveni={D\bibinitperiod},
+           givenun=0,
+           prefix={do},
+           prefixi={d\bibinitperiod}}}%
+        {{un=0,uniquepart=base,hash=6bc6ceb6a7c592430bd49d63b09b65d8}{%
+           family={Almeida},
+           familyi={A\bibinitperiod},
+           given={Jussara\bibnamedelima M.},
+           giveni={J\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=0bd4b42fb6877127fa81ab3cb7e28aa2}{%
+           family={Drago},
+           familyi={D\bibinitperiod},
+           given={Idilio},
+           giveni={I\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{325cbf86dffb068cc8bbd345873b20db}
+      \strng{fullhash}{35038620787a23ea4ebfc516b9fc02bb}
+      \strng{bibnamehash}{35038620787a23ea4ebfc516b9fc02bb}
+      \strng{authorbibnamehash}{35038620787a23ea4ebfc516b9fc02bb}
+      \strng{authornamehash}{325cbf86dffb068cc8bbd345873b20db}
+      \strng{authorfullhash}{35038620787a23ea4ebfc516b9fc02bb}
+      \field{sortinit}{R}
+      \field{sortinithash}{b9c68a358aea118dfa887b6e902414a7}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{2595-2706}
+      \field{journaltitle}{Workshop de Computação Urbana COURB-SBRC}
+      \field{number}{1/2018}
+      \field{title}{Caracterização de Padrões de Demanda e Uso de um Sistema de Compartilhamento de Veı́culos de Duas Vias}
+      \field{volume}{2}
+      \field{year}{2018}
+      \verb{urlraw}
+      \verb http://portaldeconteudo.sbc.org.br/index.php/courb/article/view/2341
+      \endverb
+      \verb{url}
+      \verb http://portaldeconteudo.sbc.org.br/index.php/courb/article/view/2341
+      \endverb
+    \endentry
     \entry{Schmoller2015}{article}{}
       \name{author}{4}{}{%
         {{un=0,uniquepart=base,hash=2f89e0a54b47e8b957a84566878fb2e0}{%
@@ -432,6 +1129,137 @@
       \field{year}{2015}
       \field{pages}{275\bibrangedash 280}
       \range{pages}{6}
+    \endentry
+    \entry{shaheen2010carsharing}{report}{}
+      \name{author}{5}{}{%
+        {{un=2,uniquepart=given,hash=9ead44ef26805be942326fba2797e9eb}{%
+           family={Shaheen},
+           familyi={S\bibinitperiod},
+           given={Susan\bibnamedelima A},
+           giveni={S\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=2}}%
+        {{un=0,uniquepart=base,hash=030fb3e767b82da8039de935ad1ab5f5}{%
+           family={Rodier},
+           familyi={R\bibinitperiod},
+           given={Caroline},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=4ad2f1a1ed0a9a67b0896dfddf5804ae}{%
+           family={Murray},
+           familyi={M\bibinitperiod},
+           given={Gail},
+           giveni={G\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=d8e39d1f9783a02824cb766439b95fac}{%
+           family={Cohen},
+           familyi={C\bibinitperiod},
+           given={Adam},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=091b773a880e0f8adb27e11ccb352702}{%
+           family={Martin},
+           familyi={M\bibinitperiod},
+           given={Elliot},
+           giveni={E\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{19f445069322d7e08411d5bce41e021a}
+      \strng{fullhash}{5b1ab5b3968ce93fbb760196cf842b3a}
+      \strng{bibnamehash}{5b1ab5b3968ce93fbb760196cf842b3a}
+      \strng{authorbibnamehash}{5b1ab5b3968ce93fbb760196cf842b3a}
+      \strng{authornamehash}{19f445069322d7e08411d5bce41e021a}
+      \strng{authorfullhash}{5b1ab5b3968ce93fbb760196cf842b3a}
+      \field{sortinit}{S}
+      \field{sortinithash}{c319cff79d99c853d775f88277d4e45f}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Carsharing and public parking policies: assessing benefits, costs, and best practices in North America}
+      \field{type}{techreport}
+      \field{year}{2010}
+    \endentry
+    \entry{shaheen2016mobility}{article}{}
+      \name{author}{1}{}{%
+        {{un=2,uniquepart=given,hash=9ead44ef26805be942326fba2797e9eb}{%
+           family={Shaheen},
+           familyi={S\bibinitperiod},
+           given={Susan\bibnamedelima A.},
+           giveni={S\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=2}}%
+      }
+      \strng{namehash}{9ead44ef26805be942326fba2797e9eb}
+      \strng{fullhash}{9ead44ef26805be942326fba2797e9eb}
+      \strng{bibnamehash}{9ead44ef26805be942326fba2797e9eb}
+      \strng{authorbibnamehash}{9ead44ef26805be942326fba2797e9eb}
+      \strng{authornamehash}{9ead44ef26805be942326fba2797e9eb}
+      \strng{authorfullhash}{9ead44ef26805be942326fba2797e9eb}
+      \field{sortinit}{S}
+      \field{sortinithash}{c319cff79d99c853d775f88277d4e45f}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0967-070X}
+      \field{journaltitle}{Transport Policy}
+      \field{number}{Supplement C}
+      \field{title}{Mobility and the sharing economy}
+      \field{volume}{51}
+      \field{year}{2016}
+      \field{pages}{141\bibrangedash 142}
+      \range{pages}{2}
+      \verb{doi}
+      \verb https://doi.org/10.1016/j.tranpol.2016.01.008
+      \endverb
+      \verb{urlraw}
+      \verb http://www.sciencedirect.com/science/article/pii/S0967070X16000020
+      \endverb
+      \verb{url}
+      \verb http://www.sciencedirect.com/science/article/pii/S0967070X16000020
+      \endverb
+    \endentry
+    \entry{stillwater2009carsharing}{article}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=a7af0ff4c8a58c84fa289311cd84647e}{%
+           family={Stillwater},
+           familyi={S\bibinitperiod},
+           given={Tai},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=f72894b970b55c28ae3c1811d63465b2}{%
+           family={Mokhtarian},
+           familyi={M\bibinitperiod},
+           given={Patricia},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=282db80d46ce05d352e5aaca70314ab9}{%
+           family={Shaheen},
+           familyi={S\bibinitperiod},
+           given={Susan},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Transportation Research Board of the National Academies}%
+      }
+      \strng{namehash}{3d622fb4d819543176591168be2a0c32}
+      \strng{fullhash}{cd75e51b2b107eaeee1049459c036dfb}
+      \strng{bibnamehash}{cd75e51b2b107eaeee1049459c036dfb}
+      \strng{authorbibnamehash}{cd75e51b2b107eaeee1049459c036dfb}
+      \strng{authornamehash}{3d622fb4d819543176591168be2a0c32}
+      \strng{authorfullhash}{cd75e51b2b107eaeee1049459c036dfb}
+      \field{sortinit}{S}
+      \field{sortinithash}{c319cff79d99c853d775f88277d4e45f}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Transportation Research Record: Journal of the Transportation Research Board}
+      \field{number}{2110}
+      \field{title}{Carsharing and the built environment: Geographic information system-based study of one US operator}
+      \field{year}{2009}
+      \field{pages}{27\bibrangedash 34}
+      \range{pages}{8}
     \endentry
     \entry{Tyndall2016}{article}{}
       \name{author}{1}{}{%
