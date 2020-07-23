@@ -1,0 +1,37 @@
+\section{Impact of charging station placement}
+\label{sec:freefloating}
+
+We consider the Free Floating return policy, and study the impact different charging station placement policies. Our aim is to check what would be the minimum number of charging stations to install to sustain a FFCS system based on electric vehicles that is equivalent to the one currently in use.
+
+Fig.~\ref{fig:deathsVsZones_algorithm} shows the performance of the different placement algorithms in terms of percentage of infeasible trips  with respect to  the number of charging stations $N$ for each city. Each charging station has $k=4$ poles. Bottom x-axis reports the percentage of equipped zones with respect to the total, while top x-axis reports the actual number, different for each city.
+
+We observe notably different performance for different placement algorithm.
+First, the average parking time placement policy (\textit{Avg time} - purple line) has very poor performance in all the cities.
+Even a simple random choice sometimes performs better (\textit{Mean rnd} - green line, obtained as the average of 10 random instances). 
+However, in Milan -- Fig.~\ref{fig:zone_vs_deaths_milano} -- and Berlin -- Fig.~\ref{fig:zone_vs_deaths_berlino}, the random placement results the worst. This is due to the larger number of zones, which makes the space of available solutions much larger.
+
+Second, the total parking time  (\textit{Tot time} - black line) and total number of parkings (\textit{Num parking} - red line) perform similarly and consistently better than other policies. A 10\% coverage in Turin, 11\% in Milan, 23\% in Berlin\%, and 13\% in Vancouver lead to about 2\% of infeasible trips. 
+In all the city but Berlin we can reach a negligible percentage of infeasible trips with just 15-18\% of charging zones. Instead, in Berlin we still have some infeasible trips with 30\% of charging zones. Recalling that with our battery we can travel 135\,km, the presence of infeasible trip is explained by looking the rental distance presented in~\ref{fig:cdf_characterization}. Trips in Berlin can be as long as 39\,km. Therefore, with only 4 long-trips which do not end in a charging station area, the battery could run out the energy.
+
+The overall trends confirm the intuition of why the recharging stations placement algorithm is of primary importance. \textit{Avg time} placement favors peripheral zones where few trips end, and where cars stay parked for long time, sometime longer than the time required for a complete charge, (see left heat maps~Fig.~\ref{fig:heatmap_Berlin} and Fig.~\ref{fig:heatmap_vancouver}). On the contrary, \textit{Num parking} and \textit{Tot time} favor city center areas, where cars  are frequently parked for short time (see right heat maps in ~Fig.~\ref{fig:heatmap_Berlin} and Fig.~\ref{fig:heatmap_vancouver}). 
+
+\textbf{Takeaway:} Placing charging stations in areas where cars stay parked for long time is not convenient. Placing charging stations in areas which allow many cars to recover the (little) energy consumed in the (short) trips results in a much better policy.
+
+Given this, we will use the total number of parking placement algorithm for the rest of the paper. 
+
+
+
+%Indeed, in the whole simulation, for $Z=40$, only 7\,430 recharges have been recorded for \textit{Avg time}, compared with 47\,628 recharges of the \textit{Num parking}. Moreover, as shown in Fig.~\ref{fig:CDF_parking_time_per_algorithm} the average parking time placement generates much longer plugged times, often much longer than the time needed for a full recharge. Therefore, many cars occupy the recharging poles when they are already charged, preventing other cars to use the pole and increasing the number of infeasible trips. Even if plugged time is shorter, the \textit{Num parking} policy allows the cars to recharge the (little) energy consumed in the (short) trips.
+
+% %To confirm this intuition, Fig.~\ref{fig:CDF_parking_time_per_algorithm} shows the the CDF of the charging time cumulated during each recharge period for \mm{$Z=XX$}. It clearly shows that the average time placement generates much longer charging times, much longer than the time needed to reach a complete recharge.
+% %For instance, a full recharge requires 9 hours. 
+
+% Therefore the best approach is to choose charging station zones that favours the central areas, in which the parkings last less and are more frequent. 
+
+% %This is due to the fact that the average time placement algorithm favours peripheral zones which are less reached by users' trips. In this way the cars occupy for long time the zones in which users arrive infrequently. But, when one of those area is reached, the user can leave the car in recharge since that very likely the plug is free. When the system evolving over the time, the charging stations tend to fill up and when another user finishes its ride in those zone, they found the all plugs occupied actually preventing the other cars to charge. Therefore, on the long run, the system tends to keep in charge car yet charged favouring the discharging of the remaining vehicles, increasing the number of unfeasible trips.  
+
+
+% %that will host a charging station considering the max parking placement algorithm, that favours the central areas, in which the parking last less and are more frequent. In this way the plugs are released more often and consequently the probability to recharge the car when the ride finishes increases actually decreasing the percentage to fall in the condition of unfeasible trip.
+
+
+

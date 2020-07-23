@@ -4,7 +4,7 @@
 
 \documentclass[%
    corpo=12pt, % optional; default:= 10pt
-   twoside, % recommended
+   oneside, % recommended
    tipotesi=scudo,
    mybibliostyle, % only if biblio is typeset with a personal style
   numerazioneromana, % not necessary in a real thesis
@@ -132,6 +132,13 @@
 Chapter1/1_introduction,%
 Chapter2/2_datacollection,%
 Chapter3/3_cs_comparison,%
+Chapter4/4_simulator,
+Chapter5/5_4cities,
+Chapter6/6_cs_optimization,
+Chapter7/7_prediction,
+Chapter8/8_relocation,
+Chapter9/9_scalability,
+Chapter10/10_conclusion
 %Appendix1/appendix1,
 %Appendix2/appendix2,%
 }
@@ -139,6 +146,11 @@ Chapter3/3_cs_comparison,%
 \newcommand{\tool}{\textit{UMAP}\xspace}
 \newcommand{\MGM}[1]{#1}
 \newcommand{\removelatexerror}{\let\@latex@error\@gobble}
+\newcommand{\reviewed}[1]{{\color{black}{#1}}}
+
+\DeclareMathOperator*{\argmax}{arg\,max}
+\DeclareMathOperator*{\argmin}{arg\,min}
+
 
 \ifPDFTeX \usepackage{indentfirst}\fi
 \raggedbottom
@@ -282,6 +294,13 @@ The sentence used above clearly is an example of something very common, but it i
 \include{Chapter1/1_introduction}
 \include{Chapter2/2_datacollection}
 \include{Chapter3/3_cs_comparison}
+\include{Chapter4/4_simulator}
+\include{Chapter5/5_4cities}
+\include{Chapter6/6_cs_optimization}
+\include{Chapter7/7_prediction}
+\include{Chapter8/8_relocation}
+\include{Chapter9/9_scalability}
+\include{Chapter10/10_conclusion}
 %% Numbered appendices remain in the main matter...
 %\appendix
 %\include{Appendix1/appendix1}
