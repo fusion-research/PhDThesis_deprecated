@@ -1,100 +1,161 @@
-\section{Data collection and characterisation}
+\section{Data collection and characterization}
 \label{sec:data}
 
-Obtaining mobility data is fundamental in the design of transport systems. Nowadays, the diffusion of ICT technologies makes collecting actual usage data much simpler. Here, we present our approach to collect data from currently running FFCSs. For this, we designed and engineered \tool~\cite{UMAP}. It is composed by three modules: a data acquisition, a data normalisation and integration, and a data characterisation and analysis module. \tool is freely accessible as open source at~\cite{MicheleGithub}.
-%\footnote{\url{https://github.com/michelelt/sim3.0}}
+Here we describe the methodology we followed to harvest data from already operative FFCS systems in the city of Turin (Italy), Milan (Italy), Berlin (Germany), and Vancouver (Canada). We first describe the data collection mechanisms. Then we characterize system usage, focusing on those metrics that are instrumental for the design of FFCS systems based on electric vehicles and highlighting the non-stationary patterns. 
 
-%\ext{
-\subsection{Data Acquisition}
+\subsection{Data collection and filtering}
+\label{par:coll_and_filter}
+The modern FFCS provider like Car2go, DriveNow or GoGet use information systems to expose the position of the available cars through web services. Customers access these to check  which cars are available for a rental by using a smartphone app. For instance, Car2go offers public Application Programming Interface (API) \footnote{car2goAPI, \url{https://www.car2go.com/api/tou.htm} service subject to approval by car2Go. Approval granted in Sept. 2016 and discontinued in Jan. 2018.} to access the information about the system status. We use these APIs to collect data about actual rentals occurred over time following a streaming approach. First, we get the operative area for each city, i.e., the zone where cars can be rented and returned. The operative areas remain constant for several months.
+Next, we collect a snapshot every minute reporting the positions of all cars available for a rental, for each city. From each snapshot we save the car plates (used as car identifier) and its geographic coordinates.
 
-The first step consists in the data acquisition from the FFCS platform of interest. Each platform exposes information through a web-service that lets customers find positions of cars when available for rental. 
-\tool implements crawler-modules that harvests these web-service to collect, at periodic time instant, which cars are available. For now, we have developed crawlers for two FFCS providers, Car2Go and Enjoy, both offering services in Italy. For Car2Go,  we rely on their public APIs~\footnote{Car2Go API, \url{https://www.car2go.com/api/tou.htm}, service subject to approval by Car2Go. Approval granted in September 2016, service disconnected in January 2018.}, while for Enjoy we implemented a custom crawler by reverse engineering API. In both cases, the system returns the currently available cars using a JSON document, for each city in which they are present.
-\tool takes periodic \textit{snapshots} describing which cars are parked and ready for rental.
+We developed UMAP~\cite{UMAP}, a software able to process these snapshots and rebuild, for each car, the history in terms of \emph{bookings} and \emph{parkings}.\footnote{UMAP can be downloaded from \url{https://github.com/MobilityPolito/UMAP}}
+A booking is an event describing a possible car rental $i$, characterized by the starting and final position $o(i)$ and $d(i)$, and starting and ending time $t_s(i)$ and $t_e(i)$. A parking describes a period of time when the car was parked and available for rentals; it is characterized by the location and the starting and final time. In a nutshell, we process the snapshots of the available cars and derive booking periods by observing which cars are available at each snapshot.
+Given a car, when it ``disappears'' from a snapshot, it means that someone has booked it -- so that the car is not available for other customers. A new booking is started. When the same car ``reappears'' back later on, it means someone has returned it. The booking is then ended.
 
-In a nutshell, a car is described as an object annotated by information like plate, vehicle identification number (VIN), fuel level, model, parked location, etc. 
-This is instrumental for the customers, e.g., to choose which car to rent.
-This object is only present if the car is available, i.e., it is parked and free for a rental. When a customer reserves and rents it, the object disappears, and reappears later when the customer ends the rental, likely in a different location.
+Not all bookings correspond to actual rentals:
+(i) a customer can book a car, and cancel the booking later on;
+(ii) the data collection may suffer from outages, so that some snapshots may miss some available cars;
+(iii) cars may go in maintenance, so that they disappear and never come back (or return after a long time).
+We developed data cleaning and filtering rules to extract actual \textit{rentals} from bookings. A booking is considered a valid rental if:
+(i) it lasts at least 3 minutes;
+(ii) the ending position is at least 700\,m far from the staring position, with both positions inside the city operative area;\footnote{This to account for possible errors in the GPS fixing, and to remove rentals started and ended in different cities.};
+(iii) its duration is smaller than 1\,h. These thresholds have been selected by domain knowledge of the data -- see~\cite{UMAP} for more details.
+Bookings that do not correspond to rentals are then merged with parkings events (since the car did not move).
 
-\tool takes a snapshot $S(t)$ every minute, a reasonable time resolution to capture car rental and return events, while avoiding overloading the servers.
-In particular, we extract 
-the \textit{VIN} or \textit{plate} field to uniquely identify a car, the parking \textit{coordinates} reported with \textit{longitude} and \textit{latitude} by the in-car GPS, and the \textit{fuel} level of the car.\footnote{The GPS coordinates are only available if a car is parked and available. There is no risk for users' privacy during rentals. In addition no user's identifier is exposed. Therefore data is totally anonymized as there is no means to know who booked a car.}
+We started to collected data in December 2016 in all the 22 cities in which Car2go is present, and stopped our collection in February 2018. Overall, we obtained more than 28 millions rentals and parkings that we leverage for our studies.
 
-%DG: MongoDB qui non entra ancora in gioco, quindi non lo nominerei
-%The  unstructured data grow large very easily, thus we store the data on on \textit{MongoDB}, a NoSQL document-based database.
-
-We started collecting data with \tool in December 2016, and we have collected more than a year of data in all the 22 and 5 cities where Car2Go and Enjoy offer service, respectively. 
-
-\subsection{Data Normalisation and Integration}
-
-In this second module we process and consolidate each snapshot $S(t)$ to obtain \textit{booking} and \textit{parking} periods for each car. The intuition is to track the availability of each car, and rebuild the history of parking and booking periods over time: when some customer books a car at time $[t-1,t)$, the latter ``disappears'' from the system starting from $S(t)$. We identify this events, and record it by creating a new booking, and setting the start time ($t_s=t$) and the start position. When the customer ends the booking, the car ``reappears'' in the system in $S(t2), t2>t$. We record this event, by setting the end time ($t_e=t2$) and end position of the booking. After that, for the same car, a new parking period starts, hence we record a new parking event with its initial time ($t_s=t2$) and its position. When the car ``disappears'' again in $S(t3),t3>t2$, we record end time ($t_e=t3$) of the parking event, and we start recording a new booking.
- 
-Next, we define a procedure to filter bookings and to obtain actual \textit{rentals}. The FFCS allows customers to reserve a car prior the actual rental starts. In case the customer cancels the reservation, the car becomes available, creating a booking in our data-set, for which no rental actually ever happened. Conversely, some bookings last for several days or weeks, e.g., due to a car going offline, or under repair. At last, the back-end system may sometimes fail, generating spurious bookings. \tool filters these artefacts to obtain actual {rentals}: Initial  and final positions must be at least 500\,m far apart, booking duration must be greater than 3 minutes, and shorter than 1 hour. %After filtering, our Turin dataset contains about 125\,000 actual rentals.
-
-At last, we need to estimate the possible driving path and length from the knowledge of only the initial and final position. Euclidean distance between starting and ending coordinates of the trip represents a lower bound of the real driven distance, since cars have to follow the topology of the city and traffic laws. To estimate the real driving distance, we apply a corrective factor, that we obtain again from data. In more details, given a rental, we use the information returned by the Google Directions API related to the best driving path from the  initial to the final position of the rental.~\footnote{\url{https://developers.google.com/maps/documentation/distance-matrix/}, freely available for a limited number of queries.} Then, we compute the ratio between the returned driving distance, and the euclidean distance. \reviewed{We collect this information at time the trip end is observed.}\footnote{Google Directions API factor eventual traffic congestion at different time of the day. As such, we include its impact in our model.}
-We repeat this for about 10\,000 trips, observing the distribution of the ratio which ranges between 1 and 2, with most of values around the median value of 1.4. We use the latter value as corrective factor to obtain the driving distance from the euclidean distance.
-%\dg{DA CHIARIRE MEGLIO: We further verify this results by analysing the data about fuel consumption. We estimate an average consumption of 11.7 litres every 100 kilometres, which is clearly an overestimate in city driving. By multiplying by 1.4, we have a consumption pretty closer to the one typically observed in the city} (7.4\,l every 100\,km).\footnote{\url{https://www.alvolante.it/prova/smart-fortwo-coupe-twinamic}.}  In the following we use 1.4 as the corrective factor for all driven distances.
-
-In this work, \reviewed{we consider 8 weeks between September and  November 2017 for the Car2Go provider to optimise the charging station placement. We collected about 190\,000 bookings that generated 125\,000 actual rentals from the 377 cars of the Car2Go fleet in Turin. To verify the robustness of the solution, we use other two traces collected in June-July 2017 and December 2017-January 2018}.
+\subsection{Temporal characterization}
+In this work we focus our analysis from September to November 2017 in four city: Turin (Italy), Milan (Italy), Berlin (Germany), Vancouver (Canada). %We restrict our analysis to this period since the system was in stationary conditions.
+Overall, we get more than 1 million rental events that describe the typical usage patterns of FFCS customers. 
 
 
-\reviewed{Our data takes into account all the rentals, also in presence of special events generating a higher demand (like strikes, sport events, concerts, etc.). Therefore our data captures both normal daily traffic patterns, and anomalies.}
-
-
-
-In the following, we provide a quick characterisation of the data, which is instrumental to guide the design of the charging station placement algorithms.
-
-\subsection{Data characterisation}
-
-First focus on the characterisation of the (estimated) distance travelled during rentals. This figure is interesting since it is directly related to the minimum amount of charge an electric car shall have to complete a trip.
-Fig. \ref{fig:cdf_distance} shows the empirical Cumulative Density Function (CDF) of the distances covered over all rentals. 97\% of the trips covers less than 10~km, roughly corresponding to the operative area diameter in Turin. The remaining 3\% are trips to and from the airport, up to 19 km far away.\footnote{The Turin airport has a reserved parking for Car2Go vehicles. It is about 15 km far away from the city centre. Distances for trips to the airport, reached by a straight highway, are not corrected.}
-
-Next, we investigate the parking duration. This figure is interesting since it is related to the amount of charge a parked car obtains when attached to a charging station.
-Fig. \ref{fig:cdf_duration} illustrates the empirical CDF of parking duration. Interestingly, more than half of the parking events lasts less than 1 hour. This is due to the high utilisation of cars in FFCS, especially during business hours.
-Conversely, 10\% of the parking events lasts more than 8 hours, with some cars that are left parked for days. The former are probably due to overnight parkings, while the latter hint for some cars parked in areas with few customers.
-
-\begin{figure}[th]
-    \centering
-        \subfloat[][CDF of travelled distances. X-axis is logarithmic.]
-        {
-            \label{fig:cdf_distance}
-            \includegraphics[width=0.45\columnwidth]{figures/CDF_distance.pdf}
-        }
-        \subfloat[][CDF of parking durations. X-axis is logarithmic, and limited to 2 days.]
-        {
-            \label{fig:cdf_duration}
-            \includegraphics[width=0.45\columnwidth]{figures/CDF_duration.pdf}
-        }
-        \caption{Characteristics of the trips in our data-set.}
-        \label{}
+\begin{figure}[t]
+    \begin{center}
+        \begin{subfigure}{0.49\textwidth}
+            \includegraphics[width=\columnwidth]{figures/bookings_per_day.pdf}
+            \caption{Number of rentals per day.}
+            \label{fig:rentals_per_day}
+        \end{subfigure}
+         \begin{subfigure}{0.49\textwidth}
+             \includegraphics[width=\columnwidth]{figures/aggBookginfsPerHour.pdf}
+             \caption{Average number of rentals per hour.}
+             \label{fig:rentals_per_hour}
+         \end{subfigure}
+         \caption{Rental trends in different cities.}
+         \label{fig:rentals_trends}
+\end{center}
 \end{figure}
 
 
-Next, we analyse how parking habits are different in the city area. For this, we divide the service operative area using a grid of squared zones of 500x500 meters, obtaining 261 zones covering Turin.
-For each zone, we compute the total number of parkings recorded and the average parking time.
-
-
-
-
-Fig. \ref{fig:hm_max-parking} shows the heatmap of the total number of parkings in each city zone. The warmer the colour is, the more frequently cars are parked here. The hot areas correspond to the city centre which exhibits the highest number of parkings. Customers rely on car sharing for travelling and moving downtown, a working area full of shops and restaurants. The zones with more parkings are close to the train stations, where 47 parking events per day are observed on average.
-On the contrary, few parkings are observed in the suburbs (down to less than 1 event per day), where people likely return home in the evening~\cite{UMAP}. 
-
-Fig. \ref{fig:hm_avg-time} shows the heatmap of the average parking time for each zone. Peaks are on borders of the operative area, where parking events last more than 24 hours. Few cars reach these peripheries  and rest unused for long time (see also rightmost part of Fig. \ref{fig:cdf_duration}). The lower values are registered in the downtown, where cars stay parked only for 85 minutes on average.
-
-The large spread of parking density and duration challenges the decision on where to place charging stations. Indeed, if placed in areas where cars are frequently parked but for short time (e.g., city centre), batteries would get little charge. If placed in areas where few cars stay parked for long time (e.g., suburbs),  cars will be fully charged cars but occupying the station for long time.
-
-\begin{figure}[th]
-    \centering     %%% not \center
-        \subfloat[][Number of Parkings.]
-            {
-            \label{fig:hm_max-parking}
-            \includegraphics[width=0.35\columnwidth]{figures/Torino_NParkings.pdf}
-            }
-        \subfloat[][Average Parking Time.]
-            {
-            \label{fig:hm_avg-time}
-            \includegraphics[width=0.35\columnwidth]{figures/Torino_AvgTime.pdf}
-            }
-    	\caption{Heatmaps showing (a) number of parkings per zone  and (b) average parking time per zone. Warmer areas have larger values. }
-    	\label{fig:data_car}
+\begin{figure}[t]
+%     \begin{center}
+            \begin{subfigure}{0.45\textwidth}
+            \includegraphics[width=\columnwidth]{figures/CDF_aggregate_RentalsDuration.pdf}
+           % \caption{CDF of driving duration}
+            %\label{fig:cdf_driving_duration}
+\vspace{-0.3cm}
+        \end{subfigure}\\
+        \begin{subfigure}{0.47\textwidth}
+             \includegraphics[width=\columnwidth]{figures/CDF_aggregate_RentalsDistance.pdf}
+           %  \caption{CDF of driving distance}
+            % \label{fig:cdf_driving_distance}
+\vspace{-0.3cm}
+         \end{subfigure}\\
+         \begin{subfigure}{0.46\textwidth}
+             \includegraphics[width=\columnwidth]{figures/CDF_aggregate_ParkingsDuration.pdf}
+           %  \caption{CDF of parking duration}
+            % \label{fig:cdf_parking_duration}
+         \end{subfigure}
+         
+         \caption{Car Sharing usage habit characterization.}
+         \label{fig:cdf_characterization}
+% \end{center}
 \end{figure}
+
+To give the intuition of the system, we first provide a characterization of actual usage patterns by current FFCS customers in each city. We focus first on the temporal characteristics.
+Fig.~\ref{fig:rentals_trends} reports the rental trend. More in details, Fig.~\ref{fig:rentals_per_day} shows the number of recorded rentals for each day in the considered period. Usage similarity is striking, with Milan, Berlin and Vancouver that have more rentals per day than Turin. This intense usage, justify the difference in fleet size between the cities, with these three having at least twice as much cars with respect to Turin (see Tab.~\ref{tab:summary}). These first results highlights the importance of extending our previous work to other cities than Turin. A second interesting aspect is the presence of a weekly pattern: in correspondence of the weekends the number of rentals drops of about 30\%. This is justified by the fact that during the working days cars are used for commuting. Moreover, non-stationary events due to holidays or strikes are visible, e.g., October 6th in Milan due to a public transport strike.\footnote{The sudden fall around the October $2^{th}$ is due to system outage that caused a lack of data.} 
+
+\begin{figure*}[t!]
+    \begin{center}
+        \begin{subfigure}{0.56\textwidth}
+		    \begin{center}
+            \includegraphics[width=0.45\columnwidth]{figures/BerlinoAvgParking.pdf}
+            \includegraphics[width=0.45\columnwidth]{figures/BerlinoMaxParking.pdf}                \captionsetup{justification=centering}
+            \caption{Berlin: average parking time (left) and total \\ number of  parkings (right).}
+            \label{fig:heatmap_Berlin}
+            \end{center}
+        \end{subfigure}
+        \begin{subfigure}{0.41\textwidth}
+		    \begin{center}
+            %\vspace{20pt}
+            \includegraphics[width=0.47\columnwidth]{figures/VancouverAvgParking.pdf}
+            \includegraphics[width=0.47\columnwidth]{figures/VancouverMaxParking.pdf}
+            \captionsetup{justification=centering}
+            \caption{Vancouver: average parking time (left) and total number of parkings (right).}
+            \label{fig:heatmap_vancouver}
+            \end{center}
+        \end{subfigure}
+          \caption{Heat map of average parking time and total number of parking. The warmer the color, the higher the value.}
+         \label{fig:heatmaps}
+\end{center}
+\end{figure*}
+
+To deeply analyze customers' habits, we detail the average number of rentals per hour in Fig.~\ref{fig:rentals_per_hour}, separately per working-days (WD, solid line) and per weekends (WE, dashed line). Each curve reports the number of rentals for each our, considering the average number over the same hour in the dataset.
+Firstly, notice the usage peaks during commuting times. These happen at different times for different cities, e.g., 8am for Turin, Milan and Berlin vs 7am for Vancouver, following local commuting habits. Secondly, notice how the evening and night usage tend to be larger during  weekends than working days. This reflects the different usage patterns at night, when cars are used to reach areas dense of pubs and nightlife.
+At last, observe again the different patterns in different cities. For instance, the average number of rentals in Vancouver and Berlin during weekend mornings is higher than during working days. This does not happen in Italian cities. The charging station placement design must thus weight this different needs and non-stationary patterns.
+
+
+Given our goals of deriving guidelines for charging station placement policies, we focus now on the characterization of three important metrics:
+(i) for how long customers rent a car,
+(ii) how far they drive,
+(iii) how long cars usually stay parked.
+The former two metrics guide the battery discharging properties, while the latter metric is fundamental to understand battery charging opportunities. Given we have no information on car position during a rental, we compute the travel distance by assuming the customer went directly from the origin to the destination. This is indeed compatible with the duration of rentals (see below). We use Google Map service to compute a correcting factor to be applied on the euclidean distance~\cite{UMAP}. 
+
+
+Fig.~\ref{fig:cdf_characterization} reports the Cumulative Distribution Function (CDF) of the rentals duration (top), driving distance (middle) and parking duration (bottom).
+The size of the city has a clear impact, with Turin that has the shortest trips, and Berlin the longest. 
+Rental duration is in general very short, leading to the intuition that drivers tend to minimize the rental time (and cost). Traveled distance is fundamental to understand the battery consumption: The maximum driving distance sets the minimum battery charge to sustain that trip. Looking at the middle plot in Fig.~\ref{fig:cdf_characterization}, we observe that in Berlin the longest trips are twice as long as the longest trips in other cities. Therefore, the same battery constraints would not fit for all cities. 
+
+Overall, the limited traveled distance and rental duration suggest people use the car just for the time strictly needed to reach their destinations. Trips are limited by the service area and are thus typically within 15\,km (25\,km for Berlin).
+
+At last, bottom plot of Fig.~\ref{fig:cdf_characterization} details the duration of the parking periods. Interestingly, 50\% of parkings lasts less than 22 minutes in Berlin, testifying a very high system utilization. In Turin, the median grows to 42 minutes, still showing that most cars are parked for short time. Yet, the long tail of the CDF (note the log scale on x-axis) suggests that there is a sizable fraction of parkings that last for 5 or more hours. Cars parked in the periphery typically at night, where the demand is lower, belongs to this fraction.
+\begin{table}[h!]
+\begin{center}
+\scriptsize
+\caption{Main characteristics of data.\label{tab:summary}}
+\setlength\tabcolsep{5pt} % default value: 6pt reduce cell padding
+\begin{tabular}{|l|l|l|l|c|c|c|c|c|l|}
+\hline
+\!\multirow{3}{*}{City} &\!\multirow{3}{*}{Rental}\!& \multirow{2}{*}{Fleet} &  \multicolumn{2}{|c|}{Rental}  &  \multicolumn{2}{|c|}{Rental}  &  \multicolumn{2}{|c|}{Parking}  &\!\multirow{3}{*}{Zones}\!\\ 
+ &  & \multirow{2}{*}{Size}  & \multicolumn{2}{|c|}{Time~[min]}  & \multicolumn{2}{|c|}{Dist.~[km]} & \multicolumn{2}{|c|}{Time~[h]} &    \\ \cline{4-9} %&  \multirow{2}{*}{Size[GB]}
+ & &  &\!Avg\!&\!Med\!&\!Avg\!&\!Med\!&\!Avg\!&\!Med\!& \\ \hline
+\hline
+       \!Torino       & 125k & 377 & 21 & 20 & 3.96 & 3.36 & 3:17 & 0:42 & 261 \\ \hline
+\!Milano       & 320k & 739 & 25 & 24 & 4.15 & 3.66 & 2:21 & 0:24 & 549 \\ \hline
+\!Berlino      & 342k & 900 & 29 & 28 & 6.22 & 5.24 & 2:23 & 0:22 & 833 \\ \hline
+\!Vancouver\!  & 317k & 941 & 26 & 24 & 4.70 & 3.98 & 2:54 & 0:22 & 532 \\ \hline
+
+\end{tabular}
+\end{center}
+\end{table}
+
+
+\textbf{Takeaway:} car sharing usage is time heterogeneous and non stationary. However, many patterns can be identified. FFCS customers tend to use the system mostly during commuting time and for short trips.
+
+\subsection{Spatial characterization}
+\label{sec:dataspace}
+The choice of charging station placement has to balance two main factors: place them where cars are (i) frequently parked -- so to maximize the opportunity for charging; and where cars (ii) stay parked for long time -- so to maximize the charging time. Knowing the zones within the city where cars are left parked is fundamental. For this, we divide the operative area of each city into squared zones, obtained with a grid of 500\,m of side. For each zone, we compute the total number of parkings and the average parking time.
+
+Fig.~\ref{fig:heatmaps} shows the above metrics for Berlin and Vancouver using a heat map -- with blue and red corresponding to the minimum and maximum values, respectively. Focus on Berlin first - Fig.~\ref{fig:heatmap_Berlin}. Left plot shows the average parking time. Results clearly show that cars stay parked for very short time in busy downtown areas, while cars stay parked for longer time in the periphery (corresponding to the head and tail of the CDF in Fig.~\ref{fig:cdf_characterization}, respectively).
+
+Conversely, right plot depicts the total number of parkings recorded in each zone. It clearly shows that areas where the majority of rentals/parkings occurs correspond to zones downtown where people frequently drive, drop the car, and then someone else re-rent the same car. 
+
+In a nutshell, in busy areas, the average parking time is short, and number of rentals and parkings recorded is high. This reflects the specific usage of FFCS according to which cars move to downtown areas in the morning, then are rented to move within central areas, and finally are driven back to the periphery at the end of the day.
+Similar results apply to all cities -- see Fig.~\ref{fig:heatmap_vancouver} which details Vancouver statistics.
+
+In the following we leverage this knowledge obtained by actual data, to compare the design of and optimize different charging station placement policies.
+
+
+\textbf{Takeaway:} Periphery zones are characterized by a long parking time, while central areas are characterized by many parkings which last a short time.
+
 

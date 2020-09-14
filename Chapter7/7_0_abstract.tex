@@ -1,9 +1,12 @@
 \section{Abstract}
-Free Floating Car Sharing (FFCS) services are a flexible alternative to car ownership. These transportation services show highly dynamic usage both over different hours of the day, and across different city areas. 
-In this work, we study the problem of predicting FFCS demand patterns -- a problem of great importance to an adequate provisioning of the service. We tackle both the prediction of the demand i) over time and ii) over space. 
-We rely on months of real FFCS rides in Vancouver, which constitute our ground truth. We enrich this data with detailed socio-demographic information obtained from large open-data repositories to predict usage patterns. 
-Our aim is to offer a thorough comparison of several machine learning algorithms in terms of accuracy and easiness of training, and to assess the effectiveness of current state-of-art approaches to address the prediction problem.
-Our results show that it is possible to predict the future usage with relative errors down to 10\%, and the spatial prediction can be estimated with relative errors of about 40\%.
-Our study also uncovered the socio-demographic features that most strongly correlate with FFCS usage, providing interesting insights for providers interested into opening service in new regions.
+%Self-contained abstract of no more than 100 words MA HO VISTO CHE NEGLI ALTRI PAPER NE USANO CIRCA 180, outlining the aims, scope and conclusion of the paper. Three to five keywords must be included.
+%Ora siamo a 209
 
+In this work we consider the design of a Free Floating Car Sharing (FFCS) system based on Electric Vehicles. We face the problems of finding the optimal placement of charging stations, and the design of smart car return policies, i.e, how many and where to place charging stations, and whether to ask or not customers to return the car to a charging pole.
 
+We leverage actual data containing rentals performed by Car2Go customers. We obtain information for several months worth of actual trips in the city of Turin, our use case.
+Via trace driven simulations, we replay the exact same trips while simulating electric car based FFCS, to accurately gauge battery discharging and recharging.
+With this, we compare different charging station placements, also driven by optimisation algorithms. Moreover, we observe the impact of collaborative or selfish car return policies.
+
+Results are surprisingly: just as few as 13 charging stations (52 poles) guarantee a fleet of 377 vehicles running in a 1 million inhabitant city to work flawlessly, with limited customer's discomfort.
+We believe our data driven methodology helps researchers and car sharing providers discerning different design solutions. For this, we make available all data and tools to foster further studies in these directions.

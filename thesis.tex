@@ -131,14 +131,15 @@
 \includeonly{%
 Chapter1/1_introduction,%
 Chapter2/2_datacollection,%
-Chapter3/3_cs_comparison,%
-Chapter4/4_simulator,
-Chapter5/5_4cities,
-Chapter6/6_cs_optimization,
-Chapter7/7_prediction,
-Chapter8/8_relocation,
-Chapter9/9_scalability,
-Chapter10/10_conclusion
+Chapter3/3_datacharact,%
+Chapter4/4_cs_comparison,%
+Chapter5/5_simulator,
+Chapter6/6_4cities,
+Chapter7/7_cs_optimization,
+Chapter8/8_prediction,
+Chapter9/9_relocation,
+Chapter10/10_scalability,
+Chapter11/11_conclusion
 %Appendix1/appendix1,
 %Appendix2/appendix2,%
 }
@@ -147,6 +148,8 @@ Chapter10/10_conclusion
 \newcommand{\MGM}[1]{#1}
 \newcommand{\removelatexerror}{\let\@latex@error\@gobble}
 \newcommand{\reviewed}[1]{{\color{black}{#1}}}
+\newcommand{\mc}[1]{{\color{purple}{[mike: #1]}}}
+\usepackage[thinlines]{easytable}
 
 \DeclareMathOperator*{\argmax}{arg\,max}
 \DeclareMathOperator*{\argmin}{arg\,min}
@@ -293,14 +296,15 @@ The sentence used above clearly is an example of something very common, but it i
 
 \include{Chapter1/1_introduction}
 \include{Chapter2/2_datacollection}
-\include{Chapter3/3_cs_comparison}
-\include{Chapter4/4_simulator}
-\include{Chapter5/5_4cities}
-\include{Chapter6/6_cs_optimization}
-\include{Chapter7/7_prediction}
-\include{Chapter8/8_relocation}
-\include{Chapter9/9_scalability}
-\include{Chapter10/10_conclusion}
+\include{Chapter3/3_datacharact}
+\include{Chapter4/4_cs_comparison}
+\include{Chapter5/5_simulator}
+\include{Chapter6/6_4cities}
+\include{Chapter7/7_cs_optimization}
+\include{Chapter8/8_prediction}
+\include{Chapter9/9_relocation}
+\include{Chapter10/10_scalability}
+\include{Chapter11/11_conclusion}
 %% Numbered appendices remain in the main matter...
 %\appendix
 %\include{Appendix1/appendix1}

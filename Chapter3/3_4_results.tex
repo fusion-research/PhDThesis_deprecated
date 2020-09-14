@@ -1,396 +1,196 @@
-\section{Car-sharing services characterization} 
-\label{sec:3_4_characterization}
+\section{Data Analysis}
+\label{sec:results}
 
-In this section, we first present temporal characterization of the three services (Section~\ref{sec:temporal_characterization}). Then, we describe the services spatial-temporal characteristics (Section~\ref{sec:spatial-temporal}). Finally, we present users' behavior (Section~\ref{sec:user-behavior}).
+In this section we run different analysis to discover and characterize how the FFCS are used. In the first part of the section, we analyze the systems utilization to understand if FFCS are actually used and when.
+In the second part, we perform a spatial analysis to analyze how customers tend to move during business days.
+Finally, we analyze how customers drive FFCS cars and what is the correlation with the public transport system.
 
-\subsection{Temporal characteristics}\label{sec:temporal_characterization}
+
+We consider a period from December 10th 2016 to January 31st 2017. We observed 125,000 snapshots, about 104,000 bookings for car2go and 93,000 for Enjoy. In Turin, the fleet of car2go was composed by 394 cars, and the fleet of Enjoy was composed by 172 cars.
+
+
+\subsection{System Utilization}
+
 
 \begin{figure}
 \centering
-   \begin{minipage}[b]{0.45\linewidth}
-   \centering      
-         \begin{minipage}[b]{\linewidth}
-           \hspace*{-0.9cm}
-           \centering
-           \includegraphics[width=55mm]{modo_inTravel/weekdays.pdf}
-           {\\(a) Two-way Modo Weekdays}
-         \end{minipage}
-         %\hspace{3mm}
-         \begin{minipage}[b]{\linewidth}
-           \centering
-           \hspace*{-0.6cm}
-           \includegraphics[width=60mm]{evo_inTravel/weekdayslim.pdf}
-           {\\(c) One-way Evo Weekdays}
-         \end{minipage}
-         \begin{minipage}[b]{\linewidth}
-           \centering
-           \hspace*{-0.6cm}
-           \includegraphics[width=60mm]{car2go_inTravel/weekdayslim.pdf}
-           {\\(e) Free floating Car2Go Weekdays}
-         \end{minipage}
-   \end{minipage}
-   \hspace{3mm}
-   \begin{minipage}[b]{0.45\linewidth}
-   \centering
-         \begin{minipage}[b]{\linewidth}
-           \centering
-           \hspace*{-0.9cm}
-           \includegraphics[width=55mm]{modo_inTravel/weekends.pdf}
-           {\\(b) Two-way Modo Weekends}
-         \end{minipage}
-         %\hspace{3mm}
-         \begin{minipage}[b]{\linewidth}
-           \centering
-           \hspace*{-0.6cm}
-           \includegraphics[width=60mm]{evo_inTravel/weekendslim.pdf}
-           {\\(d) One-way Evo Weekends}
-           %\vspace{1.0mm}
-         \end{minipage}
-          \begin{minipage}[b]{\linewidth}
-           \centering
-           \hspace*{-0.6cm}
-           \includegraphics[width=60mm]{car2go_inTravel/weekendslim.pdf}
-           {\\(f) Free floating Car2Go Weekends}
-           %\vspace{4mm}
-         \end{minipage}
-   \end{minipage}
-   %\hspace{1cm}
-  \caption{Minute-by-minute mean value (plus/minus standard deviation) for  the  percentage of busy (blue curve) and reserved cars (red curve), for weekdays and weekends.}
-   \label{fig:demandPatterns}
+ \includegraphics[width=0.85\columnwidth]{figures/bookings.pdf}
+ \caption{Total number of bookings and of rentals per day for car2go and for Enjoy \label{fig:bookings}}
 \end{figure}
 
-%PRENSENTATION OF FIGURE
-We present in Figure~\ref{fig:demandPatterns} the service daily demand pattern. The blue and red solid lines refer to a minute-by-minute mean value over the studied period for the percentage of busy and reserved cars, respectively, for each service. We also show the standard deviation from the mean as the smoothed gray and orange background areas around the mean. The left column of Figure~\ref{fig:demandPatterns}  (Figures~\ref{fig:demandPatterns}-a, c, and e) present the demand pattern during working days, while the right column (Figures~\ref{fig:demandPatterns}-b, d, and f) present the demand for weekends (Saturdays, Sundays, and festivities). 
+Starting from December 10th, Figure~\ref{fig:bookings} plots the total number of bookings and the total number of rentals recorded on each day, for car2go (blue curves), and for Enjoy (red curves). The number of bookings refers to all reservations done by users. Instead, the number of rentals refers only to those bookings where the car final position is different then the initial position.
+Obviously, being the latter a subset of the first, its number is always smaller. However, during some days, the discrepancy is well visible; that means that the operation of booking cancellation is not so rare.
 
-%Overall, this figure highlights four main insights about the daily demand for the three services: (i) all of them present differences between weekdays and weekends; (ii) Modo has a distinct demand pattern when compared to the other two services; (iii) the number of cancellations is considerable in Modo and; (iv) the variation on demand, considering all analyzed period is small for Modo, but it is large for Evo and Car2go.
+%Interestingly, firstly, we observe that, both car2go and Enjoy follow a similar behavior with the number of bookings and rentals decreasing in the Christmas period and increasing again after the Epiphany.	
+%Secondly, despite car2go fleet has more than twice as much cars than Enjoy, the number of car2go bookings does not show such a higher value with respect to Enjoy. With Enjoy having more bookings in some snapshots e.g., December 10th and 11th. \DG{Come sistemare meglio?:We can also observe that in some points December 19th, January 24th we detect huge drop due to the failure of our crawler. However, we can also observe that January 13th we have a dramatic drop for car2go but not for enjoy showing that in that snapshot the ca2go web service ad a problem retrieving the list of available cars.}
 
-%DESCRIPTION OF INSIGHTS OF FIGURE
-All three services present two peaks of demand during weekdays and only one during the weekends. 
-During weekdays, for Evo and Car2Go, the one-way and free-floating services, the peaks of demand occur about 8~AM and 6~PM whereas for Modo, the two-way service, these peaks occur around 2~PM and 7~PM.
-Moreover, note that for Evo and Car2Go, weekdays demand is higher than during weekends. On the other hand, for Modo, we observe just the opposite. 
-Mostly, Modo users are regulars and present weekly/daily/hourly subscription. In this sense, they tend to reserve cars at the same hour, for regular periods, which explains Modo lower variation.
-For a given moment, we consider the relative difference between the reserved and busy cars as the cancellations of the system. Modo presents up to 60\% of cancellations, while the other two services present no more than 5\%. 
-%For Modo, during weekdays, the cancellations often occur during all the day, including on the peak hours. During weekends, on the other hand, the number of cancellations is lower in the Modo peak of use. \lv{Not completely true from the plot}
+%By looking the difference between the number of bookings and of rentals, we can observe that this difference \DG{che takeaway?}
+
+%A first evaluation is on the utilization of the two services during the period of observation. 
+
+We can observe both for Enjoy and car2go the same evolution over time, where we can easily recognize a general decrease of number of bookings during the Christmas period, and an increase after the Epiphany.
+Interestingly, \MGM{despite} the total number of available car2go vehicles is more than twice with respect to Enjoy (394 vs. 172), we can not appreciate such a difference in \MGM{the number of rentals}. 
+
+ 
+In the figure, some drops in bookings' values are noticeable. Those sudden changes can be addressed to some failures, in the crawlers \MGM{(e.g., when all curves suddenly drop),} or in the operators' web services \MGM{(e.g., when only one system suffers a sudden drop)}.
+
+%The graph shows the trend for both bookings and rentals, as explained above. 
 
 
 
-\begin{figure}[htb]
+\begin{figure}
 \centering
-    \begin{minipage}[b]{0.45\linewidth}
-    \centering
-     \includegraphics[width=59mm]{modo_cdfs/modo_tarde_noiteCDF_rebuttal.pdf}
-     {\\(a) Two-way Modo}
-    \end{minipage}
-    \hspace{5mm}
-    \begin{minipage}[b]{0.45\linewidth}
-     \centering
-     \includegraphics[width=65mm]{evo_cdfs/evo_tarde_noiteCDF_rebuttal.pdf}
-     \vspace*{-3mm}
-     {\\(b) One-way Evo}
-    \end{minipage}
-    %\hspace{1cm}
-    %\hspace{5mm}
-    \begin{minipage}[b]{0.45\linewidth}
-    \vspace{5mm}
-     \centering
-     \includegraphics[width=65mm]{car2go_cdfs/c2g_tarde_noiteCDF_rebuttal.pdf}
-     {\\(c) Free floating Car2Go}
-    \end{minipage}
-    \caption{Cumulative distribution function of vehicle busy time during a weekday.}
-    \label{fig:cdfs_picos}
+ \includegraphics[width=0.85\columnwidth]{figures/bookings_day.pdf}
+ \caption{Average number of bookings during weekdays and weekends for car2go and for Enjoy\label{fig:bookingsweek}}
 \end{figure}
 
-%DESCRIPTION OF FIGURE
-Figure~\ref{fig:cdfs_picos} presents the Empirical Cumulative Distribution Function (ECDF) of vehicles busy time, i.e., the rental duration, during load peaks of the day. In this case, we evaluate the load periods from 7~AM to 10~AM and from 4~PM to 8~PM for free-floating and one-way, from 11~AM to 4~PM and 7~PM to 8~PM for two-way, and also all-day data for the three services. 
-
-%INSIGHTS OF FIGURE
-As for the demand, Evo and Car2Go present similar behavior, which is different from Modo. For Modo we observe at least 80\% of vehicles rentals presents more than 1 hour of occupation, with more than 10\% of rentals that last for more than 15 hours. On the other hand, Evo and Car2Go usually present shorter rentals, with no more than 10\% of vehicles busy for more than one hour. 
-In sum, we believe the most notable differences between these services occur due to their business model. Indeed, Modo presents a strict policy, where users must pick-up a car and leave it at the same station. However, Modo presents a flexible policy regarding cancellations. The other two services, only allow users to cancel the rent of a vehicle up to 30 minutes after its booking.
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Spatial-temporal characteristics}
-\label{sec:spatial-temporal}
-
-
-%modo
-% Não é o definitivo
-\begin{figure}[hhh!!]
-\centering
-   \begin{minipage}[b]{0.3\linewidth}
-   \centering      
-         \begin{minipage}[b]{\linewidth}
-           \hspace*{-0.9cm}
-           \centering
-           \includegraphics[width=42mm]{modo_heatmaps/min/0.pdf}
-           {\\(a) 0~AM to 1~AM}
-         \end{minipage}
-         %\hspace{3mm}
-         \begin{minipage}[b]{\linewidth}
-           \centering
-           \hspace*{-0.9cm}
-           \includegraphics[width=42mm]{modo_heatmaps/min/8.pdf}
-           {\\(c) 8~AM to 9~AM}
-         \end{minipage}
-         \begin{minipage}[b]{\linewidth}
-           \centering
-           \hspace*{-0.9cm}
-           \includegraphics[width=42mm]{modo_heatmaps/min/16.pdf}
-           {\\(e) 4~PM to 5~PM}
-         \end{minipage}
-   \end{minipage}
-   \hspace{3mm}
-   \begin{minipage}[b]{0.3\linewidth}
-   \centering
-         \begin{minipage}[b]{\linewidth}
-           \centering
-           \hspace*{-0.1cm}
-           \includegraphics[width=42mm]{modo_heatmaps/min/4.pdf}
-           {\\(b) 4~AM to 5~AM}
-         \end{minipage}
-         %\hspace{3mm}
-         \begin{minipage}[b]{\linewidth}
-           \centering
-           \hspace*{-0.1cm}
-           \includegraphics[width=42mm]{modo_heatmaps/min/12.pdf}
-           {\\(d) 12~AM to 1~PM}
-         \end{minipage}
-         \begin{minipage}[b]{\linewidth}
-           \hspace*{-0.1cm}
-           \centering
-           \includegraphics[width=42mm]{modo_heatmaps/min/20.pdf}
-           {\\(f) 8~PM to 9~PM}
-         \end{minipage}
-   \end{minipage}
-   \begin{minipage}[b]{0.1\linewidth}
-   \centering
-   		 \hspace*{12mm}
-   		 \includegraphics[width=12mm]{modo_heatmaps/legenda_modo.pdf}
-         \vspace{17mm}
-   \end{minipage}
-   %\hspace{1cm}
-   \caption{Spatial-temporal service demand for two-way service Modo.}
-   \label{fig:heat_modo}
-\end{figure}
-
-%evo
-% Não é o definitivo
-\begin{figure}[hhh!!]
-\centering
-   \begin{minipage}[b]{0.3\linewidth}
-   \centering      
-         \begin{minipage}[b]{\linewidth}
-           \hspace*{-0.9cm}
-           \centering
-           \includegraphics[width=42mm]{evo_heatmaps/min/hora0.pdf}
-           {\\(a) 0~AM to 1~AM}
-         \end{minipage}
-         %\hspace{3mm}
-         \begin{minipage}[b]{\linewidth}
-           \centering
-           \hspace*{-0.9cm}
-           \includegraphics[width=42mm]{evo_heatmaps/min/hora8.pdf}
-           {\\(c) 8~AM to 9~AM}
-         \end{minipage}
-         \begin{minipage}[b]{\linewidth}
-           \centering
-           \hspace*{-0.9cm}
-           \includegraphics[width=42mm]{evo_heatmaps/min/hora16.pdf}
-           {\\(e) 4~PM to 5~PM}
-         \end{minipage}
-   \end{minipage}
-   \hspace{3mm}
-   \begin{minipage}[b]{0.3\linewidth}
-   \centering
-         \begin{minipage}[b]{\linewidth}
-           \centering
-           \hspace*{-0.1cm}
-           \includegraphics[width=42mm]{evo_heatmaps/min/hora4.pdf}
-           {\\(b) 4~AM to 5~AM}
-         \end{minipage}
-         %\hspace{3mm}
-         \begin{minipage}[b]{\linewidth}
-           \centering
-           \hspace*{-0.1cm}
-           \includegraphics[width=42mm]{evo_heatmaps/min/hora12.pdf}
-           {\\(d) 12~AM to 1~PM}
-         \end{minipage}
-         \begin{minipage}[b]{\linewidth}
-           \hspace*{-0.1cm}
-           \centering
-           \includegraphics[width=42mm]{evo_heatmaps/min/hora20.pdf}
-           {\\(f) 8~PM to 9~PM}
-         \end{minipage}
-   \end{minipage}
-   \begin{minipage}[b]{0.1\linewidth}
-   \centering
-   		 \hspace*{12mm}
-   		 \includegraphics[width=12mm]{evo_heatmaps/legenda_evo.pdf}
-         \vspace{17mm}
-   \end{minipage}
-   %\hspace{1cm}
-   \caption{Spatial-temporal service demand for one-way service Evo.}
-   \label{fig:heat_evo}
-\end{figure}
-
-% car2go
-\begin{figure}[hhh!!]
-\centering
-   \begin{minipage}[b]{0.3\linewidth}
-   \centering      
-         \begin{minipage}[b]{\linewidth}
-           \hspace*{-0.9cm}
-           \centering
-           \includegraphics[width=42mm]{car2go_heatmaps/min/0.pdf}
-           {\\(a) 0~AM to 1~AM}
-         \end{minipage}
-         %\hspace{3mm}
-         \begin{minipage}[b]{\linewidth}
-           \centering
-           \hspace*{-0.9cm}
-           \includegraphics[width=42mm]{car2go_heatmaps/min/8.pdf}
-           {\\(c) 8~AM to 9~AM}
-         \end{minipage}
-         \begin{minipage}[b]{\linewidth}
-           \centering
-           \hspace*{-0.9cm}
-           \includegraphics[width=42mm]{car2go_heatmaps/min/16.pdf}
-           {\\(e) 4~PM to 5~PM}
-         \end{minipage}
-   \end{minipage}
-   \hspace{3mm}
-   \begin{minipage}[b]{0.3\linewidth}
-   \centering
-         \begin{minipage}[b]{\linewidth}
-           \centering
-           \hspace*{-0.1cm}
-           \includegraphics[width=42mm]{car2go_heatmaps/min/4.pdf}
-           {\\(b) 4~AM to 5~AM}
-         \end{minipage}
-         %\hspace{3mm}
-         \begin{minipage}[b]{\linewidth}
-           \centering
-           \hspace*{-0.1cm}
-           \includegraphics[width=42mm]{car2go_heatmaps/min/12.pdf}
-           {\\(d) 12~AM to 1~PM}
-         \end{minipage}
-         \begin{minipage}[b]{\linewidth}
-           \hspace*{-0.1cm}
-           \centering
-           \includegraphics[width=42mm]{car2go_heatmaps/min/20.pdf}
-           {\\(f) 8~PM to 9~PM}
-         \end{minipage}
-   \end{minipage}
-   \begin{minipage}[b]{0.1\linewidth}
-   \centering
-   		 \hspace*{12mm}
-   		 \includegraphics[width=12mm]{car2go_heatmaps/legenda_car2go.pdf}
-         \vspace{17mm}
-   \end{minipage}
-   %\hspace{1cm}
-   \caption{Spatial-temporal service demand for free-floating service Car2Go.}
-   \label{fig:heat_car2go}
-\end{figure}
-
-Figures~\ref{fig:heat_modo}, \ref{fig:heat_evo} and \ref{fig:heat_car2go} present heat-maps of the hourly\footnote{Due to space constraints, we only show one-hour period every four hour.} mean number of busy vehicles in a given location, considering analyzed period. In the case of Modo, a location refers to a fixed station. In the case of the other two services, we have clustered all travel records where users pick-up or leave a vehicle. To cluster these points we use a 400\,m radius as a reference, forming a region close to a neighborhood. We have also experimented values from 100\,m to 1000\,m, obtaining similar results. 
-
-First, all three services present a large demand in the downtown area and the university zone. Note that the demand in downtown for all three services is low during the night, starts increasing at 4-5 AM, reaches its peak during office working hours and reduces by the end of the day. In this case, users usually pick-up cars to their daily tasks, as go to work and shopping. During the night, usage increases in the surroundings of the city, the university zone, and neighborhoods with leisure facilities (such as bars). 
-Modo presents a distinct demand pattern. Indeed, Modo has fixed stations located along with the existing public transport system, especially the Expo Line and Millennium Line. For this reason, we note a strong relationship between the existing public transport system and the car-sharing system demand. On the other hand, the other two services are more flexible. Users can rent a car almost anywhere. In this sense, despite the major demand in downtown, we note a widespread demand all over the city.
-
-Figures~\ref{fig:matrixEvo} and \ref{fig:matrixCar2Go} detail the spatial-temporal demand for Evo and Car2Go by presenting their origin-destination matrix. We use the 31 city areas as defined by the metropolitan city of Vancouver. To enhance the visual effects, we normalized the previous heat-maps values to a scale between 0-1, using the min-max method. Moreover, due to space constraint, we only show the origin-destination matrix at a specific hour, i.e., at 4\,PM.
-We note that users tend to start and end a trip at the same location. It appears that during working days, users tend to use a shared car  returning it to the same region where they start (likely where they are working or living). However, for both services, we note a non-negligible probability to spread services along all city area. 
-Moreover, we also note that some regions serve as hubs. This is more notable for Evo service. As shown in Figure~\ref{fig:matrixEvo}, the downtown area serves as a hub to start trips to almost all other regions. We do not observe the opposite (a high tendency to start a trip ending at downtown). As a consequence, service may become unbalanced and, from time to time, service maintenance should relocate vehicles from a region to another, to accommodate the daily demand.
-
-\begin{figure}[tbh]
-\centering
-\includegraphics[width=80mm]{destination_matrix/hour16.png}
-\caption{Origin-destination matrix for one-way service Evo (from 4~PM to 5~PM).}
-\label{fig:matrixEvo}
-\end{figure}
+Looking at the data with a finer granularity, we can observe how the car sharing adoption changes during the day. To better characterize this, we separate weekdays and weekends. In Figure~\ref{fig:bookingsweek} we can observe the trend over the day. The curves report the average over the entire period of the number of bookings in each hour of the day.
+%We next analyze how the number of bookings differs between weekdays (Monday to Friday) with respect to weekends in Figure~\ref{fig:bookingsweek}. Each point of each curve represents the mean number of bookings in one hour of the period of interest. For example the point 0 of Enjoy weekdays is the average number of bookings between 00:00 am and 00:59 am happened in all our weekdays. 
+Firstly, we can see that weekdays and weekends have a quite different trend. During the weekend FFCS systems are more used at night with respect than weekdays, with on average at midnight \MGM{of 80 and 60 bookings per hour for Enjoy and car2go}. Instead, we can see how during the weekdays both car2go and Enjoy have their peak of usage at 8~am and between 5~pm and 7~pm. This trend can be easily explained as, during that time slots, FFCS customers use cars to go and return from work. 
+As previously indicated, despite car2go has twice the number of cars than Enjoy, the system utilization of the latter is higher, with peak utilization topping to 60\%, versus 30\% of car2go. 
+%comparable if not higher during specific times.}
+%\MGM{A last interesting aspect to see is how despite the difference in the number of cars, car2go is not always the more used between the two FFCS systems.}
 %
-\begin{figure}[tbh]
-\centering
-\includegraphics[width=80mm]{car2go_destination_matrix/hour16.png}
-\caption{Origin-destination matrix for free-floating service Car2Go (from 4~PM to 5~PM).}
-\label{fig:matrixCar2Go}
+%Indeed, 
+Even in absolute number of rentals, 
+we can see that Enjoy shows an higher number of bookings after 8~pm during the weekdays, and always during the weekends. This can be explained by the car models adopted by the two companies. While car2go uses the compact-two seats \textit{Smart}, Enjoy fleet is composed of \textit{Fiat 500}, which are 4 seats cars. Rentals prices are instead comparable (0.24\euro/min Enjoy vs 0.25\euro/min car2go). Data suggests that Enjoy looks more appealing during the \MGM{times} when people prefer to share the \MGM{ride}, and during weekends when families and groups move. 
+%Instead, being car2go smaller and therefore easier to park, it looks more appealing during working days and especially during business hours.
+
+\begin{figure}[t!]
+	\centering     %%% not \center
+	\subfloat[][ECDF of the booking duration when the booking does not produce a rental. Weekdays and weekends]
+	{\label{fig:pdf_norent}
+		\includegraphics[width=0.33\columnwidth]
+		{figures/no_rent.pdf}
+	}
+	\subfloat[][ECDF of the rental duration. Weekdays and weekends]{\label{fig:cdf_duration}\includegraphics[width=0.33\columnwidth]{figures/duration.pdf}}
+	\subfloat[][ECDF of the rental distance. Weekdays and weekends]{\label{fig:cdf_distance}\includegraphics[width=0.33\columnwidth]{figures/distance.pdf}}
+	\caption{Users' booking and rentals habits}
+	\vspace{-3pt}
 \end{figure}
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%\begin{figure}[t!]
+%%	\centering     %%% not \center
+%%	\subfigure[ECDF of the booking duration when the booking does not produce a rental. Weekdays and weekends]
+%%	{\label{fig:pdf_norent}
+%%		\includegraphics[width=0.85\columnwidth]
+%%		{figures/no_rent.pdf}
+%%	}
+%%	\subfigure[ECDF of the rental duration. Weekdays and weekends]{\label{fig:cdf_duration}\includegraphics[width=0.85\columnwidth]{figures/duration.pdf}}
+%%	\subfigure[ECDF of the rental distance. Weekdays and weekends]{\label{fig:cdf_distance}\includegraphics[width=0.85\columnwidth]{figures/distance.pdf}}
+%%	\caption{Users' booking and rentals habits}
+%%	\vspace{-3pt}
+%%\end{figure}
+%%
+
+\subsection{Usage Habits}
+
+Next, we analyze how users tend to use these FFCS systems during weekdays and weekends. We study three different aspects of users behavior: 
+\MGM{(i) for how long users reserve the car before canceling a booking (Figure~\ref{fig:pdf_norent}),
+(ii) for how long users rent a car (Figure~\ref{fig:cdf_duration}), 
+(iii) how far users drive (Figure~\ref{fig:cdf_distance}).} 
+
+First,we check {if and} for how long users {reserve a car and then} they cancel a booking. Interestingly, only a small subset of Enjoy bookings are affected by cancellation with respect to car2go bookings. In particular, in our dataset we observed that 14.9\% of all car2go bookings and 2.9\% of all Enjoy bookings are cancelled. This again hints for people preferring to use the Fiat 500 offered by Enjoy, so that they hardly cancel a booking when they reserved an available vehicle. On the contrary car2go availability is higher and so it looks easier to find a closer car. People may thus cancel a previous booking when they find a closer vehicle. Another hypothesis is that car2go may be used as a ``backup'' until an Enjoy vehicle becomes free in the user's area. 
+Looking at when people cancel the reservation, Figure~\ref{fig:pdf_norent} shows the CDF of reservation time. We can see how car2go tend to have a smaller percentage of cancellation within 5 minutes, with a huge step at about 20 minutes. While the first ramp can be explained as a communication error or as some sudden cancellation, the latter can be explained by the \textit{maximum free-of-charge reservation time} of car2go. Indeed, users, may reserve a car up to 20 minutes without paying any fee. Interestingly, we do not see the same trend for Enjoy which offers a \textit{maximum free-of-charge reservation time} of 15 minutes. Instead, we see a peak at 2 minutes and then a decreasing trend after 15 minutes, when almost all the cancellation are already done.
+One last important aspect that this picture shows is how the Enjoy curves have some steps instead of being smooth as the car2go ones. 
+This hints to periodic updates on web system so that a time granularity emerges.
+To shed some lights on this phenomenon, we performed some active experiments with the Enjoy web portal. The experiment consists of making a new reservation and find when our crawler detects that the car actually disappears from the set of available cars. Then, as soon as we spot the car disappearing, we cancel the reservation to detect when the car reappears in the system. Surprisingly, we discover that when we make the reservation, the car immediately disappears from the system, instead, when we cancel the reservation, the system takes between 1 and 4 minutes to actually show the car again. The presence of such an offset causes the steps in the Enjoy curves which are affected by an artificial delay. To take into account this offset all Enjoy duration have been decreased of 2.5 minutes, i.e., the average delay the Enjoy system adds. 
+
+We next move to characterize the rental duration. We consider only bookings that include an actual rental. Figure~\ref{fig:cdf_duration} depicts the Empirical Cumulative Distribution Function (ECDF) of the booking duration for Enjoy and car2go during the weekdays and the weekends. We can see how the trend tends to be equal during the weekdays and the weekends. 
+%The same behavior is  also present in the Enjoy curves. 
+This demonstrates that despite the different pattern of utilization shown before,
+%i.e., more during business hour during weekdays and more during evening and night in the weekends
+the booking duration time is similar. 
+Secondly, we can observe how the ECDF of car2go and Enjoy are almost overlapped, highlighting how these two services tend to be used in a similar way. 
+%Moreover, despite both car2go and Enjoy offer dandily planes 
+{Most of the rentals last less than 1 hour, with 80\% of them lasting less then 30 minutes.}
+It is important to remark that this times include also the reservation time, i.e., the time the user can reserve a car for free before driving it, and the time to find a parking place. 
+Therefore the actual driving time may be significantly smaller.
+%, hence the income of the FFCS company.
 
 
-\subsection{User behavior characteristics}
-\label{sec:user-behavior}
+%After this analysis we moved to characterize how users drive in terms of distance by studying in Figure~\ref{fig:cdf_distance} the ECDF of the driving distance. 
+{We repeat the same analysis considering the driving distance as reported in Figure~\ref{fig:cdf_distance}.}
+To determine the driving distance of each trip we exploit the Google Direction APIs to get the shortest path from the origin to the destination. Similarly 
+%at what we have seen 
+for the driving duration, car2go and Enjoy show a comparable behavior, and marginal changes during weekdays and weekends. Interestingly, we see that 90\% of the trips last less then 5~km demonstrating that most of the rentals are used for short trips both in term of time, and in term of distance. Lastly, we observe how the car2go curves saturate many km later than the Enjoy ones as highlighted by the circles. This is due to the possibility to reach the airport of Turin with the car2go cars, which is about 20 km far. 
 
 
-Vehicles busy and idle periods direct impacts service revenue. Indeed, the longer the busy period is and the lower the idle period of a vehicle is, the more profitable the car will be. Therefore, we characterize the busy and idle periods of vehicles for all three services. In our analysis, we have considered all vehicles and we filtered out travels longer than 90 hours, which corresponds to less than 0.5\% records. 
-For each service, we identified the statistical distribution that best fits the actual data (busy and idle period). For this purpose, we tested more than 40 well-known statistical distributions. More in-depth, for each component of the model, the parameters of the distribution that most closely approximate the data are determined using the Maximum Likelihood Estimation (MLE) method. After defining the parameters of each component of the model, the ten distributions with shorter Kolmogorov-Smirnov distance (continuous distributions) or lower least square error (discrete distributions) concerning the data are chosen. Finally, we chose the top three common distributions to each car-sharing service. These choices are also validated with a visual assessment of the curve fitting.
 
-Figure~\ref{fig:busy_all_eCDF} shows the Cumulative Distribution Function of vehicle busy time.  Modo, Evo and Car2Go  busy time and their best statistical distribution fitting are shown in blue, red and yellow, respectively. For all three services, the Inverse~Gamma\footnote{Cumulative distribution function (CDF) of the Inverse~Gamma distribution: $F(x, a, \beta, \delta) = \frac{1}{\Gamma(a)}\int_{1/\left((x-\beta)/\delta\right)}^{\infty}t^{a-1}e^{-t}dt$}, 
-the Burr\footnote{Cumulative distribution function (CDF) of the Burr distribution: $F(x,c,d,\beta,\delta)=\left(1 + \left((x-\beta)/\delta\right)^{-c}\right)^{-d}$}, 
-and Mielke's Beta-Kappa\footnote{Cumulative distribution function (CDF) of the Mielke's Beta-Kappa distribution: $F(x,k,s,\beta,\delta) = \frac{\left((x-\beta)/\delta\right)^{k}}{(1+\left((x-\beta)/\delta\right)^{s})^{(k*\frac{1}{s})}}$} 
-distributions present a  good fitting to the empirical data, with similar MLEs.  
-Table~\ref{table:fit_busy} summarizes the parameters of the distributions of the busy time for each statistical distribution.
-Despite all three services present the same statistical distribution fitting, 
-the two-way service (i.e., Modo), presents a clear shift to right on its curve when compared to the other two services, as shown in Figure~\ref{fig:busy_all_eCDF}. As we previously discussed, the median busy time on Modo is more than one hour longer than the median busy time for the other services. 
-Users in Modo must return cars to the same station they originated travels. As a consequence, they tend to perform longer tasks. On the other hand, with the other two services users tend to do a longer number of shorter travels.
-
-Finally, Figure~\ref{fig:idle_all_eCDF}, presents vehicle idle periods distribution.  Power~log~normal\footnote{Cumulative distribution function (CDF) of the Power~log~normal distribution: $F(x,c,s,\beta,\delta)=1-\left(\frac{1}{\sqrt{2\pi}}\int_{-\infty}^{-log((x-\beta)/\delta)/s}e^{-t^{2}/2}dt\right)^{c}$}, Burr and Mielke's~Beta$-$Kappa distributions best fit the idle data, for all three datasets. Table~\ref{table:fit_idle} presents the distribution parameters. 
-Again, Modo presents a distinct behavior from the other two services. The longer idle period for Modo vehicles corroborates to our previous observations. Indeed, the demand for car-sharing varies over the city during a day. While users in Evo and Car2Go can park anywhere, they contribute to spreading cars over the city. For example, at least 75\% of cars in Modo remains idle for periods longer than 2 hours. For the other two services, no more than 20\% of vehicles remains idle for the same period.
-
-In sum, our analysis shows that the free-floating and one-way car-sharing systems have similar characteristics. They are mostly used for short/medium period travels, while the two-way system is mostly used for medium to long travels. 
-Moreover, Evo and Car2Go dynamically spread car over the city, turning the car's idle periods shorter. The longer number of shorter travels, associated with the shorter idle periods, may indicate a more profitable service.
-
-\begin{figure}[tbh]
-   \centering
-   \includegraphics[width=9cm]{images_test/CDF_Fit_final.pdf}
-   \caption{Cumulative distribution function of vehicle busy time.}
-   \label{fig:busy_all_eCDF}
+\begin{figure}[t!]
+\centering
+\vspace{-10pt}
+ \includegraphics[width=0.72\columnwidth]{figures/clorophlet_o_minus_o1.pdf}
+ \vspace{-10pt}
+ \caption{Heatmap of arrival - departure per area from 7~am to 12~am vs from 5~pm to 9~pm \label{fig:heatmap_arr_dep}}
 \end{figure}
 
 
-\begin{table}
-\centering
-\scriptsize
-\begin{tabular}{lll}
-\hline
-\multirow{3}{*}{Modo}   & Inv.Gamma       & a = 1.7032,  $\beta$ = -38.5120,  $\delta$ = 278.8487                        \\
-                        & Burr                & c = 1.5651, d = 1.0327,  $\beta$ = -1.8893, $\delta$ = 163.0525 \\
-                        & Mielke & k = 1.59745, s = 1.5687,  $\beta$ = -1.6713, $\delta$ = 164.9877 \\ \hline
-\multirow{3}{*}{Evo}    & Inv.Gamma       & a = 2.0674, $\beta$ = -4.7928, $\delta$ = 63.4382                          \\
-                        & Burr                & c = 1.8332, d = 1.5078, $\beta$ = -0.1855, $\delta$ = 23.5794   \\
-                        & Mielke & k = 2.7305, s = 1.8336, $\beta$ = -0.1125, $\delta$ = 23.7291 \\ \hline
-\multirow{3}{*}{Car2Go} & Inv.Gamma       & a = 2.7688, $\beta$ = -4.9702, $\delta$ = 75.2494                           \\
-                        & Burr                & c = 2.3869, d = 64.2072, $\beta$ = -12.5240, $\delta$ = 5.7419   \\
-                        & Mielke & k = 37.8163, s = 2.3450, $\beta$ = -10.9187, $\delta$ = 9.6407   \\ \hline
-\end{tabular}
-\caption{Distributions parameters of the busy time fit curves. The $\beta$ and $\delta$ are key parameters to adjust the location and scale of the distributions.}
-\label{table:fit_busy}
-\end{table}
+\subsection{Spatial Analysis}  
 
-\begin{figure}
-   \centering
-   \includegraphics[width=9cm]{images_test/CDF_Fit_idle_final.pdf}
-   \caption{Cumulative distribution function of vehicle idle time}
-   \label{fig:idle_all_eCDF}
+
+The present work is designed to offer an easy interaction with geo-spatial tools, and to extract knowledge looking at geographical distribution of cars in the urban area. For this reason we used GeoPandas to consider generic shape zones and correlate them with the FFCS parking places. Figure~\ref{fig:heatmap_arr_dep} shows the result as the attractivness of the  zones in Turin by analyzing the departure and arrival zones. For each zone we compute the difference between bookings ended in the evening [5~pm - 9~pm] and bookings ended in the morning [7~am, 12~am]. Red {areas are those} more attractive during the evening, while blue areas are more attractive in the morning. It is clear that the city center is the most popular destination for car sharing during the office hours, while the trips are sparsely ending in the suburbs during the evening.
+
+
+
+
+\subsection{Users' Habits}
+
+We now characterize how users drive and what is the correlation between public transport usage and availability.
+
+To observe users' driving habits, we use the \textit{driving time} returned by the Google Directions APIs to {obtain} the estimated {driving} time from {rental initial position to the rental final position}. Intuitively, the {rental} time is longer than the driving time as it takes into account also the {reservation} time, and the time to find a final parking spot. Figure~\ref{fig:heatmap_driving} shows an heat map where the X axis represents the Google estimated driving time and the Y axis the actual booking time. Each cell counts the number of {observed} trips {for each (x,y) pairs}.
+For the ease of representation the values are rounded by minute. The diagonal line separates the area where the booking time is lower/greater than the driving time. As we expect, most of the trip falls in the area where the booking time is greater then the driving time. However, a non negligible number of trips (12.1\%) falls in the area where the booking time lasts less than the driving time. 
+%This may be due to Google overestimating the driving time or drivers who drive faster than typical urban driving style. 
+This may be due to several factors: Google Directions possibly overestimating the average trip duration, or users driving faster than expected.
+To better quantify how much faster users drive the car in those cases, we compute the difference between the driving time and the actual booking time. We show the Empirical Cumulative Distribution Function of such values in Figure~\ref{fig:cdf_faster_google}. As we can see most of these trips are only 5 minutes faster than the estimated driving time, with Enjoy users which seems to drive faster than car2go ones. We verified that in cases where the trip is more than 10 minutes faster, Google suggested a longer path to the destination, e.g., suggesting to take the highway which was much longer with respect to crossing part of the city.
+
+This analysis hints that the current pricing policy, which depends only by the booking time, may have some drawbacks as it may encourage users to drive fast. An hybrid pricing policy, which takes into account both the time and the distance, may be effective in solving this problem, e.g., by increasing the price in case of an user drive faster than expected, or by reducing the fee in case of traffic congestion.
+
+\begin{figure}[t!]
+\centering     %%% not \center
+\subfloat[][Heatmap of booking time vs estimated driving time by Google]{\label{fig:heatmap_driving}\includegraphics[width=0.5\columnwidth]{figures/car2go_faster_driving.pdf}}
+\subfloat[][CDF of the difference between the expected driving time and the actual driving time]{\label{fig:cdf_faster_google}\includegraphics[width=0.5\columnwidth]{figures/faster_driving.pdf}}
+\caption{Users' driving habits}
 \end{figure}
 
-\begin{table}
+%\begin{figure}[t!]
+%	\centering     %%% not \center
+%	\subfigure[Heatmap of booking time vs estimated driving time by Google]{\label{fig:heatmap_driving}\includegraphics[width=0.8\columnwidth]{figures/car2go_faster_driving.pdf}}
+%	\subfigure[CDF of the difference between the expected driving time and the actual driving time]{\label{fig:cdf_faster_google}\includegraphics[width=0.8\columnwidth]{figures/faster_driving.pdf}}
+%	\caption{Users' driving habits}
+%\end{figure}
+
+
+At last, we leverage Google Directions APIs to extract public transport travel information for each vehicle's trip. 
+We want to analyze another way of mobility in the urban area, and compare car sharing usage with respect to public transport. Results are shown in Figure~\ref{fig:public_transport}.
+%The public transport duration includes both the time of travel and time of wait.
+As one could expect, the majority of trips last less than public transport. The higher density is for bookings that last between 10 and 20 minutes. For longer trips, the discrepancy in terms of duration is higher, probably due to the longer path and the higher number of stops of the public transport.
+Conversely, we can interpret the points where the booking time is greater than  the public transport duration as trips where the customers spent a lot of time in reaching the car or finding a parking spot for the drop-off.
+
+To help to visualize the juxtaposition of car sharing and public transport, we extract from the data the probability of booking a car, conditioned to the public transport travel time.
+Figure~\ref{fig:pdf_transport}, reports on the X axis the public transport duration (as predicted by Google) in intervals of 5 minutes, and on the Y axis the probability of booking a car for each interval.
+The distribution of probability is similar for both car2go and Enjoy. Higher values are reported for trips that can be covered by public transport between 15 and 35 minutes. Interestingly, car sharing mobility is not preferred for very short trips, while the distribution shows a significant tail for duration greater than 30 minutes. This behavior can be justified by the significant amount of time that can be saved with cars haring with respect to public transport.
+
+
+  
+  \begin{figure}[t!]
+  \centering     %%% not \center
+  \subfloat[][heatmap of the booking time  vs the estimated public tranport time by Google]{\label{fig:heatmap_transport}\includegraphics[width=0.5\columnwidth]{figures/car2go_faster_public.pdf}}
+  \subfloat[][Probability of using car sharing based on public transport time by Google]{\label{fig:pdf_transport}\includegraphics[width=0.5\columnwidth]{figures/public_tranport_probability.pdf}}
+  \caption{Public transportation vs car sharing \label{fig:public_transport}}
+  \end{figure}
+  
+  
+ 
+Finally, to globally understand how users tend to use the different services we report in Figure~\ref{fig:avg_comparison} the average time for: the Enjoy rentals (red curve), the car2go bookings (blue curve), the driving time (green curve), and public transport time (orange curve). To compute this value, for each hour we take all the rentals of interest, and then we compute the average value and report it. A first interesting aspect is that the average time of Enjoy is always greater then the car2go ones and for the pure driving time. Secondly, we can see that both show a similar trend with, a decreasing average duration during the night. As a consequence, we cannot ascribe this trend with traffic jam, instead, but more likely with an increase time in the reservation time and in the parking time. Finally, we can appreciate how during the night the public transport takes more than 1 hour for trips which last less then 20 minutes by car. Instead, we can see how during the daytime the average public transport time get close to the car sharing time. 
+%This demonstrates the goodness of the public transport system.
+
+
+
+\begin{figure}[h!]
 \centering
-\scriptsize
-\begin{tabular}{lll}
-\hline
-\multirow{3}{*}{Modo}   & PLogNorm       & c = 118.7142, s=3.6088,  $\beta$=0.7191,  $\delta$=3780209.5149                     \\
-                        & Burr                & c = 1.9865, d = 0.3860,  $\beta$ = -7.7229, $\delta$ = 1105.5853 \\
-                        & Mielke & k = 0.8898, s = 1.5390,  $\beta$ = -1.4862, $\delta$ = 860.6790 \\ \hline
-\multirow{3}{*}{Evo}    & PLogNorm       & c = 0.0723, s = 0.7003,  $\beta$ = -0.6723,  $\delta$ = 1.8246                          \\
-                        & Burr                & c = 0.6931, d = 3.7574, $\beta$ = -0.4881, $\delta$ = 2.3713   \\
-                        & Mielke & k = 2.7161, s = 0.5882, $\beta$ = -0.2800, $\delta$ = 0.9725 \\ \hline
-\multirow{3}{*}{Car2Go} & PLogNorm       & c = 4.8747, s = 3.3741,  $\beta$ = 0.7134,  $\delta$ = 1334.7243                           \\
-                        & Burr                & c = 0.7714, d = 0.7337, $\beta$ = 0.7166, $\delta$ = 53.9727   \\
-                        & Mielke & k = 0.5743, s = 0.8826, $\beta$ = 0.7166, $\delta$ = 68.1029   \\ \hline
-\end{tabular}
-\caption{Distributions parameters of the idle time fit curves. The $\beta$ and $\delta$ are keyword parameters to adjust the location and scale of the distributions.}
-\label{table:fit_idle}
-\end{table}
+ \includegraphics[width=0.85\columnwidth]{figures/average_duration.pdf}
+ \caption{Average Time per transport solution per hour \label{fig:avg_comparison}}
+\end{figure}
 

@@ -1,31 +1,40 @@
-\section{Related work}\label{sec:related}
+\section{Related work}
+\label{sec:related}
 
-
-The diffusion of the free floating approach to car sharing led to an increasing attention by many researchers, with many analyses of
+The diffusion of the free floating approach to car sharing leaded to an increasing attention by many researchers, with  analyses of
 these systems and their extension to electrical vehicles. 
-The studies performed in 2011 by Finkorn and M\"{u}ller~\cite{Firnkorn2011,FM12} are the first attempts to analyse benefits of FFCS for the population. Their results on customers' characterisation, like travelled distances and rental duration, are similar to ours.
-Later works~\cite{Car2GoGlobalAnalysis,Kortum2016,Schmoller2015} also collected data and analysed the mobility pattern of customers and differences among cities. While providing insights on usage patterns, these works do not discuss the implications on Electric Vehicles based FFCSs. We also introduced UMAP~\cite{UMAP} - a system to harvest data by crawling FFCS websites. Here we use traces collected with UMAP to drive our system design.
+The studies performed  in 2011 by Finkorn and M\"{u}ller \cite{Firnkorn2011,FM12} are the first attempts to analyze benefits of FFCS for the population. Their results on customers' behavior, like traveled distances, are similar to ours, and our first work~\cite{UMAP}.
+Later works \cite{Car2GoGlobalAnalysis,CSandSocial,Schmoller2015} also collected data and analyzed the mobility patterns of customers and differences among cities.
 
-The introduction of EVs for private and public transportation brought the problem of the design of the electric charging station infrastructure.
-After a survey among FFCS customers in Ulm (Germany), authors of~\cite{FM15}  investigated the positive influence and feasibility of an electric FFCS systems.
-Authors in~\cite{ChargingStationForVehicularNetworks} show the benefits of placing charging stations with different capacity according to the car parking duration. 
-Authors of~\cite{bi2017simulation} presents a simulation study similar to ours, but using random models to generate random trips rather than actual traces. Their algorithms tend to place charging stations along frequently used streets, so to let drivers top up the battery in 10 minutes.
+The introduction of electrical vehicles for private and public transportation, brought the problem of placing the electric charging stations. Authors in \cite{ChargingStationForVehicularNetworks} show the benefits of placing charging stations with different power according to the customer parking duration. 
+Few data driven studies address the charging station placement, either by respectively minimizing  cost of installation, power loss and maintenance  \cite{PlacementAndPowergrid,mipCSPpechino}, or by minimizing the customers' walked distances necessary to reach a charging pole\cite{placementAustin}. 
 
-Few data driven studies address the charging station placement,  by respectively minimising  cost of installation, power loss and maintenance~\cite{taormina,PlacementAndPowergrid,mipCSPpechino}, or by minimising the customers' walked distances necessary to reach a charging pole~\cite{placementAustin}.  
-In \cite{PlacementAndPowergrid}, authors study the impact on the power distribution grid, with limited focus on FFCS performance. Authors of~\cite{mipCSPpechino} instead focus on charging station design to minimise customers' anxiety. 
-In our previous work~\cite{taormina}, we presented a study of charging station placement based on actual data. Here we build upon this work, and present a more in depth study that includes global optimisation algorithms, never considered before.
+After a survey among FFCS customers in Ulm (Germany), authors of \cite{FM15}  investigate the positive influence and feasibility of an electric FFCS systems.
+Lastly, authors of \cite{WB15} study the relocation of electric cars in FFCS, since few charging stations may be blocked by completely charged vehicles. 
 
-\reviewed{Other works focus on station-based car sharing systems. Authors of~\cite{3_RickenbergGebhardtBreitner_2013} present algorithms to place the parking stations in a two-way scenario. They consider a combustion engine fleet, and solve the problem by considering real data from operative car sharing systems. The same authors propose a similar methodology considering a one-way scenario and electric vehicles~\cite{5_SonnebergKune_2015}. Here they use synthetic data and other socio-economic information to estimate the demand. Both works are similar to our in spirit, but are limited to station-based car sharing.}
+Previously, in~\cite{taormina}, we performed several analysis about how to design an electrical FFCS in the city of Turin. In~\cite{maui} we introduced a first optimization of electric charging stations placement. In this work, we extend both works, by considering 4 cities as case study, and studying a new set of return policies to observe the impact of the willingness of customers to contribute to the system sustainability. We further extend our work by discussing the benefits of using charging hubs.
 
-\reviewed{Considering return policies, an interesting data driven research is presented in~\cite{2_FlathIlgWeinhardt_2012}. The authors focus on station-based car sharing system with electric vehicles, finding that the best policy is to charge a car only when its state of charge goes below to a minimum threshold. This is similar to the return policies we consider in this paper.}
+For our knowledge, in this work we are the first to validate a data driven approach for dimensioning an electric FFCS system, by analyzing and optimizing different metrics impacting customer experience in different cities word wide located.
 
-
-\reviewed{Other works focus on FFCS with EVs to study the revenue considering a demand-supply scenario for energy~\cite{4_Eisel_2015},  introducing policies to free charging stations when occupied by fully charged cars~\cite{WB15}, maximising revenue by moving cars in areas of high-demand~\cite{8_Wagner2015DataAF}, or providing incentives to customers to balance fleet~\cite{1_BrendelBrennecke_2015,6_BrendelLichtenberg_2017,7_BrendelRockenkamm_2015}.
-This works are orthogonal to our.}
-
-%\dg{Authors in~\cite{flath2012decision} focused the charging station strategies by evaluating the range anxiety and the electricity cost}.  
-
-%Lastly, authors of studied the relocation of electric cars in FFCS, since few charging stations may be blocked by fully charged vehicles. \reviewed{Here, we do not consider relocation for benefiting system efficiency, but rather to minimise charging network costs. Instead, authors of  developed an algorithm which performs relocation to increase system revenues, thus encouraging drivers to park in areas in which the demand is higher.  Similar works like  treat the topic under different aspects considering different incentive strategies relying on both real and synthetic data-sets. These are orthogonal to our work and could still be applied also with EVs based FFCS systems.}
+%try to merge all the approaches coming from the previous works in order to design an electric free floating car sharing system. We will demonstrate that, using Turin as case of study, it is possible to obtain a charging station placement able to guarantee an car sharing services based on electric vehicles.
 
 
-To the best of our knowledge, we are the first to take a completely data driven approach for designing an electric FFCS system by optimising different metrics impacting customer experience. 
+%, focus on the Then the authors of  started delving into study, enriching the analysis with a users' trip dataset. They characterized Car2go service, pointing out how the customers' habits are different among cities. 
+
+%Instead, Kortum et al. \cite{CSandSocial} used as dataset the trip recorded from all the providers that they was able to collect. They provided a system trend description for different cities and they tried to infer on some deduction using data like population density, land use or median income in that cities.  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,54 +1,24 @@
 \section{Introduction}
 \label{sec:intro}
 
-%1) IMPORTANZA DI PASSARE A MOBILITA CONDIVISA E A VEICOLI ELETTRICI
-%\lv{1) IMPORTANZA DI PASSARE A MOBILITA CONDIVISA E A VEICOLI ELETTRICI}
+Nowadays mobility is a very important challenge for our society, with strong implications on pollution in large cities where more eco-sustainable solutions are positively seen as a mean to improve the current situation.
+Along with the usage of public transport, the sharing mobility such as bike sharing, car pooling and car sharing, can help to address this problem. In this work,  we focus on the design of an electric car sharing system, where customers rent a car for moving within the city limits for short periods of time. We focus on the so called Free Floating Car Sharing (FFCS) system where customers are free to pick and return the car wherever they like, inside a geo-fenced area.
+Electric car sharing systems need an infrastructure of recharging stations, whose design requires ingenuity~\cite{PlacementAndPowergrid,placementAustin,mipCSPpechino}. 
+Two are the main problems that need to be faced: i) the charging station placement problem, i.e., how many and where to install charging stations; and ii) the return policy customers have to follow at the end of the rental, i.e., in which cases asking the customer to return the car to a charging station.
 
-Mobility and pollution are challenging problems in our cities. Private vehicles, still  important urban transportation means, are among the major contributors to both congestion and air pollution. Because of this, smart and shared mobility are seen as a key component to reduce emissions and traffic~\cite{Firnkorn2011}.
-Given a fleet of cars, Free Floating Car Sharing (FFCS) systems allow customers to pick and drop a shared car everywhere inside an operative area, thus reducing the number of private cars and increasing the number of available parking spots.
-The conversion from internal combustion cars into Electric Vehicles (EVs) is seen as the next big opportunity to drastically reduce pollution inside urban areas~\cite{FM15}. However, the design of a system based on electric cars entails the deployment of a charging station network~\cite{plugPowers}.
+Data is fundamental to answer these design questions. In this work, we base our study on the availability of millions of actual rentals we collected from currently in use FFCS systems. In the past we focused on the study of the city of Turin (Italy)~\cite{taormina}. Here, we generalize our approach to other cities in different countries, while extending and deepening our findings. In this paper, we leverage real FFCS data related to the city of Vancouver (Canada), Berlin (Germany), Milan, and Turin (Italy).
+Our data naturally factors the non-stationarity of FFCS systems including millions of actual rentals. Armed with this, we study and compare the performance of a hypothetical equivalent car sharing system based on electric vehicles.  While in the past some works have proposed solutions for the design of electric FFCS~\cite{FM15,WB15} and for a smart placement of charging stations, we are among the first to take a data driven approach for the design of electric car FFCS systems~\cite{ChargingStationForVehicularNetworks,mipCSPpechino,PlacementAndPowergrid,placementAustin}.
 
-%%%%2) PROBLEMI DI FFCS E OBIETTIVI GENERALI
-%\lv{2) PROBLEMI DI FFCS E OBIETTIVI GENERALI}
+First, we characterize how customers actually use FFCS transport means in different cities and countries. Results show a similar usage with an high utilization during commuting time and very different spatial distributions. Rental duration and driving distance are quite short (less than 20-30 minutes, for less than 5\,km in median). More interestingly, we observe peripheral zones where cars are left parked for long time, and busy areas where instead the parking duration is much short and dynamic.
 
-In this work, we tackle the design of an electric FFCS system.
-This is a challenging problem, given charging constraints which impact car availability, and the cost of the infrastructure setup and maintenance.
-The design of the charging station infrastructure requires thus ingenuity to maximise customers' comfort, and minimise cost for the operator~\cite{PlacementAndPowergrid,placementAustin,mipCSPpechino}. 
+Armed with these facts, we compare charging station placement policies that exploit the knowledge of typical parking zones and duration. We first assume a pure Free Floating system, where customers return the car in a charging station only if present at their actual destination.
+Results show that placing the charging stations in those areas where cars stay parked for long time performs badly. Instead, placing charging station in those areas where cars are frequently parked and rented, e.g., near train stations and working areas, guarantees much better performance. This is consistent in all cities.
 
-Two are the main problems that need to be faced: i) the charging station placement problem, i.e., how many and where to install charging stations; and ii) the return policy customers have to follow at the end of the rental, i.e., in which cases to ask the customer to return the car to a charging station.
-In this paper we face both the above problems. Notice that the number of charging stations is directly related to system installation costs.
+Next, we study different return policies, where customers are asked to return the car to a charging station in case the battery level decreases below a minimum threshold. This collaborative policy reduces the cost of the charging infrastructure by a factor of 2 or more with respect to a pure opportunistic free floating solutions. Equipping just 8\% of charging zones with 4 poles of 2\,kW would guarantee a electric car FFCS equivalent to the one currently in use.
+This with minimal impact on the customer satisfaction, measured by the number of times customers are forced to drive to a charging station and the distance they have to walk back to the desired destination.
 
-We strongly believe actual usage data is fundamental to answer these questions. While in the past some works have proposed solutions for the design of electric FFCS~\cite{FM15,WB15}, we are among the first to take a complete data-driven approach~\cite{PlacementAndPowergrid,placementAustin,mipCSPpechino,ChargingStationForVehicularNetworks,3_RickenbergGebhardtBreitner_2013,5_SonnebergKune_2015} in an electric FFCS. Here, we extend our preliminary works~\cite{taormina, maui} by presenting a more extensive evaluation, and introducing two search algorithms.
+At last, we compare system design alternatives to check whether is better to place a lot of charging poles in very few areas, or rather to spread a lot charging stations with few poles in many areas. Results demonstrate that both extreme solutions perform badly, with best performance when installing charging stations with  5 to 20 poles in popular areas. This has benefits also on the power grid used to supply power to the recharging areas.
 
-We start by describing the system we implemented to collect real data from the FFCS systems currently in use in the city of Turin  (Italy), which we consider as a test case. Despite being based on internal combustion engine cars, this data perfectly captures the actual usage patterns of regular customers~\cite{UMAP}. This naturally factors the desired origin and destination of trips and the time varying demand, including special events such as sport matches or strikes.
+We believe results presented in this paper, guided by actual usage pattern for FFCS customers, are very important for regulators and policy makers, as well as for researchers working in this area. In an effort to allow reproducibility and extend our results, we make both dataset and simulator publicly available.\footnote{\url{https://github.com/michelelt/sim3.0}}
 
-We next leverage the data collected from more than 2 months of rentals in 2017. First, we characterise how customers actually use the FFCS, in terms of rental/parking event duration, and of the origin/destination of hundred of thousand trips.
-%3B SIMULATORE 
-Then, we develop a flexible event driven simulator that replays the exact same events recorded in the traces to accurately mimic actual customers' habits. It simulates the usage of each EV, its battery consumption and charging, while considering different design parameters. With this, we run thorough simulations to understand the implication of the design choices, such as charging station placement algorithms, and car return policies.
-
-Results show that placing the charging stations in those areas where cars stay parked for long periods performs worse than a totally agnostic random placement. Instead, placing charging station in those areas where cars are frequently parked even for short periods guarantees  better performance.
-
-Next we gauge the benefits of considering collaborative car return policies, where customers voluntarily or forcibly return the car to a charging station in case the battery level decreases below a  threshold like the authors of \cite{2_FlathIlgWeinhardt_2012} proposed. This kind of return policies are inspired by the user-relocation model presented in \cite{1_BrendelBrennecke_2015, 6_BrendelLichtenberg_2017,7_BrendelRockenkamm_2015,8_Wagner2015DataAF}, where the relocation is driven by the presence of parking and charging stations and not by the demand areas.
-% can be seen as a forced user-relocation: the provider maintains the fleet balanced by imposing to the users to park in the charge point. 
-We observe that this halves the number of charging stations required to sustain the system. However, this increases customer's discomfort, in terms of number of times customers have to return the car to a charging station, at the cost of additional distance from their desired final destination. 
-%Opportunistic free floating solutions, i.e., charge only when there is an available nearby charging pole, requires more than twice as much charging stations compared to policies that force to charge when the battery level gets below a threshold.
-
-To solve this tension, we further optimise the placement of the charging station by means of global optimisation algorithms. We  %design, 
-implement and validate two algorithms: a hill-climb local search and a genetic algorithm, both tuned to minimise system cost and customer's discomfort. 
-%%%%4) general results
-%\lv{4) general results} 
-Results are surprising: just equipping 5\% of the city area with charging stations guarantees the system to self sustain, with no cars ever running out of battery in two months of trips.
-This corresponds to install only 13 charging stations in the whole city of Turin, which has 1 million inhabitants. %and a 300 vehicle fleet.
-Furthermore, the placement found by the genetic algorithm guarantees only 4\% of re-routing events, with the customers parking the car, on average, within 90\,m from their desired final destination.
-
-We believe results presented in this paper, guided by actual usage pattern for FFCS customers, are very important for regulators, policy makers, car sharing providers, as well as for researchers working in this area. Our data driven approach provides novel opportunities to guide the design of electric car sharing system, where the realistic figures provided by data allow investigating solutions that  meet both customer requirements and limit system costs. 
-%%%%5) availability of data
-%\lv{5) availability of data} 
-In an effort to allow reproducibility and extend our results, we make both the data set and the simulator publicly available as open source~
-\cite{MicheleGithub}.%\footnote{\github}
-
-
-%%%%6) organization of the paper
-%\lv{6) organization of the paper} 
-
-After discussing related work in Section~\ref{sec:related}, we present our methodology to collect data and characterise our data-set in Section~\ref{sec:data}. In  Section~\ref{sec:Modelling} we describe the simulation model, its parameters and metrics of interest. Section~\ref{sec:placement} presents the different placement heuristics and the algorithms we design to optimise the placement.  Section~\ref{sec:freefloating} discusses the impact of simple charging stations placement policies and return policies, while Section~\ref{sec:opt} reports the results ofthe optimisation and their validation. Section~\ref{sec:discussion} discusses limitations and future work, before drawing conclusions in Section~\ref{sec:conclusion}.
+After quickly discussing related work in Section~\ref{sec:related}, we present and characterize data in Section~\ref{sec:data}, and the simulation model and tool in Section~\ref{sec:Modelling}. Section~\ref{sec:freefloating} discusses the impact of charging stations placement policies, while Section~\ref{sec:results} compares return policies. Section~\ref{sec:resPoles} presents the impact of concentrating or spreading charging stations in the city. Finally Section~\ref{sec:conclusion} concludes the paper.

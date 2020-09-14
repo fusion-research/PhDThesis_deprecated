@@ -4,103 +4,100 @@
 \selectlanguage *{italian}
 \selectlanguage *{english}
 \contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}%
-\contentsline {chapter}{\numberline {2}Dataset}{2}{chapter.2}%
+\contentsline {chapter}{\numberline {2}Data acquisition}{2}{chapter.2}%
 \contentsline {section}{\numberline {2.1}Abstract}{2}{section.2.1}%
 \contentsline {section}{\numberline {2.2}Introduction}{2}{section.2.2}%
-\contentsline {section}{\numberline {2.3}Related Work}{4}{section.2.3}%
-\contentsline {section}{\numberline {2.4}Methodology}{6}{section.2.4}%
-\contentsline {subsection}{\numberline {2.4.1}Data Acquisition}{6}{subsection.2.4.1}%
-\contentsline {subsection}{\numberline {2.4.2}Data Normalization and Integration}{8}{subsection.2.4.2}%
-\contentsline {subsection}{\numberline {2.4.3}Data Analysis}{11}{subsection.2.4.3}%
-\contentsline {section}{\numberline {2.5}Data Analysis}{11}{section.2.5}%
-\contentsline {subsection}{\numberline {2.5.1}System Utilization}{11}{subsection.2.5.1}%
-\contentsline {subsection}{\numberline {2.5.2}Usage Habits}{13}{subsection.2.5.2}%
-\contentsline {subsection}{\numberline {2.5.3}Spatial Analysis}{15}{subsection.2.5.3}%
-\contentsline {subsection}{\numberline {2.5.4}Users' Habits}{16}{subsection.2.5.4}%
-\contentsline {section}{\numberline {2.6}Conclusions}{18}{section.2.6}%
-\contentsline {chapter}{\numberline {3}CS comparison}{20}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Abstract}{20}{section.3.1}%
-\contentsline {section}{\numberline {3.2}Introduction}{20}{section.3.2}%
-\contentsline {section}{\numberline {3.3}Related Work}{21}{section.3.3}%
-\contentsline {section}{\numberline {3.4}Car-sharing systems}{23}{section.3.4}%
-\contentsline {section}{\numberline {3.5}Datasets and crawling methodology}{24}{section.3.5}%
-\contentsline {subsection}{\numberline {3.5.1}Modo crawling methodology and data summary}{25}{subsection.3.5.1}%
-\contentsline {subsection}{\numberline {3.5.2}Evo crawling methodology and data summary}{26}{subsection.3.5.2}%
-\contentsline {subsection}{\numberline {3.5.3}Car2Go crawling methodology and data summary}{27}{subsection.3.5.3}%
-\contentsline {section}{\numberline {3.6}Car-sharing services characterization}{28}{section.3.6}%
-\contentsline {subsection}{\numberline {3.6.1}Temporal characteristics}{28}{subsection.3.6.1}%
-\contentsline {subsection}{\numberline {3.6.2}Spatial-temporal characteristics}{30}{subsection.3.6.2}%
-\contentsline {subsection}{\numberline {3.6.3}User behavior characteristics}{33}{subsection.3.6.3}%
-\contentsline {section}{\numberline {3.7}Conclusions}{35}{section.3.7}%
-\contentsline {chapter}{\numberline {4}Simulator}{37}{chapter.4}%
-\contentsline {chapter}{\numberline {5}Metaherustic charging station placement in 4 cities}{38}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Abstract}{38}{section.5.1}%
-\contentsline {section}{\numberline {5.2}Introduction}{39}{section.5.2}%
-\contentsline {section}{\numberline {5.3}Related work}{40}{section.5.3}%
-\contentsline {section}{\numberline {5.4}Data collection and characterization}{41}{section.5.4}%
-\contentsline {subsection}{\numberline {5.4.1}Data collection and filtering}{41}{subsection.5.4.1}%
-\contentsline {subsection}{\numberline {5.4.2}Temporal characterization}{42}{subsection.5.4.2}%
-\contentsline {subsection}{\numberline {5.4.3}Spatial characterization}{45}{subsection.5.4.3}%
-\contentsline {section}{\numberline {5.5}Electric car sharing simulator}{46}{section.5.5}%
-\contentsline {subsection}{\numberline {5.5.1}Simulation model}{46}{subsection.5.5.1}%
-\contentsline {subsection}{\numberline {5.5.2}Car charging policies}{47}{subsection.5.5.2}%
-\contentsline {subsection}{\numberline {5.5.3}Charging stations placement}{48}{subsection.5.5.3}%
-\contentsline {subsection}{\numberline {5.5.4}Performance metrics and parameters}{49}{subsection.5.5.4}%
-\contentsline {subsection}{\numberline {5.5.5}Simulation scenario}{50}{subsection.5.5.5}%
-\contentsline {section}{\numberline {5.6}Impact of charging station placement}{50}{section.5.6}%
-\contentsline {section}{\numberline {5.7}Impact of return policy}{51}{section.5.7}%
-\contentsline {subsection}{\numberline {5.7.1}Impact on infeasible trips}{52}{subsection.5.7.1}%
-\contentsline {subsection}{\numberline {5.7.2}Impact on customer experience}{54}{subsection.5.7.2}%
-\contentsline {section}{\numberline {5.8}How to distribute poles in stations}{56}{section.5.8}%
-\contentsline {section}{\numberline {5.9}Conclusion}{58}{section.5.9}%
-\contentsline {chapter}{\numberline {6}Charging station placement optmization}{59}{chapter.6}%
-\contentsline {section}{\numberline {6.1}Abstract}{59}{section.6.1}%
-\contentsline {section}{\numberline {6.2}Introduction}{59}{section.6.2}%
-\contentsline {section}{\numberline {6.3}Related work}{61}{section.6.3}%
-\contentsline {section}{\numberline {6.4}Data collection and characterisation}{63}{section.6.4}%
-\contentsline {subsection}{\numberline {6.4.1}Data Acquisition}{63}{subsection.6.4.1}%
-\contentsline {subsection}{\numberline {6.4.2}Data Normalisation and Integration}{64}{subsection.6.4.2}%
-\contentsline {subsection}{\numberline {6.4.3}Data characterisation}{65}{subsection.6.4.3}%
-\contentsline {section}{\numberline {6.5}Electric car sharing simulator}{66}{section.6.5}%
-\contentsline {subsection}{\numberline {6.5.1}Trace event processing}{67}{subsection.6.5.1}%
-\contentsline {subsection}{\numberline {6.5.2}Performance metrics and parameters}{69}{subsection.6.5.2}%
-\contentsline {section}{\numberline {6.6}Strategies for charging station placement}{70}{section.6.6}%
-\contentsline {subsection}{\numberline {6.6.1}Heuristic placements}{70}{subsection.6.6.1}%
-\contentsline {subsection}{\numberline {6.6.2}Simulation based advanced optimisation strategies}{70}{subsection.6.6.2}%
-\contentsline {subsubsection}{Hill-climbing local search}{71}{section*.39}%
-\contentsline {subsubsection}{Genetic optimiser}{72}{section*.40}%
-\contentsline {section}{\numberline {6.7}Impact of heuristic placements and return policies}{73}{section.6.7}%
-\contentsline {subsection}{\numberline {6.7.1}Impact of heuristic charging station placements}{73}{subsection.6.7.1}%
-\contentsline {subsection}{\numberline {6.7.2}Impact of return policy}{74}{subsection.6.7.2}%
-\contentsline {subsubsection}{Customers' discomfort}{75}{section*.45}%
-\contentsline {section}{\numberline {6.8}Meta-heuristic optimisation of the charging station placement}{77}{section.6.8}%
-\contentsline {subsection}{\numberline {6.8.1}Charging station placement visualisation}{79}{subsection.6.8.1}%
-\contentsline {subsection}{\numberline {6.8.2}Validation of optimised configurations}{80}{subsection.6.8.2}%
-\contentsline {section}{\numberline {6.9}Placement optimisation for \textit {Needed} return policy}{81}{section.6.9}%
-\contentsline {section}{\numberline {6.10}Discussion and Implication}{82}{section.6.10}%
-\contentsline {subsection}{\numberline {6.10.1}\textbf {Scalability}}{82}{subsection.6.10.1}%
-\contentsline {subsection}{\numberline {6.10.2}\textbf {Economical Aspects}}{83}{subsection.6.10.2}%
-\contentsline {section}{\numberline {6.11}Conclusions}{83}{section.6.11}%
-\contentsline {chapter}{\numberline {7}Geo spatial prediction}{85}{chapter.7}%
-\contentsline {section}{\numberline {7.1}Abstract}{85}{section.7.1}%
-\contentsline {section}{\numberline {7.2}Introduction}{85}{section.7.2}%
-\contentsline {section}{\numberline {7.3}Related work}{88}{section.7.3}%
-\contentsline {section}{\numberline {7.4}Data gathering methodology}{89}{section.7.4}%
-\contentsline {subsection}{\numberline {7.4.1}FFCS data collection}{89}{subsection.7.4.1}%
-\contentsline {subsection}{\numberline {7.4.2}Socio-demographic, weather and other open data}{90}{subsection.7.4.2}%
-\contentsline {section}{\numberline {7.5}Dataset overview}{91}{section.7.5}%
-\contentsline {subsection}{\numberline {7.5.1}FFCS temporal characterization}{91}{subsection.7.5.1}%
-\contentsline {subsection}{\numberline {7.5.2}FFCS spatial characterization}{93}{subsection.7.5.2}%
-\contentsline {subsection}{\numberline {7.5.3}Socio-demographic and weather data characterisation}{93}{subsection.7.5.3}%
-\contentsline {section}{\numberline {7.6}Temporal predictions of rentals}{95}{section.7.6}%
-\contentsline {subsection}{\numberline {7.6.1}Prediction models}{97}{subsection.7.6.1}%
-\contentsline {subsection}{\numberline {7.6.2}Long-term predictions - Results}{99}{subsection.7.6.2}%
-\contentsline {subsection}{\numberline {7.6.3}Short-term predictions - Results}{100}{subsection.7.6.3}%
-\contentsline {subsection}{\numberline {7.6.4}The effect of weather information}{103}{subsection.7.6.4}%
-\contentsline {section}{\numberline {7.7}Spatial prediction of rentals with socio-demographic data}{103}{section.7.7}%
-\contentsline {subsection}{\numberline {7.7.1}Feature ranking and selection}{106}{subsection.7.7.1}%
-\contentsline {section}{\numberline {7.8}Conclusions}{108}{section.7.8}%
-\contentsline {chapter}{\numberline {8}Relocation}{110}{chapter.8}%
-\contentsline {chapter}{\numberline {9}Scalability}{111}{chapter.9}%
-\contentsline {chapter}{\numberline {10}Conclusioni}{112}{chapter.10}%
-\contentsline {chapter}{Bibliography}{113}{chapter.10}%
+\contentsline {section}{\numberline {2.3}Data Acquisition}{3}{section.2.3}%
+\contentsline {section}{\numberline {2.4}Data Normalization and Integration}{5}{section.2.4}%
+\contentsline {section}{\numberline {2.5}Data Analysis}{8}{section.2.5}%
+\contentsline {section}{\numberline {2.6}Conclusion}{8}{section.2.6}%
+\contentsline {chapter}{\numberline {3}Dataset Characterization}{10}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Abstract}{10}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Introduction}{10}{section.3.2}%
+\contentsline {section}{\numberline {3.3}Related Work}{12}{section.3.3}%
+\contentsline {chapter}{\numberline {4}CS comparison}{15}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Abstract}{15}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Introduction}{15}{section.4.2}%
+\contentsline {section}{\numberline {4.3}Related Work}{16}{section.4.3}%
+\contentsline {section}{\numberline {4.4}Car-sharing systems}{18}{section.4.4}%
+\contentsline {section}{\numberline {4.5}Datasets and crawling methodology}{19}{section.4.5}%
+\contentsline {subsection}{\numberline {4.5.1}Modo crawling methodology and data summary}{20}{subsection.4.5.1}%
+\contentsline {subsection}{\numberline {4.5.2}Evo crawling methodology and data summary}{22}{subsection.4.5.2}%
+\contentsline {subsection}{\numberline {4.5.3}Car2Go crawling methodology and data summary}{22}{subsection.4.5.3}%
+\contentsline {section}{\numberline {4.6}Car-sharing services characterization}{23}{section.4.6}%
+\contentsline {subsection}{\numberline {4.6.1}Temporal characteristics}{23}{subsection.4.6.1}%
+\contentsline {subsection}{\numberline {4.6.2}Spatial-temporal characteristics}{25}{subsection.4.6.2}%
+\contentsline {subsection}{\numberline {4.6.3}User behavior characteristics}{28}{subsection.4.6.3}%
+\contentsline {section}{\numberline {4.7}Conclusions}{30}{section.4.7}%
+\contentsline {chapter}{\numberline {5}Simulator}{32}{chapter.5}%
+\contentsline {chapter}{\numberline {6}Metaherustic charging station placement in 4 cities}{33}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Abstract}{33}{section.6.1}%
+\contentsline {section}{\numberline {6.2}Introduction}{34}{section.6.2}%
+\contentsline {section}{\numberline {6.3}Related work}{35}{section.6.3}%
+\contentsline {section}{\numberline {6.4}Data collection and characterization}{36}{section.6.4}%
+\contentsline {subsection}{\numberline {6.4.1}Data collection and filtering}{36}{subsection.6.4.1}%
+\contentsline {subsection}{\numberline {6.4.2}Temporal characterization}{37}{subsection.6.4.2}%
+\contentsline {subsection}{\numberline {6.4.3}Spatial characterization}{40}{subsection.6.4.3}%
+\contentsline {section}{\numberline {6.5}Electric car sharing simulator}{41}{section.6.5}%
+\contentsline {subsection}{\numberline {6.5.1}Simulation model}{41}{subsection.6.5.1}%
+\contentsline {subsection}{\numberline {6.5.2}Car charging policies}{42}{subsection.6.5.2}%
+\contentsline {subsection}{\numberline {6.5.3}Charging stations placement}{43}{subsection.6.5.3}%
+\contentsline {subsection}{\numberline {6.5.4}Performance metrics and parameters}{44}{subsection.6.5.4}%
+\contentsline {subsection}{\numberline {6.5.5}Simulation scenario}{45}{subsection.6.5.5}%
+\contentsline {section}{\numberline {6.6}Impact of charging station placement}{45}{section.6.6}%
+\contentsline {section}{\numberline {6.7}Impact of return policy}{46}{section.6.7}%
+\contentsline {subsection}{\numberline {6.7.1}Impact on infeasible trips}{47}{subsection.6.7.1}%
+\contentsline {subsection}{\numberline {6.7.2}Impact on customer experience}{49}{subsection.6.7.2}%
+\contentsline {section}{\numberline {6.8}How to distribute poles in stations}{51}{section.6.8}%
+\contentsline {section}{\numberline {6.9}Conclusion}{53}{section.6.9}%
+\contentsline {chapter}{\numberline {7}Charging station placement optmization}{54}{chapter.7}%
+\contentsline {section}{\numberline {7.1}Abstract}{54}{section.7.1}%
+\contentsline {section}{\numberline {7.2}Introduction}{54}{section.7.2}%
+\contentsline {section}{\numberline {7.3}Related work}{57}{section.7.3}%
+\contentsline {section}{\numberline {7.4}Data collection and characterisation}{58}{section.7.4}%
+\contentsline {subsection}{\numberline {7.4.1}Data Acquisition}{58}{subsection.7.4.1}%
+\contentsline {subsection}{\numberline {7.4.2}Data Normalisation and Integration}{59}{subsection.7.4.2}%
+\contentsline {subsection}{\numberline {7.4.3}Data characterisation}{60}{subsection.7.4.3}%
+\contentsline {section}{\numberline {7.5}Electric car sharing simulator}{62}{section.7.5}%
+\contentsline {subsection}{\numberline {7.5.1}Trace event processing}{62}{subsection.7.5.1}%
+\contentsline {subsection}{\numberline {7.5.2}Performance metrics and parameters}{64}{subsection.7.5.2}%
+\contentsline {section}{\numberline {7.6}Strategies for charging station placement}{65}{section.7.6}%
+\contentsline {subsection}{\numberline {7.6.1}Heuristic placements}{65}{subsection.7.6.1}%
+\contentsline {subsection}{\numberline {7.6.2}Simulation based advanced optimisation strategies}{66}{subsection.7.6.2}%
+\contentsline {subsubsection}{Hill-climbing local search}{66}{section*.33}%
+\contentsline {subsubsection}{Genetic optimiser}{67}{section*.34}%
+\contentsline {section}{\numberline {7.7}Impact of heuristic placements and return policies}{68}{section.7.7}%
+\contentsline {subsection}{\numberline {7.7.1}Impact of heuristic charging station placements}{68}{subsection.7.7.1}%
+\contentsline {subsection}{\numberline {7.7.2}Impact of return policy}{70}{subsection.7.7.2}%
+\contentsline {subsubsection}{Customers' discomfort}{70}{section*.39}%
+\contentsline {section}{\numberline {7.8}Meta-heuristic optimisation of the charging station placement}{72}{section.7.8}%
+\contentsline {subsection}{\numberline {7.8.1}Charging station placement visualisation}{74}{subsection.7.8.1}%
+\contentsline {subsection}{\numberline {7.8.2}Validation of optimised configurations}{75}{subsection.7.8.2}%
+\contentsline {section}{\numberline {7.9}Placement optimisation for \textit {Needed} return policy}{76}{section.7.9}%
+\contentsline {section}{\numberline {7.10}Discussion and Implication}{78}{section.7.10}%
+\contentsline {subsection}{\numberline {7.10.1}\textbf {Scalability}}{78}{subsection.7.10.1}%
+\contentsline {subsection}{\numberline {7.10.2}\textbf {Economical Aspects}}{78}{subsection.7.10.2}%
+\contentsline {section}{\numberline {7.11}Conclusions}{79}{section.7.11}%
+\contentsline {chapter}{\numberline {8}Geo spatial prediction}{80}{chapter.8}%
+\contentsline {section}{\numberline {8.1}Abstract}{80}{section.8.1}%
+\contentsline {section}{\numberline {8.2}Introduction}{80}{section.8.2}%
+\contentsline {section}{\numberline {8.3}Related work}{83}{section.8.3}%
+\contentsline {section}{\numberline {8.4}Data gathering methodology}{84}{section.8.4}%
+\contentsline {subsection}{\numberline {8.4.1}FFCS data collection}{84}{subsection.8.4.1}%
+\contentsline {subsection}{\numberline {8.4.2}Socio-demographic, weather and other open data}{85}{subsection.8.4.2}%
+\contentsline {section}{\numberline {8.5}Dataset overview}{86}{section.8.5}%
+\contentsline {subsection}{\numberline {8.5.1}FFCS temporal characterization}{86}{subsection.8.5.1}%
+\contentsline {subsection}{\numberline {8.5.2}FFCS spatial characterization}{88}{subsection.8.5.2}%
+\contentsline {subsection}{\numberline {8.5.3}Socio-demographic and weather data characterisation}{88}{subsection.8.5.3}%
+\contentsline {section}{\numberline {8.6}Temporal predictions of rentals}{90}{section.8.6}%
+\contentsline {subsection}{\numberline {8.6.1}Prediction models}{92}{subsection.8.6.1}%
+\contentsline {subsection}{\numberline {8.6.2}Long-term predictions - Results}{94}{subsection.8.6.2}%
+\contentsline {subsection}{\numberline {8.6.3}Short-term predictions - Results}{95}{subsection.8.6.3}%
+\contentsline {subsection}{\numberline {8.6.4}The effect of weather information}{98}{subsection.8.6.4}%
+\contentsline {section}{\numberline {8.7}Spatial prediction of rentals with socio-demographic data}{98}{section.8.7}%
+\contentsline {subsection}{\numberline {8.7.1}Feature ranking and selection}{101}{subsection.8.7.1}%
+\contentsline {section}{\numberline {8.8}Conclusions}{103}{section.8.8}%
+\contentsline {chapter}{\numberline {9}Relocation}{105}{chapter.9}%
+\contentsline {chapter}{\numberline {10}Scalability}{106}{chapter.10}%
+\contentsline {chapter}{\numberline {11}Conclusions}{107}{chapter.11}%
+\contentsline {chapter}{Bibliography}{108}{chapter.11}%
