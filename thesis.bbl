@@ -87,6 +87,49 @@
       \endverb
       \keyw{Urban mobility,Car-sharing,Characterizing,Two-way,One-way,Free-floating}
     \endentry
+    \entry{becker:17}{article}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=1acdcc3f269880d3aac4a1d8644650a8}{%
+           family={Becker},
+           familyi={B\bibinitperiod},
+           given={Henrik},
+           giveni={H\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=26042d183470b998e67e63b375e57c0e}{%
+           family={Ciari},
+           familyi={C\bibinitperiod},
+           given={Francesco},
+           giveni={F\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=a6714cff9b29857a4c9c40a8d29c1d4b}{%
+           family={Axhausen},
+           familyi={A\bibinitperiod},
+           given={Kay\bibnamedelima W},
+           giveni={K\bibinitperiod\bibinitdelim W\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Elsevier}%
+      }
+      \strng{namehash}{b412a7f8496f9ce3f5347945a625b334}
+      \strng{fullhash}{d196dc6baab472e86e5b96788b3fc613}
+      \strng{bibnamehash}{d196dc6baab472e86e5b96788b3fc613}
+      \strng{authorbibnamehash}{d196dc6baab472e86e5b96788b3fc613}
+      \strng{authornamehash}{b412a7f8496f9ce3f5347945a625b334}
+      \strng{authorfullhash}{d196dc6baab472e86e5b96788b3fc613}
+      \field{sortinit}{B}
+      \field{sortinithash}{8de16967003c7207dae369d874f1456e}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Transportation Research Part A: Policy and Practice}
+      \field{title}{Comparing car-sharing schemes in Switzerland: User groups and usage patterns}
+      \field{volume}{97}
+      \field{year}{2017}
+      \field{pages}{17\bibrangedash 29}
+      \range{pages}{13}
+    \endentry
     \entry{bi2017simulation}{inproceedings}{}
       \name{author}{6}{}{%
         {{un=0,uniquepart=base,hash=5080a199da3ecf49ee55aa0771f4d53e}{%
