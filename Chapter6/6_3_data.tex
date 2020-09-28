@@ -1,31 +1,50 @@
 \section{Data collection and characterization}
-\label{sec:data}
+\label{sec:6_2_data}
 
-Here we describe the methodology we followed to harvest data from already operative FFCS systems in the city of Turin (Italy), Milan (Italy), Berlin (Germany), and Vancouver (Canada). We first describe the data collection mechanisms. Then we characterize system usage, focusing on those metrics that are instrumental for the design of FFCS systems based on electric vehicles and highlighting the non-stationary patterns. 
+Here I characterize system usage in all the case of study cities, focusing on those metrics that are instrumental for the design of FFCS systems based on electric vehicles and highlighting the non-stationary patterns. 
 
-\subsection{Data collection and filtering}
-\label{par:coll_and_filter}
-The modern FFCS provider like Car2go, DriveNow or GoGet use information systems to expose the position of the available cars through web services. Customers access these to check  which cars are available for a rental by using a smartphone app. For instance, Car2go offers public Application Programming Interface (API) \footnote{car2goAPI, \url{https://www.car2go.com/api/tou.htm} service subject to approval by car2Go. Approval granted in Sept. 2016 and discontinued in Jan. 2018.} to access the information about the system status. We use these APIs to collect data about actual rentals occurred over time following a streaming approach. First, we get the operative area for each city, i.e., the zone where cars can be rented and returned. The operative areas remain constant for several months.
-Next, we collect a snapshot every minute reporting the positions of all cars available for a rental, for each city. From each snapshot we save the car plates (used as car identifier) and its geographic coordinates.
-
-We developed UMAP~\cite{UMAP}, a software able to process these snapshots and rebuild, for each car, the history in terms of \emph{bookings} and \emph{parkings}.\footnote{UMAP can be downloaded from \url{https://github.com/MobilityPolito/UMAP}}
-A booking is an event describing a possible car rental $i$, characterized by the starting and final position $o(i)$ and $d(i)$, and starting and ending time $t_s(i)$ and $t_e(i)$. A parking describes a period of time when the car was parked and available for rentals; it is characterized by the location and the starting and final time. In a nutshell, we process the snapshots of the available cars and derive booking periods by observing which cars are available at each snapshot.
-Given a car, when it ``disappears'' from a snapshot, it means that someone has booked it -- so that the car is not available for other customers. A new booking is started. When the same car ``reappears'' back later on, it means someone has returned it. The booking is then ended.
-
-Not all bookings correspond to actual rentals:
-(i) a customer can book a car, and cancel the booking later on;
-(ii) the data collection may suffer from outages, so that some snapshots may miss some available cars;
-(iii) cars may go in maintenance, so that they disappear and never come back (or return after a long time).
-We developed data cleaning and filtering rules to extract actual \textit{rentals} from bookings. A booking is considered a valid rental if:
-(i) it lasts at least 3 minutes;
-(ii) the ending position is at least 700\,m far from the staring position, with both positions inside the city operative area;\footnote{This to account for possible errors in the GPS fixing, and to remove rentals started and ended in different cities.};
-(iii) its duration is smaller than 1\,h. These thresholds have been selected by domain knowledge of the data -- see~\cite{UMAP} for more details.
-Bookings that do not correspond to rentals are then merged with parkings events (since the car did not move).
-
-We started to collected data in December 2016 in all the 22 cities in which Car2go is present, and stopped our collection in February 2018. Overall, we obtained more than 28 millions rentals and parkings that we leverage for our studies.
+%\subsection{Data collection and filtering}
+%\label{par:coll_and_filter}
+%The modern FFCS provider like Car2go, DriveNow or GoGet use information systems to expose the position of the available cars through web services. Customers access these to check  which cars are available for a rental by using a smartphone app. For instance, Car2go offers public Application Programming Interface (API) \footnote{car2goAPI, \url{https://www.car2go.com/api/tou.htm} service subject to approval by car2Go. Approval granted in Sept. 2016 and discontinued in Jan. 2018.} to access the information about the system status. We use these APIs to collect data about actual rentals occurred over time following a streaming approach. First, we get the operative area for each city, i.e., the zone where cars can be rented and returned. The operative areas remain constant for several months.
+%Next, we collect a snapshot every minute reporting the positions of all cars available for a rental, for each city. From each snapshot we save the car plates (used as car identifier) and its geographic coordinates.
+%
+%We developed UMAP~\cite{UMAP}, a software able to process these snapshots and rebuild, for each car, the history in terms of \emph{bookings} and \emph{parkings}.\footnote{UMAP can be downloaded from \url{https://github.com/MobilityPolito/UMAP}}
+%A booking is an event describing a possible car rental $i$, characterized by the starting and final position $o(i)$ and $d(i)$, and starting and ending time $t_s(i)$ and $t_e(i)$. A parking describes a period of time when the car was parked and available for rentals; it is characterized by the location and the starting and final time. In a nutshell, we process the snapshots of the available cars and derive booking periods by observing which cars are available at each snapshot.
+%Given a car, when it ``disappears'' from a snapshot, it means that someone has booked it -- so that the car is not available for other customers. A new booking is started. When the same car ``reappears'' back later on, it means someone has returned it. The booking is then ended.
+%
+%Not all bookings correspond to actual rentals:
+%(i) a customer can book a car, and cancel the booking later on;
+%(ii) the data collection may suffer from outages, so that some snapshots may miss some available cars;
+%(iii) cars may go in maintenance, so that they disappear and never come back (or return after a long time).
+%We developed data cleaning and filtering rules to extract actual \textit{rentals} from bookings. A booking is considered a valid rental if:
+%(i) it lasts at least 3 minutes;
+%(ii) the ending position is at least 700\,m far from the staring position, with both positions inside the city operative area;\footnote{This to account for possible errors in the GPS fixing, and to remove rentals started and ended in different cities.};
+%(iii) its duration is smaller than 1\,h. These thresholds have been selected by domain knowledge of the data -- see~\cite{UMAP} for more details.
+%Bookings that do not correspond to rentals are then merged with parkings events (since the car did not move).
+%
+%We started to collected data in December 2016 in all the 22 cities in which Car2go is present, and stopped our collection in February 2018. Overall, we obtained more than 28 millions rentals and parkings that we leverage for our studies.
 
 \subsection{Temporal characterization}
-In this work we focus our analysis from September to November 2017 in four city: Turin (Italy), Milan (Italy), Berlin (Germany), Vancouver (Canada). %We restrict our analysis to this period since the system was in stationary conditions.
+I collected the data with the software described in chapter \ref{chap:2_dataset}. Reminding that not all bookings correspond to an actual rental because
+\begin{itemize}
+	\item a customer can book a car, and cancel the booking later on;
+	\item the data collection may suffer from outages, so that some snapshots may miss some available cars;
+	\item cars may go in maintenance, so that they disappear and never come back (or return after a long time)
+\end{itemize}
+%(i) a customer can book a car, and cancel the booking later on;
+%(ii) the data collection may suffer from outages, so that some snapshots may miss some available cars;
+%(iii) cars may go in maintenance, so that they disappear and never come back (or return after a long time).
+I developed data cleaning and filtering rules to extract actual \textit{rentals} from bookings. A booking is considered a valid rental if:
+\begin{itemize}
+	\item it lasts at least 3 minutes;
+	\item the ending position is at least 700\,m far from the staring position, with both positions inside the city operative area;\footnote{This to account for possible errors in the GPS fixing, and to remove rentals started and ended in different cities.};
+	\item its duration is smaller than 1\,h. These thresholds have been selected by domain knowledge of the data -- see~\cite{UMAP} for more details.
+\end{itemize}\
+Bookings that do not correspond to rentals are then merged with parkings events (since the car did not move).
+
+%I started to collected data in December 2016 in all the 22 cities in which Car2go is present, and stopped our collection in February 2018. Overall, we obtained more than 28 millions rentals and parkings that we leverage for our studies.
+
+In this work I focus the analysis from September to November 2017 in four city: Turin (Italy), Milan (Italy), Berlin (Germany), Vancouver (Canada).
 Overall, we get more than 1 million rental events that describe the typical usage patterns of FFCS customers. 
 
 

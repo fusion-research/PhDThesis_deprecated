@@ -1469,37 +1469,6 @@
       \field{pages}{771\bibrangedash 778}
       \range{pages}{8}
     \endentry
-    \entry{harms1998emergence}{article}{}
-      \name{author}{2}{}{%
-        {{un=0,uniquepart=base,hash=14621f08236ee400deaa337540a59e7a}{%
-           family={Harms},
-           familyi={H\bibinitperiod},
-           given={Sylvia},
-           giveni={S\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=cad06db6b4d67a72f061de8e5ea20961}{%
-           family={Truffer},
-           familyi={T\bibinitperiod},
-           given={Bernard},
-           giveni={B\bibinitperiod},
-           givenun=0}}%
-      }
-      \strng{namehash}{0133c6884a95a0b56eb992adbb4c87ad}
-      \strng{fullhash}{0133c6884a95a0b56eb992adbb4c87ad}
-      \strng{bibnamehash}{0133c6884a95a0b56eb992adbb4c87ad}
-      \strng{authorbibnamehash}{0133c6884a95a0b56eb992adbb4c87ad}
-      \strng{authornamehash}{0133c6884a95a0b56eb992adbb4c87ad}
-      \strng{authorfullhash}{0133c6884a95a0b56eb992adbb4c87ad}
-      \field{sortinit}{H}
-      \field{sortinithash}{6db6145dae8dc9e1271a8d556090b50a}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{year}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{journaltitle}{A case-study for the EC-supported rsearch project “Strategic Niche Management as a tool for transition to a sustainable transport system”, EAWAG: Z{ü}rich}
-      \field{title}{The emergence of a nation-wide carsharing co-operative in Switzerland}
-      \field{year}{1998}
-    \endentry
     \entry{He:2019}{article}{}
       \name{author}{2}{}{%
         {{un=0,uniquepart=base,hash=4c412890c14dc7051403ff4716120423}{%
@@ -1946,12 +1915,12 @@
     \endentry
     \entry{Kortum2016}{article}{}
       \name{author}{3}{}{%
-        {{un=0,uniquepart=base,hash=c7172e638ff55ad547ff4f65fd235683}{%
+        {{un=2,uniquepart=given,hash=c7172e638ff55ad547ff4f65fd235683}{%
            family={Kortum},
            familyi={K\bibinitperiod},
            given={K.},
            giveni={K\bibinitperiod},
-           givenun=0}}%
+           givenun=2}}%
         {{un=0,uniquepart=base,hash=22f6292235281c1d31e3faacf7dccb6d}{%
            family={R.\bibnamedelimi Schönduwe},
            familyi={R\bibinitperiod\bibinitdelim S\bibinitperiod},
@@ -1974,6 +1943,52 @@
       \strng{authorbibnamehash}{a170ec624f46a154ee056b07baa8c447}
       \strng{authornamehash}{24dfb720d4498e7ab008ce6a31a4197b}
       \strng{authorfullhash}{a170ec624f46a154ee056b07baa8c447}
+      \field{sortinit}{K}
+      \field{sortinithash}{d3edc18d54b9438a72c24c925bfb38f4}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Transportation Research Procedia}
+      \field{title}{Free-Floating Carsharing: City-Specific Growth Rates and Success Factors}
+      \field{volume}{19}
+      \field{year}{2016}
+      \field{pages}{328\bibrangedash 340}
+      \range{pages}{13}
+    \endentry
+    \entry{CSandSocial}{article}{}
+      \name{author}{4}{}{%
+        {{un=2,uniquepart=given,hash=06e50238a18b2765f0368e77a3389f15}{%
+           family={Kortum},
+           familyi={K\bibinitperiod},
+           given={Katherine},
+           giveni={K\bibinitperiod},
+           givenun=2}}%
+        {{un=0,uniquepart=base,hash=6ab83e0389d7ed08de9e676a72de8257}{%
+           family={Schönduwe},
+           familyi={S\bibinitperiod},
+           given={Robert},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=0fae4aa7d79d64dd2362d60bfabd913d}{%
+           family={Stolte},
+           familyi={S\bibinitperiod},
+           given={Benjamin},
+           giveni={B\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=16c18db33683d07ea546a70de42f7974}{%
+           family={Bockb},
+           familyi={B\bibinitperiod},
+           given={Benno},
+           giveni={B\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{887c05806b04354d08fa7459a3a76185}
+      \strng{fullhash}{9f26fdb6fde87b3f3dc9ab93665919c8}
+      \strng{bibnamehash}{9f26fdb6fde87b3f3dc9ab93665919c8}
+      \strng{authorbibnamehash}{9f26fdb6fde87b3f3dc9ab93665919c8}
+      \strng{authornamehash}{887c05806b04354d08fa7459a3a76185}
+      \strng{authorfullhash}{9f26fdb6fde87b3f3dc9ab93665919c8}
       \field{sortinit}{K}
       \field{sortinithash}{d3edc18d54b9438a72c24c925bfb38f4}
       \field{extradatescope}{labelyear}
@@ -2105,34 +2120,6 @@
       \field{year}{2011}
       \field{pages}{2094\bibrangedash 2114}
       \range{pages}{21}
-    \endentry
-    \entry{millard2005car}{book}{}
-      \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=a7c6eb77bd9de5af0f15906ac5364a53}{%
-           family={Millard-Ball},
-           familyi={M\bibinithyphendelim B\bibinitperiod},
-           given={Adam},
-           giveni={A\bibinitperiod},
-           givenun=0}}%
-      }
-      \list{publisher}{1}{%
-        {Transportation Research Board}%
-      }
-      \strng{namehash}{a7c6eb77bd9de5af0f15906ac5364a53}
-      \strng{fullhash}{a7c6eb77bd9de5af0f15906ac5364a53}
-      \strng{bibnamehash}{a7c6eb77bd9de5af0f15906ac5364a53}
-      \strng{authorbibnamehash}{a7c6eb77bd9de5af0f15906ac5364a53}
-      \strng{authornamehash}{a7c6eb77bd9de5af0f15906ac5364a53}
-      \strng{authorfullhash}{a7c6eb77bd9de5af0f15906ac5364a53}
-      \field{sortinit}{M}
-      \field{sortinithash}{2e5c2f51f7fa2d957f3206819bf86dc3}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{year}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{title}{Car-sharing: Where and how it succeeds}
-      \field{volume}{108}
-      \field{year}{2005}
     \endentry
     \entry{2_okutani1984dynamic}{article}{}
       \name{author}{2}{}{%
@@ -3096,7 +3083,6 @@
   \missing{14_firnkorn2011will}
   \missing{14_firnkorn2012selling}
   \missing{18_becker2017comparing}
-  \missing{CSandSocial}
   \missing{UMAP}
   \missing{becker2017comparing}
   \missing{ciari2013estimation}
