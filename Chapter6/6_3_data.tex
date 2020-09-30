@@ -25,7 +25,7 @@ Here I characterize system usage in all the case of study cities, focusing on th
 %We started to collected data in December 2016 in all the 22 cities in which Car2go is present, and stopped our collection in February 2018. Overall, we obtained more than 28 millions rentals and parkings that we leverage for our studies.
 
 \subsection{Temporal characterization}
-I collected the data with the software described in chapter \ref{chap:2_dataset}. Reminding that not all bookings correspond to an actual rental because
+I collected the data with the software described in chapter \ref{chap:2_dataset}. Reminding that not all bookings correspond to an actual rental because:
 \begin{itemize}
 	\item a customer can book a car, and cancel the booking later on;
 	\item the data collection may suffer from outages, so that some snapshots may miss some available cars;
@@ -39,23 +39,24 @@ I developed data cleaning and filtering rules to extract actual \textit{rentals}
 	\item it lasts at least 3 minutes;
 	\item the ending position is at least 700\,m far from the staring position, with both positions inside the city operative area;\footnote{This to account for possible errors in the GPS fixing, and to remove rentals started and ended in different cities.};
 	\item its duration is smaller than 1\,h. These thresholds have been selected by domain knowledge of the data -- see~\cite{UMAP} for more details.
-\end{itemize}\
+	\item \mc{rivedere capitolo appropriato con vari link, e linkare anche le def}
+\end{itemize}
 Bookings that do not correspond to rentals are then merged with parkings events (since the car did not move).
 
 %I started to collected data in December 2016 in all the 22 cities in which Car2go is present, and stopped our collection in February 2018. Overall, we obtained more than 28 millions rentals and parkings that we leverage for our studies.
 
 In this work I focus the analysis from September to November 2017 in four city: Turin (Italy), Milan (Italy), Berlin (Germany), Vancouver (Canada).
-Overall, we get more than 1 million rental events that describe the typical usage patterns of FFCS customers. 
+Overall, the case study dataset has more than 1 million rental events that describe the typical usage patterns of FFCS customers. 
 
 
 \begin{figure}[t]
     \begin{center}
-        \begin{subfigure}{0.49\textwidth}
+        \begin{subfigure}{\textwidth}
             \includegraphics[width=\columnwidth]{figures/bookings_per_day.pdf}
             \caption{Number of rentals per day.}
             \label{fig:rentals_per_day}
         \end{subfigure}
-         \begin{subfigure}{0.49\textwidth}
+         \begin{subfigure}{\textwidth}
              \includegraphics[width=\columnwidth]{figures/aggBookginfsPerHour.pdf}
              \caption{Average number of rentals per hour.}
              \label{fig:rentals_per_hour}
@@ -68,19 +69,19 @@ Overall, we get more than 1 million rental events that describe the typical usag
 
 \begin{figure}[t]
 %     \begin{center}
-            \begin{subfigure}{0.45\textwidth}
+            \begin{subfigure}{\textwidth}
             \includegraphics[width=\columnwidth]{figures/CDF_aggregate_RentalsDuration.pdf}
            % \caption{CDF of driving duration}
             %\label{fig:cdf_driving_duration}
 \vspace{-0.3cm}
         \end{subfigure}\\
-        \begin{subfigure}{0.47\textwidth}
+        \begin{subfigure}{\textwidth}
              \includegraphics[width=\columnwidth]{figures/CDF_aggregate_RentalsDistance.pdf}
            %  \caption{CDF of driving distance}
             % \label{fig:cdf_driving_distance}
 \vspace{-0.3cm}
          \end{subfigure}\\
-         \begin{subfigure}{0.46\textwidth}
+         \begin{subfigure}{\textwidth}
              \includegraphics[width=\columnwidth]{figures/CDF_aggregate_ParkingsDuration.pdf}
            %  \caption{CDF of parking duration}
             % \label{fig:cdf_parking_duration}
@@ -91,24 +92,25 @@ Overall, we get more than 1 million rental events that describe the typical usag
 % \end{center}
 \end{figure}
 
-To give the intuition of the system, we first provide a characterization of actual usage patterns by current FFCS customers in each city. We focus first on the temporal characteristics.
-Fig.~\ref{fig:rentals_trends} reports the rental trend. More in details, Fig.~\ref{fig:rentals_per_day} shows the number of recorded rentals for each day in the considered period. Usage similarity is striking, with Milan, Berlin and Vancouver that have more rentals per day than Turin. This intense usage, justify the difference in fleet size between the cities, with these three having at least twice as much cars with respect to Turin (see Tab.~\ref{tab:summary}). These first results highlights the importance of extending our previous work to other cities than Turin. A second interesting aspect is the presence of a weekly pattern: in correspondence of the weekends the number of rentals drops of about 30\%. This is justified by the fact that during the working days cars are used for commuting. Moreover, non-stationary events due to holidays or strikes are visible, e.g., October 6th in Milan due to a public transport strike.\footnote{The sudden fall around the October $2^{th}$ is due to system outage that caused a lack of data.} 
+To give the intuition of the system, I first provide a characterization of actual usage patterns by current FFCS customers in each city. I focus first on the temporal characteristics.
+Figure~\ref{fig:rentals_trends} reports the rental trend. More in details, figure~\ref{fig:rentals_per_day} shows the number of recorded rentals for each day in the considered period. Usage similarity is striking, with Milan, Berlin and Vancouver that have more rentals per day than Turin. This intense usage, justify the difference in fleet size between the cities, with these three having at least twice as much cars with respect to Turin (see Tab.~\ref{tab:summary}). These first results highlights the importance of extending our previous work to other cities than Turin. A second interesting aspect is the presence of a weekly pattern: in correspondence of the weekends the number of rentals drops of about 30\%. This is justified by the fact that during the working days cars are used for commuting. Moreover, non-stationary events due to holidays or strikes are visible, e.g., October 6th in Milan due to a public transport strike.\footnote{The sudden fall around the October $2^{th}$ is due to system outage that caused a lack of data.} 
 
 \begin{figure*}[t!]
     \begin{center}
-        \begin{subfigure}{0.56\textwidth}
+        \begin{subfigure}{\textwidth}
 		    \begin{center}
-            \includegraphics[width=0.45\columnwidth]{figures/BerlinoAvgParking.pdf}
-            \includegraphics[width=0.45\columnwidth]{figures/BerlinoMaxParking.pdf}                \captionsetup{justification=centering}
-            \caption{Berlin: average parking time (left) and total \\ number of  parkings (right).}
+            \includegraphics[width=0.495\columnwidth]{figures/BerlinoAvgParking.pdf}
+            \includegraphics[width=0.495\columnwidth]{figures/BerlinoMaxParking.pdf}                
+            \captionsetup{justification=centering}
+            \caption{Berlin: average parking time (left) and total number of  parkings (right).}
             \label{fig:heatmap_Berlin}
             \end{center}
         \end{subfigure}
-        \begin{subfigure}{0.41\textwidth}
+        \begin{subfigure}{\textwidth}
 		    \begin{center}
             %\vspace{20pt}
-            \includegraphics[width=0.47\columnwidth]{figures/VancouverAvgParking.pdf}
-            \includegraphics[width=0.47\columnwidth]{figures/VancouverMaxParking.pdf}
+            \includegraphics[width=0.495\columnwidth]{figures/VancouverAvgParking.pdf}
+            \includegraphics[width=0.495\columnwidth]{figures/VancouverMaxParking.pdf}
             \captionsetup{justification=centering}
             \caption{Vancouver: average parking time (left) and total number of parkings (right).}
             \label{fig:heatmap_vancouver}
@@ -119,25 +121,25 @@ Fig.~\ref{fig:rentals_trends} reports the rental trend. More in details, Fig.~\r
 \end{center}
 \end{figure*}
 
-To deeply analyze customers' habits, we detail the average number of rentals per hour in Fig.~\ref{fig:rentals_per_hour}, separately per working-days (WD, solid line) and per weekends (WE, dashed line). Each curve reports the number of rentals for each our, considering the average number over the same hour in the dataset.
+To deeply analyze customers' habits, I detail the average number of rentals per hour in figure~\ref{fig:rentals_per_hour}, separately per working-days (WD, solid line) and per weekends (WE, dashed line). Each curve reports the number of rentals for each hour, considering the average number over the same hour in the dataset.
 Firstly, notice the usage peaks during commuting times. These happen at different times for different cities, e.g., 8am for Turin, Milan and Berlin vs 7am for Vancouver, following local commuting habits. Secondly, notice how the evening and night usage tend to be larger during  weekends than working days. This reflects the different usage patterns at night, when cars are used to reach areas dense of pubs and nightlife.
 At last, observe again the different patterns in different cities. For instance, the average number of rentals in Vancouver and Berlin during weekend mornings is higher than during working days. This does not happen in Italian cities. The charging station placement design must thus weight this different needs and non-stationary patterns.
 
 
-Given our goals of deriving guidelines for charging station placement policies, we focus now on the characterization of three important metrics:
+Given the goals of deriving guidelines for charging station placement policies, I focus now on the characterization of three important metrics:
 (i) for how long customers rent a car,
 (ii) how far they drive,
 (iii) how long cars usually stay parked.
-The former two metrics guide the battery discharging properties, while the latter metric is fundamental to understand battery charging opportunities. Given we have no information on car position during a rental, we compute the travel distance by assuming the customer went directly from the origin to the destination. This is indeed compatible with the duration of rentals (see below). We use Google Map service to compute a correcting factor to be applied on the euclidean distance~\cite{UMAP}. 
+The former two metrics guide the battery discharging properties, while the latter metric is fundamental to understand battery charging opportunities. Given the data-set does not have any information on car position during a rental, I compute the travel distance by assuming the customer went directly from the origin to the destination. This is indeed compatible with the duration of rentals (see below). I use Google Map service to compute a correcting factor to be applied on the euclidean distance, \mc{citare sezione apposita}. 
 
 
-Fig.~\ref{fig:cdf_characterization} reports the Cumulative Distribution Function (CDF) of the rentals duration (top), driving distance (middle) and parking duration (bottom).
+Figure~\ref{fig:cdf_characterization} reports the Cumulative Distribution Function (CDF) of the rentals duration (top), driving distance (middle) and parking duration (bottom).
 The size of the city has a clear impact, with Turin that has the shortest trips, and Berlin the longest. 
-Rental duration is in general very short, leading to the intuition that drivers tend to minimize the rental time (and cost). Traveled distance is fundamental to understand the battery consumption: The maximum driving distance sets the minimum battery charge to sustain that trip. Looking at the middle plot in Fig.~\ref{fig:cdf_characterization}, we observe that in Berlin the longest trips are twice as long as the longest trips in other cities. Therefore, the same battery constraints would not fit for all cities. 
+Rental duration is in general very short, leading to the intuition that drivers tend to minimize the rental time (and cost). Traveled distance is fundamental to understand the battery consumption: The maximum driving distance sets the minimum battery charge to sustain that trip. Looking at the middle plot in digure~\ref{fig:cdf_characterization}, I observe that in Berlin the longest trips are twice as long as the longest trips in other cities. Therefore, the same battery constraints would not fit for all cities. 
 
-Overall, the limited traveled distance and rental duration suggest people use the car just for the time strictly needed to reach their destinations. Trips are limited by the service area and are thus typically within 15\,km (25\,km for Berlin).
+Overall, the limited travelled distance and rental duration suggest people use the car just for the time strictly needed to reach their destinations. Trips are limited by the service area and are thus typically within 15\,km (25\,km for Berlin).
 
-At last, bottom plot of Fig.~\ref{fig:cdf_characterization} details the duration of the parking periods. Interestingly, 50\% of parkings lasts less than 22 minutes in Berlin, testifying a very high system utilization. In Turin, the median grows to 42 minutes, still showing that most cars are parked for short time. Yet, the long tail of the CDF (note the log scale on x-axis) suggests that there is a sizable fraction of parkings that last for 5 or more hours. Cars parked in the periphery typically at night, where the demand is lower, belongs to this fraction.
+At last, bottom plot of figure~\ref{fig:cdf_characterization} details the duration of the parking periods. Interestingly, 50\% of parkings lasts less than 22 minutes in Berlin, testifying a very high system utilization. In Turin, the median grows to 42 minutes, still showing that most cars are parked for short time. Yet, the long tail of the CDF (note the log scale on x-axis) suggests that there is a sizeable fraction of parkings that last for 5 or more hours. Cars parked in the periphery typically at night, where the demand is lower, belongs to this fraction.
 \begin{table}[h!]
 \begin{center}
 \scriptsize
@@ -163,16 +165,17 @@ At last, bottom plot of Fig.~\ref{fig:cdf_characterization} details the duration
 
 \subsection{Spatial characterization}
 \label{sec:dataspace}
-The choice of charging station placement has to balance two main factors: place them where cars are (i) frequently parked -- so to maximize the opportunity for charging; and where cars (ii) stay parked for long time -- so to maximize the charging time. Knowing the zones within the city where cars are left parked is fundamental. For this, we divide the operative area of each city into squared zones, obtained with a grid of 500\,m of side. For each zone, we compute the total number of parkings and the average parking time.
+The choice of charging station placement has to balance two main factors: place them where cars are (i) frequently parked -- so to maximize the opportunity for charging; and where cars (ii) stay parked for long time -- so to maximize the charging time. Knowing the zones within the city where cars are left parked is fundamental. For this I divide the operative area described in section \ref{sec:5_3_mh_placement}
+%For this, we divide the operative area of each city into squared zones, obtained with a grid of 500\,m of side. For each zone, we compute the total number of parkings and the average parking time. 
 
-Fig.~\ref{fig:heatmaps} shows the above metrics for Berlin and Vancouver using a heat map -- with blue and red corresponding to the minimum and maximum values, respectively. Focus on Berlin first - Fig.~\ref{fig:heatmap_Berlin}. Left plot shows the average parking time. Results clearly show that cars stay parked for very short time in busy downtown areas, while cars stay parked for longer time in the periphery (corresponding to the head and tail of the CDF in Fig.~\ref{fig:cdf_characterization}, respectively).
+Figure~\ref{fig:heatmaps} shows the above metrics for Berlin and Vancouver using a heat map -- with blue and red corresponding to the minimum and maximum values, respectively. Focus on Berlin first - figure~\ref{fig:heatmap_Berlin}. Left plot shows the average parking time. Results clearly show that cars stay parked for very short time in busy downtown areas, while cars stay parked for longer time in the periphery (corresponding to the head and tail of the CDF in figure~\ref{fig:cdf_characterization}, respectively).
 
 Conversely, right plot depicts the total number of parkings recorded in each zone. It clearly shows that areas where the majority of rentals/parkings occurs correspond to zones downtown where people frequently drive, drop the car, and then someone else re-rent the same car. 
 
 In a nutshell, in busy areas, the average parking time is short, and number of rentals and parkings recorded is high. This reflects the specific usage of FFCS according to which cars move to downtown areas in the morning, then are rented to move within central areas, and finally are driven back to the periphery at the end of the day.
 Similar results apply to all cities -- see Fig.~\ref{fig:heatmap_vancouver} which details Vancouver statistics.
 
-In the following we leverage this knowledge obtained by actual data, to compare the design of and optimize different charging station placement policies.
+In the following I leverage this knowledge obtained by actual data, to compare the design of and optimize different charging station placement policies.
 
 
 \textbf{Takeaway:} Periphery zones are characterized by a long parking time, while central areas are characterized by many parkings which last a short time.
