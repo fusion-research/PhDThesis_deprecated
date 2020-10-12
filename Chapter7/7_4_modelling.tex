@@ -1,78 +1,37 @@
-\section{Electric car sharing simulator}
-\label{sec:Modelling}
+\section{Simulation scenarios }
 
-Our goal is to study different design choices for electric car sharing systems, based on collected data. For this, we developed a flexible event-based simulator that allows us to compare different algorithms and tune  parameters while collecting metrics of interests.
+\label{sec:7_4_modelling}
 
+The goal is to study different design choices for electric car sharing systems, based on collected data. For this, we developed a flexible event-based simulator that allows us to compare different algorithms and tune  parameters while collecting metrics of interests.
 
-We simulate a fixed fleet of electric cars. Each car is characterised by its parking location, and the current status of battery charge. 
-The simulator takes as input the pre-recorded data-set of rentals, i.e., the trace, characterised by the start and end time, and initial and final geographic coordinates. For simplicity, space is divided into 261 zones of 500\,x\,500\,m each (as explained in Section \ref{sec:data}). 
+\subsection{Simulation parameters}
 
+Through the simulator widely described in chapter \ref{chap:5_simulator}, I simulate a fixed fleet of electric cars. Each car is characterised by its parking location, and the current status of battery charge. 
+The simulator takes as input the pre-recorded data-set of rentals, i.e., the trace, characterised by the start and end time, and initial and final geographic coordinates.
 
-\subsection{Trace event processing}
-
-Each recorded rental reflects a mobility interest of a customer, i.e., a desired trip.
-In more details, each trip $i \in \mathcal{I}$  is characterised by its start and end time, $t_{s}(i)$ and $t_{e}(i)$, and origin and destination coordinates, $o(i)$ and $d(i)$. We associate each position to the zone $O(i)=zone(o(i))$ and $D(i)=zone(d(i))$. We assume a charging station $cs$, composed of $k$ poles, can be placed at the centre of a given zone $z\in \mathcal{Z}$, so either $cs(z)=1$ if the station is present, or $cs(z)=0$ otherwise. $N=\sum_{z\in \mathcal{Z}}cs(z)$ is the total number of zones equipped with charging stations, with $K=N\cdot k$ the total number of poles.
-
-We have a set $\mathcal{A}$ of cars, where each car $a\in \mathcal{A}$ at time $t$ is characterised by its position $p(a,t)$, its zone $P(a,t)=zone(p(a,t))$, and the residual battery capacity $c(a,t)\in[0,C]$, with $C$ being the maximum nominal capacity.
-
-The simulator processes each rental event $i$ in temporal order. 
-When a car rental start event $i$ at time $t=t_{s}(i)$ is processed, the (simulated) customer looks for a car in the initial position zone $O(i)$. If cars are present, the customer rents the most charged one, independently whether the car is at a pole being charged or not.\footnote{We choose this policy because people are worried about vehicle range~\cite{RangeAnxiety}.}
-In formulas, we get a car $\bar{a} \in \mathcal{A}$ such that:
-
-$$
-c(\bar{a},t) \geq c(\hat{a},t)\ \forall \hat{a} \in \argmin_{a \in A} { dist(O(i), P(a,t))}.
-$$
-
-
-If no car is present, the customer walks to the closest zone containing an available car, mimicking the normal behaviour of FFCS customers that look for the closest car to rent on their smartphones.
-A car rental end event is then scheduled using the trace final time $t_{e}(i)$ and desired destination location $d(i)$. 
-When car $a$ rental end event at time $t_{e}(i)$ is processed, the customer returns the car in  $p(a,t_{e}(i))$, chosen according to the behaviour described in the next paragraph. The simulator updates the battery charge status by consuming an amount of power proportional to the trip distance:
-
-$$
-	c(a,t_{e}(i)) =  \max{(c(a,t_{s}(i)) - Energy(p(a,t_{s}(i)), p(a,t_{e}(i))))} 
-$$
-
-with $Energy(\cdot)$ that models the energy necessary to go from the car origin $p(a,t_{s}(i))$ to the car destination $p(a,t_{e}(i))$.
-Here we consider $Energy(\cdot)$ to be dependent only on the two positions and proportional to their distance, but more complicated functions can be easily implemented.
-
-In case the battery level drops below 0 ($c(a,t_{e}(i)) = 0$), the trip $i$ is declared {\it infeasible}. The discharged car still performs further trips, all marked as infeasible, until it reaches a charging station.\footnote{This is instrumental to give an exhausted car the chance to recover energy.}
-
-Depending from the return policy, the customer may connect the car to a charging pole. We investigate the following return policies:
-\begin{itemize}
-	\item{\it Free Floating}: the customer opportunistically connects the car to a charging pole if and only if it is available (present and free) in the final desired zone $D(i)$;
-	\item{\it Needed}: cars are connected to a pole only when the battery level at the end of the rental goes below a minimum percentage threshold $\alpha$, i.e., $(c(a,t_{s}(i)) - Energy(p(a,t_{s}(i)), d(i))) / C\leq  \alpha $. This implies the customer can be \textit{rerouted} to the closest zone  with an available free charging pole, if none exists in the desired final zone $d(i)$; 
-	\item{\it Hybrid}: the customers follow the Needed policy, but voluntarily connect to a charging pole -- if available -- in the desired ending zone, whatever car charge status is;
-\end{itemize}
-
-The \textit{Free Floating} policy never obliges the customer to bring the car far from the desired ending location, even in case battery charge is close to exhaustion. \textit{Needed} mandates to connect cars to a charge station only if battery runs low, thus trying to protect from battery exhaustion. \textit{Hybrid} mixes the two policies letting customers opportunistically recharge the battery whenever they park close to a charging station.
+Depending from the return policy, the customer may connect the car to a charging pole. , namely \textit{Free Floating}, \textit{Needed} and \textit{Hybrid}. The \textit{Free Floating} policy never obliges the customer to bring the car far from the desired ending location, even in case battery charge is close to exhaustion. \textit{Needed} mandates to connect cars to a charge station only if battery runs low, thus trying to protect from battery exhaustion. \textit{Hybrid} mixes the two policies letting customers opportunistically recharge the battery whenever they park close to a charging station. More information in section \ref{sec:5_4_charging_policies}.
 
 \reviewed{Notice that policies similar to \emph{Needed} have been introduced in~\cite{2_FlathIlgWeinhardt_2012}, where the system make the users charge the car considering the battery state of charge, the instantaneous electricity cost,  and the user's range anxiety.}
 
-\subsection{Performance metrics and parameters}
-\label{sec:metrics}
 
-We measure the following metrics, that we identify having influence in the customers' quality of experience:
+
+\subsection{Key Performances Indicators}
+\label{sec:7_4_metrics}
+
+I measure the following metrics, defined in section \ref{sec:5_5_simulation_scenario} that I identify having influence in the customers' quality of experience:
 \begin{itemize}
 	\item \textit{InfeasibleTrips\%}: percentage of infeasible trips due to completely discharged battery observed during the whole simulation;  
 	\item \textit{Charges\%}: percentage of trips where the customer connects the car to a charging pole, implying the burden to plug the car;
 	\item \textit{Reroutings\%}: percentage of trips where the customers are rerouted to a zone different from their original destination because they are forced to charge the car;
-	\item \textit{WalkedDistance}: walked distance from the desired destination. This is considered non-zero both when the car is charged or rerouted. The walk distance when returning the car to a pole in the desired final destination is considered to be 150\,m, i.e., the average distance from any point to the centre of a square of  500\,m side;
+	\item \textit{WalkedDistance}: walked distance from the desired destination.
 \end{itemize}
 
 Infeasible trips are critical, and the system shall be engineered so that they never happen. Other performance metrics shall be minimised. 
 In addition to the above metrics, the simulator collects statistics about car battery charge level, and fraction of time a battery stays under charge. 
-  
-The key design parameters that we focus on are (i) number of zones $Z$ which are equipped with a charging station; (ii) the locations of charging stations within the city; (iii) adopted return policies.
 
-We consider the following scenario: the fleet has a constant number of cars equal to 377 (the same as observed in the trace).  Electric cars have the same nominal characteristics as the Smart ForTwo Electric Drive, i.e., $17.6\,kWh$ battery, for $135\,km$ of range, with a discharge curve that is proportional to the travelled distance ($12.9\,kWh/100\,km$).\footnote{\url{https://www.smart.com/uk/en/index/smart-electric-drive.html}} 
-Charging stations have 4 low power ($2\,kW$) poles each. These are cheap to install and a good compromise between costs, power requested, and occupied road section. We model a simple linear charge profile (complete charge in 8 hours and 50 minutes in our case).
-For \textit{Hybrid} and \textit{Needed} policy we set the minimum battery charge threshold, $\alpha$, equal to $25\%$. This is a precautionary approach, since the maximum travel distance is 19 km (Fig. \ref{fig:cdf_distance}), corresponding to about 14\% of the battery capacity.
-At last, the initial position of the cars, only affecting the initial transient, is randomly chosen.
+The key design parameters that I focus on are (i) number of zones $Z$ which are equipped with a charging station; (ii) the locations of charging stations within the city; (iii) adopted return policies.
 
-Our Python simulator
-%, and available open-source~\cite{MicheleGithub} %\footnote{\github}
-completes a single simulation including 125\,000 rentals in less than 5 seconds.\footnote{We are able to run up to 40 simulations in parallel on a 40-core Intel Xeon 
-%\textsuperscript{\textregistered} Xeon\textsuperscript{\textregistered}
-processor with 128~GB of RAM, running Ubuntu 16.04 OS.} To post-process generated results and extract aggregated data,  we use PySpark\footnote{\url{http://spark.apache.org/docs/latest/api/python/\#}} on a Big Data cluster of 30 nodes. 
-%The full anonymised trace is also publicly available~\cite{MicheleGithub}.%\footnote{The anonymised trace is available at \trace}.
+I consider the following scenario: the fleet has a constant number of cars equal to 377 (the same as observed in the trace).  Electric cars have the same nominal characteristics as the Smart ForTwo Electric Drive, i.e., $17.6\,kWh$ battery, for $135\,km$ of range, with a discharge curve that is proportional to the travelled distance ($12.9\,kWh/100\,km$).\footnote{\url{https://www.smart.com/uk/en/index/smart-electric-drive.html}} 
+Charging stations have 4 low power ($2\,kW$) poles each. These are cheap to install and a good compromise between costs, power requested, and occupied road section. I model a simple linear charge profile (complete charge in 8 hours and 50 minutes in the case of study).
+
 

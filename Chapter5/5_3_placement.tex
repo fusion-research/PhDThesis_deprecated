@@ -21,18 +21,18 @@ The above optimization problem can be solved by greedily choosing the top $N$ zo
 	\item{\it Random placement}: $l_z$ is an independent and identical distributed random uniform variable, so that charging stations result placed at random;
 	\item{\it Average parking time}: $l_z$ is the average parking duration in $z$ as recorded in the trace;
 	\item{\it Total number of parkings}: $l_z$ is the total number of parking events recorded in $z$ in the trace;
-%	\item{\it Total parking time}: $l_z$ is the total parking time accumulated in $z$ by all cars recorded in the trace. In each zone, it is the product of the two previous metrics.
+	\item{\it Total parking time}: $l_z$ is the total parking time accumulated in $z$ by all cars recorded in the trace. In each zone, it is the product of the two previous metrics.
 \end{itemize}
 Those heuristics are driven by the intuition that placing charging stations in those zones where cars are parked for long time (average parking time) or frequently parked (total number of parkings) could improve system performance.
 
 
 \begin{figure}[th]
 	\centering     %%% not \center
-	\subfloat[\centering Turin]{{\includegraphics[width=0.22\columnwidth]{figures/Torino_AvgTime.pdf}}\label{fig:5_4_ap_turin}}
+	\subfloat[\centering Turin]{{\includegraphics[width=0.22\columnwidth]{images_pdf/Torino_AvgTime.pdf}}\label{fig:5_4_ap_turin}}
 	\quad
-	\subfloat[\centering Vancouver]{{\includegraphics[width=0.30\columnwidth]{figures/VancouverAvgParking.pdf}}\label{fig:5_4_ap_vancouver}}
+	\subfloat[\centering Vancouver]{{\includegraphics[width=0.30\columnwidth]{images_pdf/Vancouver_AvgTime.pdf}}\label{fig:5_4_ap_vancouver}}
 	\quad
-	\subfloat[\centering Berlin]{{\includegraphics[width=0.4\columnwidth]{figures/BerlinoAvgParking.pdf}}\label{fig:5_4_ap_berlin}}%
+	\subfloat[\centering Berlin]{{\includegraphics[width=0.4\columnwidth]{images_pdf/Berlino_AvgTime.pdf}}\label{fig:5_4_ap_berlin}}%
 	\caption{Distribution of average parking time in Turin, Vancouver and Berlin}
 	\label{fig:5_4_heatmap_avgparking}
 \end{figure}
@@ -44,16 +44,29 @@ In first approach it is possible to se how, in all figures, the heuristic \texti
 
 \begin{figure}[th]
 	\centering     %%% not \center
-	\subfloat[\centering Turin]{{\includegraphics[width=0.22\columnwidth]{figures/Torino_NParkings.pdf}}\label{fig:5_4_np_turin}}
+	\subfloat[\centering Turin]{{\includegraphics[width=0.22\columnwidth]{images_pdf/Torino_NParkings.pdf}}\label{fig:5_4_np_turin}}
 	\quad
-	\subfloat[\centering Vancouver]{{\includegraphics[width=0.30\columnwidth]{figures/VancouverMaxParking.pdf}}\label{fig:5_4_np_vancouver}}
+	\subfloat[\centering Vancouver]{{\includegraphics[width=0.30\columnwidth]{images_pdf/Vancouver_NParkings.pdf}}\label{fig:5_4_np_vancouver}}
 	\quad
-	\subfloat[\centering Berlin]{{\includegraphics[width=0.4\columnwidth]{figures/BerlinoMaxParking.pdf}}\label{fig:5_4_np_berlin}}%
+	\subfloat[\centering Berlin]{{\includegraphics[width=0.4\columnwidth]{images_pdf/Berlino_NParkings.pdf}}\label{fig:5_4_np_berlin}}%
 	\caption{Distribution of number of parking in Turin, Vancouver and Berlin}
 	\label{fig:5_4_heatmap_numparking}
 \end{figure}
 
 Figure \ref{fig:5_4_heatmap_numparking} depicts the number of parking in each zone, for Turin (\ref{fig:5_4_np_turin}), Vancouver (\ref{fig:5_4_np_vancouver}) and Berlin (\ref{fig:5_4_np_berlin}). Reminding that more parkings means an higher zone attractiveness,
- it is possible to notice how the zones with the highest number of parking concentration zones are delimited in particular areas. For example figure \ref{fig:5_4_np_turin} shows how most frequented areas are downtown in correspondence of the two main train stations and the airport. A similar pattern can be spot in figure \ref{fig:5_4_np_vancouver}. Contrary, Berlin presents at least three actractive areas. This is mainly due to the biggest operative area and, probably, to the differentiation of business areas.
+ it is possible to notice how the zones with the highest number of parking concentration zones are delimited in particular areas. For example figure \ref{fig:5_4_np_turin} shows how most frequented areas are downtown in correspondence of the two main train stations and the airport. A similar pattern can be spot in figure \ref{fig:5_4_np_vancouver}. Contrary, Berlin presents at least three attractive areas. This is mainly due to the biggest operative area and, probably, to the differentiation of business areas.
+ 
+For completeness, I report in figure \ref{fig:5_4_heatmap_sumtime} the \textit{Total parking time} likelihood. It appears to smooth the behaviour of the previous two metrics.
+
+\begin{figure}[th]
+	\centering     %%% not \center
+	\subfloat[\centering Turin]{{\includegraphics[width=0.22\columnwidth]{images_pdf/Torino_SumTime.pdf}}\label{fig:5_4_st_turin}}
+	\quad
+	\subfloat[\centering Vancouver]{{\includegraphics[width=0.30\columnwidth]{images_pdf/Vancouver_SumTime.pdf}}\label{fig:5_4_st_vancouver}}
+	\quad
+	\subfloat[\centering Berlin]{{\includegraphics[width=0.4\columnwidth]{images_pdf/Berlino_SumTime.pdf}}\label{fig:5_4_st_berlin}}%
+	\caption{Distribution of total parking time in Turin, Vancouver and Berlin}
+	\label{fig:5_4_heatmap_sumtime}
+\end{figure} 
 
 This brief catheterization shows how  different cities can have different spatial characterization and thus different charging station placements. However those characterization will be deepened in chapters \mc{captoli}.

@@ -38,7 +38,7 @@ I developed data cleaning and filtering rules to extract actual \textit{rentals}
 \begin{itemize}
 	\item it lasts at least 3 minutes;
 	\item the ending position is at least 700\,m far from the staring position, with both positions inside the city operative area;\footnote{This to account for possible errors in the GPS fixing, and to remove rentals started and ended in different cities.};
-	\item its duration is smaller than 1\,h. These thresholds have been selected by domain knowledge of the data -- see~\cite{UMAP} for more details.
+	\item its duration is smaller than 1\,h. These thresholds have been selected by domain knowledge of the data -- see~\cite{ciociolaumap} for more details.
 	\item \mc{rivedere capitolo appropriato con vari link, e linkare anche le def}
 \end{itemize}
 Bookings that do not correspond to rentals are then merged with parkings events (since the car did not move).
@@ -93,7 +93,7 @@ Overall, the case study dataset has more than 1 million rental events that descr
 \end{figure}
 
 To give the intuition of the system, I first provide a characterization of actual usage patterns by current FFCS customers in each city. I focus first on the temporal characteristics.
-Figure~\ref{fig:rentals_trends} reports the rental trend. More in details, figure~\ref{fig:rentals_per_day} shows the number of recorded rentals for each day in the considered period. Usage similarity is striking, with Milan, Berlin and Vancouver that have more rentals per day than Turin. This intense usage, justify the difference in fleet size between the cities, with these three having at least twice as much cars with respect to Turin (see Tab.~\ref{tab:summary}). These first results highlights the importance of extending our previous work to other cities than Turin. A second interesting aspect is the presence of a weekly pattern: in correspondence of the weekends the number of rentals drops of about 30\%. This is justified by the fact that during the working days cars are used for commuting. Moreover, non-stationary events due to holidays or strikes are visible, e.g., October 6th in Milan due to a public transport strike.\footnote{The sudden fall around the October $2^{th}$ is due to system outage that caused a lack of data.} 
+Figure~\ref{fig:rentals_trends} reports the rental trend. More in details, figure~\ref{fig:rentals_per_day} shows the number of recorded rentals for each day in the considered period. Usage similarity is striking, with Milan, Berlin and Vancouver that have more rentals per day than Turin. This intense usage, justify the difference in fleet size between the cities, with these three having at least twice as much cars with respect to Turin (see Tab.~\ref{tab:summary}). These first results highlights the importance of extending the users' pattern analyses of same provider on different cities. A second interesting aspect is the presence of a weekly pattern: in correspondence of the weekends the number of rentals drops of about 30\%. This is justified by the fact that during the working days cars are used for commuting. Moreover, non-stationary events due to holidays or strikes are visible, e.g., October 6th in Milan due to a public transport strike.\footnote{The sudden fall around the October $2^{th}$ is due to system outage that caused a lack of data.} 
 
 \begin{figure*}[t!]
     \begin{center}
