@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.12.0 (TeX Live 2020)  (format=lualatex 2020.7.7)  12 OCT 2020 15:50
+This is LuaHBTeX, Version 1.12.0 (TeX Live 2020)  (format=lualatex 2020.7.7)  14 OCT 2020 23:18
  restricted system commands enabled.
 **thesis.tex
 (./thesis.tex
@@ -245,12 +245,12 @@ braces):
 >  {italian/localnumeral}  =>  {polyglossia@C@localnumeral}
 >  {italian/Localnumeral}  =>  {polyglossia@C@localnumeral}.
 Module polyglossia Info: Language data for italian
-(polyglossia)            loader	loadhyph-it.tex
-(polyglossia)            patterns	hyph-it.pat.txt
 (polyglossia)            synonyms	
-(polyglossia)            righthyphenmin	2
 (polyglossia)            hyphenation	
-(polyglossia)            lefthyphenmin	2 on input line 11
+(polyglossia)            patterns	hyph-it.pat.txt
+(polyglossia)            lefthyphenmin	2
+(polyglossia)            loader	loadhyph-it.tex
+(polyglossia)            righthyphenmin	2 on input line 11
 Module polyglossia Info: Language italian was not yet loaded; created with id 2 
 on input line 11
 
@@ -1868,13 +1868,15 @@ luaotfload | aux : font no 48 (nil) defines no feature for script latn with lang
 uage eng (./Chapter1/1_introduction.aux)
 (./Chapter2/2_datacollection.aux) (./Chapter3/3_datacharact.aux)
 (./Chapter4/4_cs_comparison.aux) (./Chapter5/5_simulator.aux)
-(./Chapter6/6_4cities.aux) (./Chapter7/7_cs_optimization.aux)
-(./Chapter8/8_prediction.aux
+(./Chapter6/6_4cities.aux) (./Chapter7/7_cs_optimization.aux
 
-LaTeX Warning: Label `' multiply defined.
+LaTeX Warning: Label `fig:7_7a_asoc_Needed' multiply defined.
 
-) (./Chapter9/9_relocation.aux) (./Chapter10/10_scalability.aux)
-(./Chapter11/11_conclusion.aux))
+
+LaTeX Warning: Label `sub@fig:7_7a_asoc_Needed' multiply defined.
+
+) (./Chapter8/8_prediction.aux) (./Chapter9/9_relocation.aux)
+(./Chapter10/10_scalability.aux) (./Chapter11/11_conclusion.aux))
 \openout1 = thesis.aux
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 163.
@@ -2139,7 +2141,7 @@ LaTeX Font Info:    Font shape `TU/LibertinusMono(1)/m/n' will be
 (Font)              scaled to size 8.32002pt on input line 163.
 LaTeX Font Info:    Font shape `TU/LibertinusMono(1)/m/n' will be
 (Font)              scaled to size 6.24pt on input line 163.
-<scudo.jpeg, id=433, 432.61626pt x 117.43875pt>
+<scudo.jpeg, id=421, 432.61626pt x 117.43875pt>
 File: scudo.jpeg Graphic file (type jpg)
 <use scudo.jpeg>
 Package luatex.def Info: scudo.jpeg  used on input line 180.
@@ -2186,14 +2188,13 @@ luaotfload | aux : font no 48 (nil) defines no feature for script latn with lang
 uage eng [6
 
 
-] [7] [8])
+] [7])
 \tf@toc=\write9
 
 \openout9 = thesis.toc
- [9]
+ [8]
 \openout2 = Chapter1/1_introduction.aux
-
-(./Chapter1/1_introduction.tex
+ (./Chapter1/1_introduction.tex
 Chapter 1.
 ) [1
 
@@ -2238,7 +2239,7 @@ LaTeX Font Info:    Font shape `TU/LibertinusMono(1)/m/n' will be
 LaTeX Font Info:    Font shape `TU/LibertinusMono(0)/m/n' will be
 (Font)              scaled to size 8.66678pt on input line 10.
 ) (./Chapter2/2_3_methodology.tex
-<Chapter2/figures/framework_schema.pdf, id=613, 963.6pt x 542.025pt>
+<Chapter2/figures/framework_schema.pdf, id=593, 963.6pt x 542.025pt>
 File: Chapter2/figures/framework_schema.pdf Graphic file (type pdf)
 <use Chapter2/figures/framework_schema.pdf>
 Package luatex.def Info: Chapter2/figures/framework_schema.pdf  used on input li
@@ -2325,37 +2326,37 @@ LaTeX Warning: Reference `sec:3_5_conclu' on page 12 undefined on input line 24.
 
 
 ) (./Chapter3/3_2_related.tex [12]) (./Chapter3/3_4_results.tex [13]
-<Chapter3/figures/bookings.pdf, id=845, 650.43pt x 397.485pt>
+<Chapter3/figures/bookings.pdf, id=825, 650.43pt x 397.485pt>
 File: Chapter3/figures/bookings.pdf Graphic file (type pdf)
 <use Chapter3/figures/bookings.pdf>
 Package luatex.def Info: Chapter3/figures/bookings.pdf  used on input line 22.
 (luatex.def)             Requested size: 359.12955pt x 219.4726pt.
  [14<./Chapter3/figures/bookings.pdf>]
-<Chapter3/figures/bookings_day.pdf, id=869, 650.43pt x 361.35pt>
+<Chapter3/figures/bookings_day.pdf, id=849, 650.43pt x 361.35pt>
 File: Chapter3/figures/bookings_day.pdf Graphic file (type pdf)
 <use Chapter3/figures/bookings_day.pdf>
 Package luatex.def Info: Chapter3/figures/bookings_day.pdf  used on input line 4
 9.
 (luatex.def)             Requested size: 359.12955pt x 199.52055pt.
  [15]
-<Chapter3/figures/no_rent.pdf, id=882, 650.43pt x 361.35pt>
+<Chapter3/figures/no_rent.pdf, id=862, 650.43pt x 361.35pt>
 File: Chapter3/figures/no_rent.pdf Graphic file (type pdf)
 <use Chapter3/figures/no_rent.pdf>
 Package luatex.def Info: Chapter3/figures/no_rent.pdf  used on input line 92.
 (luatex.def)             Requested size: 359.12955pt x 199.52055pt.
  [16<./Chapter3/figures/bookings_day.pdf>]
 [17<./Chapter3/figures/no_rent.pdf>]
-<Chapter3/figures/duration.pdf, id=927, 650.43pt x 361.35pt>
+<Chapter3/figures/duration.pdf, id=907, 650.43pt x 361.35pt>
 File: Chapter3/figures/duration.pdf Graphic file (type pdf)
 <use Chapter3/figures/duration.pdf>
 Package luatex.def Info: Chapter3/figures/duration.pdf  used on input line 106.
 (luatex.def)             Requested size: 359.12955pt x 199.52055pt.
-<Chapter3/figures/distance.pdf, id=929, 650.43pt x 361.35pt>
+<Chapter3/figures/distance.pdf, id=909, 650.43pt x 361.35pt>
 File: Chapter3/figures/distance.pdf Graphic file (type pdf)
 <use Chapter3/figures/distance.pdf>
 Package luatex.def Info: Chapter3/figures/distance.pdf  used on input line 116.
 (luatex.def)             Requested size: 359.12955pt x 199.52055pt.
-<Chapter3/figures/clorophlet_o_minus_o1.pdf, id=931, 650.43pt x 722.7pt>
+<Chapter3/figures/clorophlet_o_minus_o1.pdf, id=911, 650.43pt x 722.7pt>
 File: Chapter3/figures/clorophlet_o_minus_o1.pdf Graphic file (type pdf)
 <use Chapter3/figures/clorophlet_o_minus_o1.pdf>
 Package luatex.def Info: Chapter3/figures/clorophlet_o_minus_o1.pdf  used on inp
@@ -2363,7 +2364,7 @@ ut line 129.
 (luatex.def)             Requested size: 304.20218pt x 338.00389pt.
  [18<./Chapter3/figures/duration.pdf>]
 [19<./Chapter3/figures/distance.pdf>]
-<Chapter3/figures/car2go_faster_driving.pdf, id=980, 794.97pt x 650.43pt>
+<Chapter3/figures/car2go_faster_driving.pdf, id=960, 794.97pt x 650.43pt>
 File: Chapter3/figures/car2go_faster_driving.pdf Graphic file (type pdf)
 <use Chapter3/figures/car2go_faster_driving.pdf>
 Package luatex.def Info: Chapter3/figures/car2go_faster_driving.pdf  used on inp
@@ -2374,7 +2375,7 @@ ut line 150.
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [20<./Chapter3/figures/clorophlet_o_minus_o1.pdf>]
-<Chapter3/figures/faster_driving.pdf, id=1006, 650.43pt x 361.35pt>
+<Chapter3/figures/faster_driving.pdf, id=986, 650.43pt x 361.35pt>
 File: Chapter3/figures/faster_driving.pdf Graphic file (type pdf)
 <use Chapter3/figures/faster_driving.pdf>
 Package luatex.def Info: Chapter3/figures/faster_driving.pdf  used on input line
@@ -2384,7 +2385,7 @@ Package luatex.def Info: Chapter3/figures/faster_driving.pdf  used on input line
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<Chapter3/figures/car2go_faster_public.pdf, id=1008, 794.97pt x 650.43pt>
+<Chapter3/figures/car2go_faster_public.pdf, id=988, 794.97pt x 650.43pt>
 File: Chapter3/figures/car2go_faster_public.pdf Graphic file (type pdf)
 <use Chapter3/figures/car2go_faster_public.pdf>
 Package luatex.def Info: Chapter3/figures/car2go_faster_public.pdf  used on inpu
@@ -2398,7 +2399,7 @@ LaTeX Warning: Reference `fig:pdf_transport' on page 21 undefined on input line
 185.
 
 [21<./Chapter3/figures/car2go_faster_driving.pdf>]
-<Chapter3/figures/public_tranport_probability.pdf, id=1033, 650.43pt x 361.35pt>
+<Chapter3/figures/public_tranport_probability.pdf, id=1012, 650.43pt x 361.35pt>
 
 File: Chapter3/figures/public_tranport_probability.pdf Graphic file (type pdf)
 <use Chapter3/figures/public_tranport_probability.pdf>
@@ -2409,7 +2410,7 @@ on input line 190.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<Chapter3/figures/average_duration.pdf, id=1035, 650.43pt x 361.35pt>
+<Chapter3/figures/average_duration.pdf, id=1014, 650.43pt x 361.35pt>
 File: Chapter3/figures/average_duration.pdf Graphic file (type pdf)
 <use Chapter3/figures/average_duration.pdf>
 Package luatex.def Info: Chapter3/figures/average_duration.pdf  used on input li
@@ -2440,7 +2441,7 @@ rif(0)/m/n/12 et al.[][], [][]2016[][][];
  []
 
 [26]) (./Chapter4/4_5_related.tex [27]) (./Chapter4/4_2_background.tex [28]
-<Chapter4/imagens/diagrama_v4.pdf, id=1253, 711.1368pt x 269.5671pt>
+<Chapter4/imagens/diagrama_v4.pdf, id=1233, 711.1368pt x 269.5671pt>
 File: Chapter4/imagens/diagrama_v4.pdf Graphic file (type pdf)
 <use Chapter4/imagens/diagrama_v4.pdf>
 Package luatex.def Info: Chapter4/imagens/diagrama_v4.pdf  used on input line 18
@@ -2449,26 +2450,26 @@ Package luatex.def Info: Chapter4/imagens/diagrama_v4.pdf  used on input line 18
 )
 (./Chapter4/4_3_data_collection.tex [29<./Chapter4/imagens/diagrama_v4.pdf>]
 [30]
-<Chapter4/modo_methodology/time.pdf, id=1285, 137.313pt x 43.362pt>
+<Chapter4/modo_methodology/time.pdf, id=1265, 137.313pt x 43.362pt>
 File: Chapter4/modo_methodology/time.pdf Graphic file (type pdf)
 <use Chapter4/modo_methodology/time.pdf>
 Package luatex.def Info: Chapter4/modo_methodology/time.pdf  used on input line 
 37.
 (luatex.def)             Requested size: 90.10094pt x 28.45274pt.
-<Chapter4/modo_methodology/point.pdf, id=1286, 137.313pt x 49.8663pt>
+<Chapter4/modo_methodology/point.pdf, id=1266, 137.313pt x 49.8663pt>
 File: Chapter4/modo_methodology/point.pdf Graphic file (type pdf)
 <use Chapter4/modo_methodology/point.pdf>
 Package luatex.def Info: Chapter4/modo_methodology/point.pdf  used on input line
  39.
 (luatex.def)             Requested size: 78.34883pt x 28.45274pt.
-<Chapter4/modo_methodology/Normal_Situation.pdf, id=1287, 231.86626pt x 227.8512
+<Chapter4/modo_methodology/Normal_Situation.pdf, id=1267, 231.86626pt x 227.8512
 6pt>
 File: Chapter4/modo_methodology/Normal_Situation.pdf Graphic file (type pdf)
 <use Chapter4/modo_methodology/Normal_Situation.pdf>
 Package luatex.def Info: Chapter4/modo_methodology/Normal_Situation.pdf  used on
  input line 46.
 (luatex.def)             Requested size: 135.20383pt x 132.86307pt.
-<Chapter4/modo_methodology/Cancelation_Situation.pdf, id=1288, 231.86626pt x 227
+<Chapter4/modo_methodology/Cancelation_Situation.pdf, id=1268, 231.86626pt x 227
 .85126pt>
 File: Chapter4/modo_methodology/Cancelation_Situation.pdf Graphic file (type pdf
 )
@@ -2476,7 +2477,7 @@ File: Chapter4/modo_methodology/Cancelation_Situation.pdf Graphic file (type pdf
 Package luatex.def Info: Chapter4/modo_methodology/Cancelation_Situation.pdf  us
 ed on input line 52.
 (luatex.def)             Requested size: 135.20383pt x 132.86307pt.
-<Chapter4/modo_methodology/Consecutive_without_legend.pdf, id=1289, 243.5499pt x
+<Chapter4/modo_methodology/Consecutive_without_legend.pdf, id=1269, 243.5499pt x
  227.6505pt>
 File: Chapter4/modo_methodology/Consecutive_without_legend.pdf Graphic file (typ
 e pdf)
@@ -2493,37 +2494,37 @@ Overfull \hbox (3.26036pt too wide) in paragraph at lines 4--5
 ces spatial-temporal char-ac-ter-is-tics (Sec-tion [][]4.6.2[][]).
  []
 
-<Chapter4/modo_inTravel/weekdays.pdf, id=1344, 396.55858pt x 266.97806pt>
+<Chapter4/modo_inTravel/weekdays.pdf, id=1324, 396.55858pt x 266.97806pt>
 File: Chapter4/modo_inTravel/weekdays.pdf Graphic file (type pdf)
 <use Chapter4/modo_inTravel/weekdays.pdf>
 Package luatex.def Info: Chapter4/modo_inTravel/weekdays.pdf  used on input line
  11.
 (luatex.def)             Requested size: 194.3539pt x 130.8489pt.
-<Chapter4/modo_inTravel/weekends.pdf, id=1345, 396.55858pt x 266.97806pt>
+<Chapter4/modo_inTravel/weekends.pdf, id=1325, 396.55858pt x 266.97806pt>
 File: Chapter4/modo_inTravel/weekends.pdf Graphic file (type pdf)
 <use Chapter4/modo_inTravel/weekends.pdf>
 Package luatex.def Info: Chapter4/modo_inTravel/weekends.pdf  used on input line
  13.
 (luatex.def)             Requested size: 194.3539pt x 130.8489pt.
-<Chapter4/evo_inTravel/weekdayslim.pdf, id=1346, 433.62pt x 289.08pt>
+<Chapter4/evo_inTravel/weekdayslim.pdf, id=1326, 433.62pt x 289.08pt>
 File: Chapter4/evo_inTravel/weekdayslim.pdf Graphic file (type pdf)
 <use Chapter4/evo_inTravel/weekdayslim.pdf>
 Package luatex.def Info: Chapter4/evo_inTravel/weekdayslim.pdf  used on input li
 ne 21.
 (luatex.def)             Requested size: 194.3539pt x 129.5687pt.
-<Chapter4/evo_inTravel/weekendslim.pdf, id=1347, 433.62pt x 289.08pt>
+<Chapter4/evo_inTravel/weekendslim.pdf, id=1327, 433.62pt x 289.08pt>
 File: Chapter4/evo_inTravel/weekendslim.pdf Graphic file (type pdf)
 <use Chapter4/evo_inTravel/weekendslim.pdf>
 Package luatex.def Info: Chapter4/evo_inTravel/weekendslim.pdf  used on input li
 ne 23.
 (luatex.def)             Requested size: 194.3539pt x 129.5687pt.
-<Chapter4/car2go_inTravel/weekdayslim.pdf, id=1348, 433.62pt x 289.08pt>
+<Chapter4/car2go_inTravel/weekdayslim.pdf, id=1328, 433.62pt x 289.08pt>
 File: Chapter4/car2go_inTravel/weekdayslim.pdf Graphic file (type pdf)
 <use Chapter4/car2go_inTravel/weekdayslim.pdf>
 Package luatex.def Info: Chapter4/car2go_inTravel/weekdayslim.pdf  used on input
  line 30.
 (luatex.def)             Requested size: 194.3539pt x 129.5687pt.
-<Chapter4/car2go_inTravel/weekendslim.pdf, id=1349, 433.62pt x 289.08pt>
+<Chapter4/car2go_inTravel/weekendslim.pdf, id=1329, 433.62pt x 289.08pt>
 File: Chapter4/car2go_inTravel/weekendslim.pdf Graphic file (type pdf)
 <use Chapter4/car2go_inTravel/weekendslim.pdf>
 Package luatex.def Info: Chapter4/car2go_inTravel/weekendslim.pdf  used on input
@@ -2532,7 +2533,7 @@ Package luatex.def Info: Chapter4/car2go_inTravel/weekendslim.pdf  used on input
 [33] [34<./Chapter4/modo_inTravel/weekdays.pdf><./Chapter4/modo_inTravel/weekend
 s.pdf><./Chapter4/evo_inTravel/weekdayslim.pdf><./Chapter4/evo_inTravel/weekends
 lim.pdf>]
-<Chapter4/modo_cdfs/modo_tarde_noiteCDF_rebuttal.pdf, id=1521, 395.89783pt x 272
+<Chapter4/modo_cdfs/modo_tarde_noiteCDF_rebuttal.pdf, id=1501, 395.89783pt x 272
 .04385pt>
 File: Chapter4/modo_cdfs/modo_tarde_noiteCDF_rebuttal.pdf Graphic file (type pdf
 )
@@ -2540,14 +2541,14 @@ File: Chapter4/modo_cdfs/modo_tarde_noiteCDF_rebuttal.pdf Graphic file (type pdf
 Package luatex.def Info: Chapter4/modo_cdfs/modo_tarde_noiteCDF_rebuttal.pdf  us
 ed on input line 54.
 (luatex.def)             Requested size: 167.87125pt x 115.3535pt.
-<Chapter4/evo_cdfs/evo_tarde_noiteCDF_rebuttal.pdf, id=1522, 433.62pt x 289.08pt
+<Chapter4/evo_cdfs/evo_tarde_noiteCDF_rebuttal.pdf, id=1502, 433.62pt x 289.08pt
 >
 File: Chapter4/evo_cdfs/evo_tarde_noiteCDF_rebuttal.pdf Graphic file (type pdf)
 <use Chapter4/evo_cdfs/evo_tarde_noiteCDF_rebuttal.pdf>
 Package luatex.def Info: Chapter4/evo_cdfs/evo_tarde_noiteCDF_rebuttal.pdf  used
  on input line 60.
 (luatex.def)             Requested size: 184.9429pt x 123.29626pt.
-<Chapter4/car2go_cdfs/c2g_tarde_noiteCDF_rebuttal.pdf, id=1523, 433.62pt x 289.0
+<Chapter4/car2go_cdfs/c2g_tarde_noiteCDF_rebuttal.pdf, id=1503, 433.62pt x 289.0
 8pt>
 File: Chapter4/car2go_cdfs/c2g_tarde_noiteCDF_rebuttal.pdf Graphic file (type pd
 f)
@@ -2555,43 +2556,43 @@ f)
 Package luatex.def Info: Chapter4/car2go_cdfs/c2g_tarde_noiteCDF_rebuttal.pdf  u
 sed on input line 69.
 (luatex.def)             Requested size: 184.9429pt x 123.29626pt.
-<Chapter4/modo_heatmaps/min/0.pdf, id=1525, 196.71893pt x 98.2872pt>
+<Chapter4/modo_heatmaps/min/0.pdf, id=1505, 196.71893pt x 98.2872pt>
 File: Chapter4/modo_heatmaps/min/0.pdf Graphic file (type pdf)
 <use Chapter4/modo_heatmaps/min/0.pdf>
 Package luatex.def Info: Chapter4/modo_heatmaps/min/0.pdf  used on input line 97
 .
 (luatex.def)             Requested size: 119.50157pt x 59.70914pt.
-<Chapter4/modo_heatmaps/min/8.pdf, id=1526, 196.71893pt x 98.2872pt>
+<Chapter4/modo_heatmaps/min/8.pdf, id=1506, 196.71893pt x 98.2872pt>
 File: Chapter4/modo_heatmaps/min/8.pdf Graphic file (type pdf)
 <use Chapter4/modo_heatmaps/min/8.pdf>
 Package luatex.def Info: Chapter4/modo_heatmaps/min/8.pdf  used on input line 10
 4.
 (luatex.def)             Requested size: 119.50157pt x 59.70914pt.
-<Chapter4/modo_heatmaps/min/16.pdf, id=1527, 196.71893pt x 98.2872pt>
+<Chapter4/modo_heatmaps/min/16.pdf, id=1507, 196.71893pt x 98.2872pt>
 File: Chapter4/modo_heatmaps/min/16.pdf Graphic file (type pdf)
 <use Chapter4/modo_heatmaps/min/16.pdf>
 Package luatex.def Info: Chapter4/modo_heatmaps/min/16.pdf  used on input line 1
 10.
 (luatex.def)             Requested size: 119.50157pt x 59.70914pt.
-<Chapter4/modo_heatmaps/min/4.pdf, id=1528, 196.71893pt x 98.2872pt>
+<Chapter4/modo_heatmaps/min/4.pdf, id=1508, 196.71893pt x 98.2872pt>
 File: Chapter4/modo_heatmaps/min/4.pdf Graphic file (type pdf)
 <use Chapter4/modo_heatmaps/min/4.pdf>
 Package luatex.def Info: Chapter4/modo_heatmaps/min/4.pdf  used on input line 12
 0.
 (luatex.def)             Requested size: 119.50157pt x 59.70914pt.
-<Chapter4/modo_heatmaps/min/12.pdf, id=1529, 196.71893pt x 98.2872pt>
+<Chapter4/modo_heatmaps/min/12.pdf, id=1509, 196.71893pt x 98.2872pt>
 File: Chapter4/modo_heatmaps/min/12.pdf Graphic file (type pdf)
 <use Chapter4/modo_heatmaps/min/12.pdf>
 Package luatex.def Info: Chapter4/modo_heatmaps/min/12.pdf  used on input line 1
 27.
 (luatex.def)             Requested size: 119.50157pt x 59.70914pt.
-<Chapter4/modo_heatmaps/min/20.pdf, id=1530, 196.71893pt x 98.2872pt>
+<Chapter4/modo_heatmaps/min/20.pdf, id=1510, 196.71893pt x 98.2872pt>
 File: Chapter4/modo_heatmaps/min/20.pdf Graphic file (type pdf)
 <use Chapter4/modo_heatmaps/min/20.pdf>
 Package luatex.def Info: Chapter4/modo_heatmaps/min/20.pdf  used on input line 1
 33.
 (luatex.def)             Requested size: 119.50157pt x 59.70914pt.
-<Chapter4/modo_heatmaps/legenda_modo.pdf, id=1531, 53.19875pt x 227.85126pt>
+<Chapter4/modo_heatmaps/legenda_modo.pdf, id=1511, 53.19875pt x 227.85126pt>
 File: Chapter4/modo_heatmaps/legenda_modo.pdf Graphic file (type pdf)
 <use Chapter4/modo_heatmaps/legenda_modo.pdf>
 Package luatex.def Info: Chapter4/modo_heatmaps/legenda_modo.pdf  used on input 
@@ -2605,43 +2606,43 @@ Overfull \hbox (28.03378pt too wide) in paragraph at lines 139--142
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<Chapter4/evo_heatmaps/min/hora0.pdf, id=1532, 196.71893pt x 98.2872pt>
+<Chapter4/evo_heatmaps/min/hora0.pdf, id=1512, 196.71893pt x 98.2872pt>
 File: Chapter4/evo_heatmaps/min/hora0.pdf Graphic file (type pdf)
 <use Chapter4/evo_heatmaps/min/hora0.pdf>
 Package luatex.def Info: Chapter4/evo_heatmaps/min/hora0.pdf  used on input line
  157.
 (luatex.def)             Requested size: 119.50157pt x 59.70914pt.
-<Chapter4/evo_heatmaps/min/hora8.pdf, id=1533, 196.71893pt x 98.2872pt>
+<Chapter4/evo_heatmaps/min/hora8.pdf, id=1513, 196.71893pt x 98.2872pt>
 File: Chapter4/evo_heatmaps/min/hora8.pdf Graphic file (type pdf)
 <use Chapter4/evo_heatmaps/min/hora8.pdf>
 Package luatex.def Info: Chapter4/evo_heatmaps/min/hora8.pdf  used on input line
  164.
 (luatex.def)             Requested size: 119.50157pt x 59.70914pt.
-<Chapter4/evo_heatmaps/min/hora16.pdf, id=1534, 196.71893pt x 98.2872pt>
+<Chapter4/evo_heatmaps/min/hora16.pdf, id=1514, 196.71893pt x 98.2872pt>
 File: Chapter4/evo_heatmaps/min/hora16.pdf Graphic file (type pdf)
 <use Chapter4/evo_heatmaps/min/hora16.pdf>
 Package luatex.def Info: Chapter4/evo_heatmaps/min/hora16.pdf  used on input lin
 e 170.
 (luatex.def)             Requested size: 119.50157pt x 59.70914pt.
-<Chapter4/evo_heatmaps/min/hora4.pdf, id=1535, 196.71893pt x 98.2872pt>
+<Chapter4/evo_heatmaps/min/hora4.pdf, id=1515, 196.71893pt x 98.2872pt>
 File: Chapter4/evo_heatmaps/min/hora4.pdf Graphic file (type pdf)
 <use Chapter4/evo_heatmaps/min/hora4.pdf>
 Package luatex.def Info: Chapter4/evo_heatmaps/min/hora4.pdf  used on input line
  180.
 (luatex.def)             Requested size: 119.50157pt x 59.70914pt.
-<Chapter4/evo_heatmaps/min/hora12.pdf, id=1536, 196.71893pt x 98.2872pt>
+<Chapter4/evo_heatmaps/min/hora12.pdf, id=1516, 196.71893pt x 98.2872pt>
 File: Chapter4/evo_heatmaps/min/hora12.pdf Graphic file (type pdf)
 <use Chapter4/evo_heatmaps/min/hora12.pdf>
 Package luatex.def Info: Chapter4/evo_heatmaps/min/hora12.pdf  used on input lin
 e 187.
 (luatex.def)             Requested size: 119.50157pt x 59.70914pt.
-<Chapter4/evo_heatmaps/min/hora20.pdf, id=1537, 196.71893pt x 98.2872pt>
+<Chapter4/evo_heatmaps/min/hora20.pdf, id=1517, 196.71893pt x 98.2872pt>
 File: Chapter4/evo_heatmaps/min/hora20.pdf Graphic file (type pdf)
 <use Chapter4/evo_heatmaps/min/hora20.pdf>
 Package luatex.def Info: Chapter4/evo_heatmaps/min/hora20.pdf  used on input lin
 e 193.
 (luatex.def)             Requested size: 119.50157pt x 59.70914pt.
-<Chapter4/evo_heatmaps/legenda_evo.pdf, id=1538, 53.19875pt x 227.85126pt>
+<Chapter4/evo_heatmaps/legenda_evo.pdf, id=1518, 53.19875pt x 227.85126pt>
 File: Chapter4/evo_heatmaps/legenda_evo.pdf Graphic file (type pdf)
 <use Chapter4/evo_heatmaps/legenda_evo.pdf>
 Package luatex.def Info: Chapter4/evo_heatmaps/legenda_evo.pdf  used on input li
@@ -2655,43 +2656,43 @@ Overfull \hbox (28.03378pt too wide) in paragraph at lines 199--202
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<Chapter4/car2go_heatmaps/min/0.pdf, id=1539, 196.71893pt x 98.2872pt>
+<Chapter4/car2go_heatmaps/min/0.pdf, id=1519, 196.71893pt x 98.2872pt>
 File: Chapter4/car2go_heatmaps/min/0.pdf Graphic file (type pdf)
 <use Chapter4/car2go_heatmaps/min/0.pdf>
 Package luatex.def Info: Chapter4/car2go_heatmaps/min/0.pdf  used on input line 
 216.
 (luatex.def)             Requested size: 119.50157pt x 59.70914pt.
-<Chapter4/car2go_heatmaps/min/8.pdf, id=1540, 196.71893pt x 98.2872pt>
+<Chapter4/car2go_heatmaps/min/8.pdf, id=1520, 196.71893pt x 98.2872pt>
 File: Chapter4/car2go_heatmaps/min/8.pdf Graphic file (type pdf)
 <use Chapter4/car2go_heatmaps/min/8.pdf>
 Package luatex.def Info: Chapter4/car2go_heatmaps/min/8.pdf  used on input line 
 223.
 (luatex.def)             Requested size: 119.50157pt x 59.70914pt.
-<Chapter4/car2go_heatmaps/min/16.pdf, id=1541, 196.71893pt x 98.2872pt>
+<Chapter4/car2go_heatmaps/min/16.pdf, id=1521, 196.71893pt x 98.2872pt>
 File: Chapter4/car2go_heatmaps/min/16.pdf Graphic file (type pdf)
 <use Chapter4/car2go_heatmaps/min/16.pdf>
 Package luatex.def Info: Chapter4/car2go_heatmaps/min/16.pdf  used on input line
  229.
 (luatex.def)             Requested size: 119.50157pt x 59.70914pt.
-<Chapter4/car2go_heatmaps/min/4.pdf, id=1542, 196.71893pt x 98.2872pt>
+<Chapter4/car2go_heatmaps/min/4.pdf, id=1522, 196.71893pt x 98.2872pt>
 File: Chapter4/car2go_heatmaps/min/4.pdf Graphic file (type pdf)
 <use Chapter4/car2go_heatmaps/min/4.pdf>
 Package luatex.def Info: Chapter4/car2go_heatmaps/min/4.pdf  used on input line 
 239.
 (luatex.def)             Requested size: 119.50157pt x 59.70914pt.
-<Chapter4/car2go_heatmaps/min/12.pdf, id=1543, 196.71893pt x 98.2872pt>
+<Chapter4/car2go_heatmaps/min/12.pdf, id=1523, 196.71893pt x 98.2872pt>
 File: Chapter4/car2go_heatmaps/min/12.pdf Graphic file (type pdf)
 <use Chapter4/car2go_heatmaps/min/12.pdf>
 Package luatex.def Info: Chapter4/car2go_heatmaps/min/12.pdf  used on input line
  246.
 (luatex.def)             Requested size: 119.50157pt x 59.70914pt.
-<Chapter4/car2go_heatmaps/min/20.pdf, id=1544, 196.71893pt x 98.2872pt>
+<Chapter4/car2go_heatmaps/min/20.pdf, id=1524, 196.71893pt x 98.2872pt>
 File: Chapter4/car2go_heatmaps/min/20.pdf Graphic file (type pdf)
 <use Chapter4/car2go_heatmaps/min/20.pdf>
 Package luatex.def Info: Chapter4/car2go_heatmaps/min/20.pdf  used on input line
  252.
 (luatex.def)             Requested size: 119.50157pt x 59.70914pt.
-<Chapter4/car2go_heatmaps/legenda_car2go.pdf, id=1545, 53.19875pt x 227.85126pt>
+<Chapter4/car2go_heatmaps/legenda_car2go.pdf, id=1525, 53.19875pt x 227.85126pt>
 
 File: Chapter4/car2go_heatmaps/legenda_car2go.pdf Graphic file (type pdf)
 <use Chapter4/car2go_heatmaps/legenda_car2go.pdf>
@@ -2728,13 +2729,13 @@ er4/car2go_heatmaps/min/0.pdf><./Chapter4/car2go_heatmaps/min/8.pdf><./Chapter4/
 car2go_heatmaps/min/16.pdf><./Chapter4/car2go_heatmaps/min/4.pdf><./Chapter4/car
 2go_heatmaps/min/12.pdf><./Chapter4/car2go_heatmaps/min/20.pdf><./Chapter4/car2g
 o_heatmaps/legenda_car2go.pdf>]
-<Chapter4/destination_matrix/hour16.png, id=1912, 571.13374pt x 468.75125pt>
+<Chapter4/destination_matrix/hour16.png, id=1892, 571.13374pt x 468.75125pt>
 File: Chapter4/destination_matrix/hour16.png Graphic file (type png)
 <use Chapter4/destination_matrix/hour16.png>
 Package luatex.def Info: Chapter4/destination_matrix/hour16.png  used on input l
 ine 278.
 (luatex.def)             Requested size: 359.12955pt x 294.74979pt.
-<Chapter4/car2go_destination_matrix/hour16.png, id=1913, 571.13374pt x 468.75125
+<Chapter4/car2go_destination_matrix/hour16.png, id=1893, 571.13374pt x 468.75125
 pt>
 File: Chapter4/car2go_destination_matrix/hour16.png Graphic file (type png)
 <use Chapter4/car2go_destination_matrix/hour16.png>
@@ -2762,13 +2763,13 @@ th(1)/m/n/10.00012 𝛿) =
 
 [39<./Chapter4/destination_matrix/hour16.png>] [40<./Chapter4/car2go_destination
 _matrix/hour16.png>]
-<Chapter4/images_test/CDF_Fit_final.pdf, id=1951, 504.16167pt x 268.31116pt>
+<Chapter4/images_test/CDF_Fit_final.pdf, id=1931, 504.16167pt x 268.31116pt>
 File: Chapter4/images_test/CDF_Fit_final.pdf Graphic file (type pdf)
 <use Chapter4/images_test/CDF_Fit_final.pdf>
 Package luatex.def Info: Chapter4/images_test/CDF_Fit_final.pdf  used on input l
 ine 318.
 (luatex.def)             Requested size: 359.12955pt x 191.12454pt.
-<Chapter4/images_test/CDF_Fit_idle_final.pdf, id=1952, 523.59364pt x 268.31116pt
+<Chapter4/images_test/CDF_Fit_idle_final.pdf, id=1932, 523.59364pt x 268.31116pt
 >
 File: Chapter4/images_test/CDF_Fit_idle_final.pdf Graphic file (type pdf)
 <use Chapter4/images_test/CDF_Fit_idle_final.pdf>
@@ -2792,39 +2793,39 @@ Package amsmath Warning: Foreign command \atopwithdelims;
 (amsmath)                \frac or \genfrac should be used instead
 (amsmath)                 on input line 10.
 
-<Chapter5/images_pdf/Torino_AvgTime.pdf, id=2087, 465.94075pt x 621.01385pt>
+<Chapter5/images_pdf/Torino_AvgTime.pdf, id=2067, 465.94075pt x 621.01385pt>
 File: Chapter5/images_pdf/Torino_AvgTime.pdf Graphic file (type pdf)
 <use Chapter5/images_pdf/Torino_AvgTime.pdf>
 Package luatex.def Info: Chapter5/images_pdf/Torino_AvgTime.pdf  used on input l
 ine 31.
 (luatex.def)             Requested size: 92.95102pt x 123.87839pt.
-<Chapter5/images_pdf/Vancouver_AvgTime.pdf, id=2088, 584.5414pt x 614.06197pt>
+<Chapter5/images_pdf/Vancouver_AvgTime.pdf, id=2068, 584.5414pt x 614.06197pt>
 File: Chapter5/images_pdf/Vancouver_AvgTime.pdf Graphic file (type pdf)
 <use Chapter5/images_pdf/Vancouver_AvgTime.pdf>
 Package luatex.def Info: Chapter5/images_pdf/Vancouver_AvgTime.pdf  used on inpu
 t line 33.
 (luatex.def)             Requested size: 126.75198pt x 133.14513pt.
-<Chapter5/images_pdf/Berlino_AvgTime.pdf, id=2089, 581.57275pt x 466.71255pt>
+<Chapter5/images_pdf/Berlino_AvgTime.pdf, id=2069, 581.57275pt x 466.71255pt>
 File: Chapter5/images_pdf/Berlino_AvgTime.pdf Graphic file (type pdf)
 <use Chapter5/images_pdf/Berlino_AvgTime.pdf>
 Package luatex.def Info: Chapter5/images_pdf/Berlino_AvgTime.pdf  used on input 
 line 35.
 (luatex.def)             Requested size: 168.99834pt x 135.62091pt.
 [47]
-<Chapter5/images_pdf/Torino_NParkings.pdf, id=2103, 465.94075pt x 621.01385pt>
+<Chapter5/images_pdf/Torino_NParkings.pdf, id=2083, 465.94075pt x 621.01385pt>
 File: Chapter5/images_pdf/Torino_NParkings.pdf Graphic file (type pdf)
 <use Chapter5/images_pdf/Torino_NParkings.pdf>
 Package luatex.def Info: Chapter5/images_pdf/Torino_NParkings.pdf  used on input
  line 47.
 (luatex.def)             Requested size: 92.95102pt x 123.87839pt.
-<Chapter5/images_pdf/Vancouver_NParkings.pdf, id=2104, 581.57275pt x 614.06197pt
+<Chapter5/images_pdf/Vancouver_NParkings.pdf, id=2084, 581.57275pt x 614.06197pt
 >
 File: Chapter5/images_pdf/Vancouver_NParkings.pdf Graphic file (type pdf)
 <use Chapter5/images_pdf/Vancouver_NParkings.pdf>
 Package luatex.def Info: Chapter5/images_pdf/Vancouver_NParkings.pdf  used on in
 put line 49.
 (luatex.def)             Requested size: 126.75198pt x 133.82912pt.
-<Chapter5/images_pdf/Berlino_NParkings.pdf, id=2105, 603.09842pt x 466.71255pt>
+<Chapter5/images_pdf/Berlino_NParkings.pdf, id=2085, 603.09842pt x 466.71255pt>
 File: Chapter5/images_pdf/Berlino_NParkings.pdf Graphic file (type pdf)
 <use Chapter5/images_pdf/Berlino_NParkings.pdf>
 Package luatex.def Info: Chapter5/images_pdf/Berlino_NParkings.pdf  used on inpu
@@ -2834,19 +2835,19 @@ t line 51.
 vgTime.pdf><./Chapter5/images_pdf/Berlino_AvgTime.pdf><./Chapter5/images_pdf/Tor
 ino_NParkings.pdf><./Chapter5/images_pdf/Vancouver_NParkings.pdf><./Chapter5/ima
 ges_pdf/Berlino_NParkings.pdf>]
-<Chapter5/images_pdf/Torino_SumTime.pdf, id=2276, 465.94075pt x 621.01385pt>
+<Chapter5/images_pdf/Torino_SumTime.pdf, id=2256, 465.94075pt x 621.01385pt>
 File: Chapter5/images_pdf/Torino_SumTime.pdf Graphic file (type pdf)
 <use Chapter5/images_pdf/Torino_SumTime.pdf>
 Package luatex.def Info: Chapter5/images_pdf/Torino_SumTime.pdf  used on input l
 ine 63.
 (luatex.def)             Requested size: 92.95102pt x 123.87839pt.
-<Chapter5/images_pdf/Vancouver_SumTime.pdf, id=2277, 581.57275pt x 614.06197pt>
+<Chapter5/images_pdf/Vancouver_SumTime.pdf, id=2257, 581.57275pt x 614.06197pt>
 File: Chapter5/images_pdf/Vancouver_SumTime.pdf Graphic file (type pdf)
 <use Chapter5/images_pdf/Vancouver_SumTime.pdf>
 Package luatex.def Info: Chapter5/images_pdf/Vancouver_SumTime.pdf  used on inpu
 t line 65.
 (luatex.def)             Requested size: 126.75198pt x 133.82912pt.
-<Chapter5/images_pdf/Berlino_SumTime.pdf, id=2278, 581.57275pt x 466.71255pt>
+<Chapter5/images_pdf/Berlino_SumTime.pdf, id=2258, 581.57275pt x 466.71255pt>
 File: Chapter5/images_pdf/Berlino_SumTime.pdf Graphic file (type pdf)
 <use Chapter5/images_pdf/Berlino_SumTime.pdf>
 Package luatex.def Info: Chapter5/images_pdf/Berlino_SumTime.pdf  used on input 
@@ -2886,19 +2887,19 @@ LaTeX Warning: Reference `sec:freefloating' on page 54 undefined on input line 2
 LaTeX Warning: Reference `chap:2_charact' on page 54 undefined on input line 6.
 
 [54]) (./Chapter6/6_3_data.tex [55]
-<Chapter6/figures/bookings_per_day.pdf, id=2480, 599.49188pt x 273.95343pt>
+<Chapter6/figures/bookings_per_day.pdf, id=2460, 599.49188pt x 273.95343pt>
 File: Chapter6/figures/bookings_per_day.pdf Graphic file (type pdf)
 <use Chapter6/figures/bookings_per_day.pdf>
 Package luatex.def Info: Chapter6/figures/bookings_per_day.pdf  used on input li
 ne 55.
 (luatex.def)             Requested size: 422.50232pt x 193.07866pt.
-<Chapter6/figures/aggBookginfsPerHour.pdf, id=2481, 587.741pt x 283.81584pt>
+<Chapter6/figures/aggBookginfsPerHour.pdf, id=2461, 587.741pt x 283.81584pt>
 File: Chapter6/figures/aggBookginfsPerHour.pdf Graphic file (type pdf)
 <use Chapter6/figures/aggBookginfsPerHour.pdf>
 Package luatex.def Info: Chapter6/figures/aggBookginfsPerHour.pdf  used on input
  line 60.
 (luatex.def)             Requested size: 422.50232pt x 204.02676pt.
-<Chapter6/figures/CDF_aggregate_RentalsDuration.pdf, id=2482, 580.59723pt x 254.
+<Chapter6/figures/CDF_aggregate_RentalsDuration.pdf, id=2462, 580.59723pt x 254.
 45015pt>
 File: Chapter6/figures/CDF_aggregate_RentalsDuration.pdf Graphic file (type pdf)
 
@@ -2906,7 +2907,7 @@ File: Chapter6/figures/CDF_aggregate_RentalsDuration.pdf Graphic file (type pdf)
 Package luatex.def Info: Chapter6/figures/CDF_aggregate_RentalsDuration.pdf  use
 d on input line 73.
 (luatex.def)             Requested size: 422.50232pt x 185.16466pt.
-<Chapter6/figures/CDF_aggregate_RentalsDistance.pdf, id=2483, 601.86418pt x 230.
+<Chapter6/figures/CDF_aggregate_RentalsDistance.pdf, id=2463, 601.86418pt x 230.
 21289pt>
 File: Chapter6/figures/CDF_aggregate_RentalsDistance.pdf Graphic file (type pdf)
 
@@ -2914,7 +2915,7 @@ File: Chapter6/figures/CDF_aggregate_RentalsDistance.pdf Graphic file (type pdf)
 Package luatex.def Info: Chapter6/figures/CDF_aggregate_RentalsDistance.pdf  use
 d on input line 79.
 (luatex.def)             Requested size: 422.50232pt x 161.61159pt.
-<Chapter6/figures/CDF_aggregate_ParkingsDuration.pdf, id=2484, 582.9733pt x 230.
+<Chapter6/figures/CDF_aggregate_ParkingsDuration.pdf, id=2464, 582.9733pt x 230.
 21289pt>
 File: Chapter6/figures/CDF_aggregate_ParkingsDuration.pdf Graphic file (type pdf
 )
@@ -2922,25 +2923,25 @@ File: Chapter6/figures/CDF_aggregate_ParkingsDuration.pdf Graphic file (type pdf
 Package luatex.def Info: Chapter6/figures/CDF_aggregate_ParkingsDuration.pdf  us
 ed on input line 85.
 (luatex.def)             Requested size: 422.50232pt x 166.84209pt.
-<Chapter6/figures/BerlinoAvgParking.pdf, id=2489, 741.81943pt x 522.27893pt>
+<Chapter6/figures/BerlinoAvgParking.pdf, id=2469, 741.81943pt x 522.27893pt>
 File: Chapter6/figures/BerlinoAvgParking.pdf Graphic file (type pdf)
 <use Chapter6/figures/BerlinoAvgParking.pdf>
 Package luatex.def Info: Chapter6/figures/BerlinoAvgParking.pdf  used on input l
 ine 102.
 (luatex.def)             Requested size: 209.13658pt x 147.24123pt.
-<Chapter6/figures/BerlinoMaxParking.pdf, id=2490, 729.2856pt x 516.1933pt>
+<Chapter6/figures/BerlinoMaxParking.pdf, id=2470, 729.2856pt x 516.1933pt>
 File: Chapter6/figures/BerlinoMaxParking.pdf Graphic file (type pdf)
 <use Chapter6/figures/BerlinoMaxParking.pdf>
 Package luatex.def Info: Chapter6/figures/BerlinoMaxParking.pdf  used on input l
 ine 103.
 (luatex.def)             Requested size: 209.13658pt x 148.0224pt.
-<Chapter6/figures/VancouverAvgParking.pdf, id=2491, 531.08513pt x 490.5672pt>
+<Chapter6/figures/VancouverAvgParking.pdf, id=2471, 531.08513pt x 490.5672pt>
 File: Chapter6/figures/VancouverAvgParking.pdf Graphic file (type pdf)
 <use Chapter6/figures/VancouverAvgParking.pdf>
 Package luatex.def Info: Chapter6/figures/VancouverAvgParking.pdf  used on input
  line 112.
 (luatex.def)             Requested size: 209.13658pt x 193.17683pt.
-<Chapter6/figures/VancouverMaxParking.pdf, id=2492, 539.58188pt x 491.34526pt>
+<Chapter6/figures/VancouverMaxParking.pdf, id=2472, 539.58188pt x 491.34526pt>
 File: Chapter6/figures/VancouverMaxParking.pdf Graphic file (type pdf)
 <use Chapter6/figures/VancouverMaxParking.pdf>
 Package luatex.def Info: Chapter6/figures/VancouverMaxParking.pdf  used on input
@@ -2977,13 +2978,13 @@ warning  (pdf inclusion): ignoring missing object 53, case 1
 
 LaTeX Warning: Reference `tab:6_summary' on page 61 undefined on input line 5.
 
-<Chapter6/figures/legenda2.pdf, id=2917, 564.67964pt x 17.43314pt>
+<Chapter6/figures/legenda2.pdf, id=2897, 564.67964pt x 17.43314pt>
 File: Chapter6/figures/legenda2.pdf Graphic file (type pdf)
 <use Chapter6/figures/legenda2.pdf>
 Package luatex.def Info: Chapter6/figures/legenda2.pdf  used on input line 17.
 (luatex.def)             Requested size: 422.50232pt x 13.0442pt.
 <Chapter6/figures/Torino_zonesVsDeaths_algorithms_acs-4_tt-25_policy-FreeFloatin
-g.pdf, id=2918, 606.36739pt x 259.4483pt>
+g.pdf, id=2898, 606.36739pt x 259.4483pt>
 File: Chapter6/figures/Torino_zonesVsDeaths_algorithms_acs-4_tt-25_policy-FreeFl
 oating.pdf Graphic file (type pdf)
 <use Chapter6/figures/Torino_zonesVsDeaths_algorithms_acs-4_tt-25_policy-FreeFlo
@@ -2992,7 +2993,7 @@ Package luatex.def Info: Chapter6/figures/Torino_zonesVsDeaths_algorithms_acs-4_
 tt-25_policy-FreeFloating.pdf  used on input line 21.
 (luatex.def)             Requested size: 207.02844pt x 88.57942pt.
 <Chapter6/figures/Milano_zonesVsDeaths_algorithms_acs-4_tt-25_policy-FreeFloatin
-g.pdf, id=2919, 604.85172pt x 259.4483pt>
+g.pdf, id=2899, 604.85172pt x 259.4483pt>
 File: Chapter6/figures/Milano_zonesVsDeaths_algorithms_acs-4_tt-25_policy-FreeFl
 oating.pdf Graphic file (type pdf)
 <use Chapter6/figures/Milano_zonesVsDeaths_algorithms_acs-4_tt-25_policy-FreeFlo
@@ -3001,7 +3002,7 @@ Package luatex.def Info: Chapter6/figures/Milano_zonesVsDeaths_algorithms_acs-4_
 tt-25_policy-FreeFloating.pdf  used on input line 26.
 (luatex.def)             Requested size: 207.02844pt x 88.80112pt.
 <Chapter6/figures/Berlino_zonesVsDeaths_algorithms_acs-4_tt-25_policy-FreeFloati
-ng.pdf, id=2920, 606.36739pt x 259.4483pt>
+ng.pdf, id=2900, 606.36739pt x 259.4483pt>
 File: Chapter6/figures/Berlino_zonesVsDeaths_algorithms_acs-4_tt-25_policy-FreeF
 loating.pdf Graphic file (type pdf)
 <use Chapter6/figures/Berlino_zonesVsDeaths_algorithms_acs-4_tt-25_policy-FreeFl
@@ -3010,7 +3011,7 @@ Package luatex.def Info: Chapter6/figures/Berlino_zonesVsDeaths_algorithms_acs-4
 _tt-25_policy-FreeFloating.pdf  used on input line 31.
 (luatex.def)             Requested size: 207.02844pt x 88.57942pt.
 <Chapter6/figures/Vancouver_zonesVsDeaths_algorithms_acs-4_tt-25_policy-FreeFloa
-ting.pdf, id=2921, 605.60956pt x 260.20613pt>
+ting.pdf, id=2901, 605.60956pt x 260.20613pt>
 File: Chapter6/figures/Vancouver_zonesVsDeaths_algorithms_acs-4_tt-25_policy-Fre
 eFloating.pdf Graphic file (type pdf)
 <use Chapter6/figures/Vancouver_zonesVsDeaths_algorithms_acs-4_tt-25_policy-Free
@@ -3018,23 +3019,38 @@ Floating.pdf>
 Package luatex.def Info: Chapter6/figures/Vancouver_zonesVsDeaths_algorithms_acs
 -4_tt-25_policy-FreeFloating.pdf  used on input line 36.
 (luatex.def)             Requested size: 207.02844pt x 88.9533pt.
-[61] [62<./Chapter6/figures/legenda2.pdf><./Chapter6/figures/Torino_zonesVsDeath
-s_algorithms_acs-4_tt-25_policy-FreeFloating.pdf><./Chapter6/figures/Milano_zone
-sVsDeaths_algorithms_acs-4_tt-25_policy-FreeFloating.pdf><./Chapter6/figures/Ber
-lino_zonesVsDeaths_algorithms_acs-4_tt-25_policy-FreeFloating.pdf><./Chapter6/fi
-gures/Vancouver_zonesVsDeaths_algorithms_acs-4_tt-25_policy-FreeFloating.pdf>]) (./Chapter6/6_7_return_results.tex
-<Chapter6/figures/DeathsVsZones_city.pdf, id=3196, 582.99683pt x 331.29222pt>
+[61]
+
+LaTeX Warning: Reference `fig:7_6_CDF_parking_time_per_algorithm' on page 62 und
+efined on input line 55.
+
+[62<./Chapter6/figures/legenda2.pdf><./Chapter6/figures/Torino_zonesVsDeaths_alg
+orithms_acs-4_tt-25_policy-FreeFloating.pdf><./Chapter6/figures/Milano_zonesVsDe
+aths_algorithms_acs-4_tt-25_policy-FreeFloating.pdf><./Chapter6/figures/Berlino_
+zonesVsDeaths_algorithms_acs-4_tt-25_policy-FreeFloating.pdf><./Chapter6/figures
+/Vancouver_zonesVsDeaths_algorithms_acs-4_tt-25_policy-FreeFloating.pdf>]
+<Chapter6/figures/CDF_parking_time_per_algorithm.pdf, id=3176, 540.89891pt x 408
+.19783pt>
+File: Chapter6/figures/CDF_parking_time_per_algorithm.pdf Graphic file (type pdf
+)
+<use Chapter6/figures/CDF_parking_time_per_algorithm.pdf>
+Package luatex.def Info: Chapter6/figures/CDF_parking_time_per_algorithm.pdf  us
+ed on input line 59.
+(luatex.def)             Requested size: 211.25116pt x 159.42073pt.
+)
+(./Chapter6/6_7_return_results.tex
+<Chapter6/figures/DeathsVsZones_city.pdf, id=3177, 582.99683pt x 331.29222pt>
 File: Chapter6/figures/DeathsVsZones_city.pdf Graphic file (type pdf)
 <use Chapter6/figures/DeathsVsZones_city.pdf>
 Package luatex.def Info: Chapter6/figures/DeathsVsZones_city.pdf  used on input 
 line 3.
 (luatex.def)             Requested size: 401.3759pt x 228.09142pt.
-<Chapter6/figures/legenda.pdf, id=3197, 742.64351pt x 22.73393pt>
+<Chapter6/figures/legenda.pdf, id=3178, 742.64351pt x 22.73393pt>
 File: Chapter6/figures/legenda.pdf Graphic file (type pdf)
 <use Chapter6/figures/legenda.pdf>
 Package luatex.def Info: Chapter6/figures/legenda.pdf  used on input line 15.
 (luatex.def)             Requested size: 207.02844pt x 6.33736pt.
-<Chapter6/figures/cut_Vancouver_DeathsVsZones_Policy_44_tt-25_100_4.pdf, id=3198
+<Chapter6/figures/cut_Vancouver_DeathsVsZones_Policy_44_tt-25_100_4.pdf, id=3179
 , 569.74419pt x 230.21289pt>
 File: Chapter6/figures/cut_Vancouver_DeathsVsZones_Policy_44_tt-25_100_4.pdf Gra
 phic file (type pdf)
@@ -3042,7 +3058,7 @@ phic file (type pdf)
 Package luatex.def Info: Chapter6/figures/cut_Vancouver_DeathsVsZones_Policy_44_
 tt-25_100_4.pdf  used on input line 20.
 (luatex.def)             Requested size: 207.02844pt x 83.65288pt.
-<Chapter6/figures/cut_Berlino_DeathsVsZones_Policy_44_tt-25_100_4.pdf, id=3199, 
+<Chapter6/figures/cut_Berlino_DeathsVsZones_Policy_44_tt-25_100_4.pdf, id=3180, 
 569.74419pt x 230.21289pt>
 File: Chapter6/figures/cut_Berlino_DeathsVsZones_Policy_44_tt-25_100_4.pdf Graph
 ic file (type pdf)
@@ -3050,15 +3066,13 @@ ic file (type pdf)
 Package luatex.def Info: Chapter6/figures/cut_Berlino_DeathsVsZones_Policy_44_tt
 -25_100_4.pdf  used on input line 25.
 (luatex.def)             Requested size: 207.02844pt x 83.65288pt.
- [63<./Chapter6/figures/DeathsVsZones_city.pdf><./Chapter6/figures/legenda.pdf><
-./Chapter6/figures/cut_Vancouver_DeathsVsZones_Policy_44_tt-25_100_4.pdf><./Chap
-ter6/figures/cut_Berlino_DeathsVsZones_Policy_44_tt-25_100_4.pdf>]
+ [63<./Chapter6/figures/CDF_parking_time_per_algorithm.pdf>]
 File: Chapter6/figures/legenda.pdf Graphic file (type pdf)
 <use Chapter6/figures/legenda.pdf>
 Package luatex.def Info: Chapter6/figures/legenda.pdf  used on input line 46.
 (luatex.def)             Requested size: 207.02844pt x 6.33736pt.
 <Chapter6/figures/cut_Torino_AmountRechargePercVsZones_Policy_44_tt-25_100_4.pdf
-, id=3391, 574.9825pt x 265.29897pt>
+, id=3234, 574.9825pt x 265.29897pt>
 File: Chapter6/figures/cut_Torino_AmountRechargePercVsZones_Policy_44_tt-25_100_
 4.pdf Graphic file (type pdf)
 <use Chapter6/figures/cut_Torino_AmountRechargePercVsZones_Policy_44_tt-25_100_4
@@ -3066,8 +3080,8 @@ File: Chapter6/figures/cut_Torino_AmountRechargePercVsZones_Policy_44_tt-25_100_
 Package luatex.def Info: Chapter6/figures/cut_Torino_AmountRechargePercVsZones_P
 olicy_44_tt-25_100_4.pdf  used on input line 49.
 (luatex.def)             Requested size: 139.42653pt x 64.33289pt.
-<Chapter6/figures/cut_Torino_ReroutePercVsZones_Policy_44_tt-25_100_4.pdf, id=33
-92, 574.512pt x 249.95413pt>
+<Chapter6/figures/cut_Torino_ReroutePercVsZones_Policy_44_tt-25_100_4.pdf, id=32
+35, 574.512pt x 249.95413pt>
 File: Chapter6/figures/cut_Torino_ReroutePercVsZones_Policy_44_tt-25_100_4.pdf G
 raphic file (type pdf)
 <use Chapter6/figures/cut_Torino_ReroutePercVsZones_Policy_44_tt-25_100_4.pdf>
@@ -3075,7 +3089,7 @@ Package luatex.def Info: Chapter6/figures/cut_Torino_ReroutePercVsZones_Policy_4
 4_tt-25_100_4.pdf  used on input line 50.
 (luatex.def)             Requested size: 139.42653pt x 60.66147pt.
 <Chapter6/figures/cut_Torino_AvgWalkedDistanceVsZones_Policy_44_tt-25_100_4.pdf,
- id=3393, 580.7227pt x 268.24748pt>
+ id=3236, 580.7227pt x 268.24748pt>
 File: Chapter6/figures/cut_Torino_AvgWalkedDistanceVsZones_Policy_44_tt-25_100_4
 .pdf Graphic file (type pdf)
 <use Chapter6/figures/cut_Torino_AvgWalkedDistanceVsZones_Policy_44_tt-25_100_4.
@@ -3084,7 +3098,7 @@ Package luatex.def Info: Chapter6/figures/cut_Torino_AvgWalkedDistanceVsZones_Po
 licy_44_tt-25_100_4.pdf  used on input line 51.
 (luatex.def)             Requested size: 139.42653pt x 64.40117pt.
 <Chapter6/figures/cut_Milano_AmountRechargePercVsZones_Policy_44_tt-25_100_4.pdf
-, id=3394, 574.9825pt x 265.29897pt>
+, id=3237, 574.9825pt x 265.29897pt>
 File: Chapter6/figures/cut_Milano_AmountRechargePercVsZones_Policy_44_tt-25_100_
 4.pdf Graphic file (type pdf)
 <use Chapter6/figures/cut_Milano_AmountRechargePercVsZones_Policy_44_tt-25_100_4
@@ -3092,8 +3106,8 @@ File: Chapter6/figures/cut_Milano_AmountRechargePercVsZones_Policy_44_tt-25_100_
 Package luatex.def Info: Chapter6/figures/cut_Milano_AmountRechargePercVsZones_P
 olicy_44_tt-25_100_4.pdf  used on input line 56.
 (luatex.def)             Requested size: 139.42653pt x 64.33289pt.
-<Chapter6/figures/cut_Milano_ReroutePercVsZones_Policy_44_tt-25_100_4.pdf, id=33
-95, 574.512pt x 249.95413pt>
+<Chapter6/figures/cut_Milano_ReroutePercVsZones_Policy_44_tt-25_100_4.pdf, id=32
+38, 574.512pt x 249.95413pt>
 File: Chapter6/figures/cut_Milano_ReroutePercVsZones_Policy_44_tt-25_100_4.pdf G
 raphic file (type pdf)
 <use Chapter6/figures/cut_Milano_ReroutePercVsZones_Policy_44_tt-25_100_4.pdf>
@@ -3101,7 +3115,7 @@ Package luatex.def Info: Chapter6/figures/cut_Milano_ReroutePercVsZones_Policy_4
 4_tt-25_100_4.pdf  used on input line 57.
 (luatex.def)             Requested size: 139.42653pt x 60.66147pt.
 <Chapter6/figures/cut_Milano_AvgWalkedDistanceVsZones_Policy_44_tt-25_100_4.pdf,
- id=3396, 580.7227pt x 268.24748pt>
+ id=3239, 580.7227pt x 268.24748pt>
 File: Chapter6/figures/cut_Milano_AvgWalkedDistanceVsZones_Policy_44_tt-25_100_4
 .pdf Graphic file (type pdf)
 <use Chapter6/figures/cut_Milano_AvgWalkedDistanceVsZones_Policy_44_tt-25_100_4.
@@ -3110,7 +3124,7 @@ Package luatex.def Info: Chapter6/figures/cut_Milano_AvgWalkedDistanceVsZones_Po
 licy_44_tt-25_100_4.pdf  used on input line 58.
 (luatex.def)             Requested size: 139.42653pt x 64.40117pt.
 <Chapter6/figures/cut_Berlino_AmountRechargePercVsZones_Policy_44_tt-25_100_4.pd
-f, id=3397, 574.9825pt x 265.29897pt>
+f, id=3240, 574.9825pt x 265.29897pt>
 File: Chapter6/figures/cut_Berlino_AmountRechargePercVsZones_Policy_44_tt-25_100
 _4.pdf Graphic file (type pdf)
 <use Chapter6/figures/cut_Berlino_AmountRechargePercVsZones_Policy_44_tt-25_100_
@@ -3119,7 +3133,7 @@ Package luatex.def Info: Chapter6/figures/cut_Berlino_AmountRechargePercVsZones_
 Policy_44_tt-25_100_4.pdf  used on input line 63.
 (luatex.def)             Requested size: 139.42653pt x 64.33289pt.
 <Chapter6/figures/cut_Berlino_ReroutePercVsZones_Policy_44_tt-25_100_4.pdf, id=3
-398, 574.512pt x 249.95413pt>
+241, 574.512pt x 249.95413pt>
 File: Chapter6/figures/cut_Berlino_ReroutePercVsZones_Policy_44_tt-25_100_4.pdf 
 Graphic file (type pdf)
 <use Chapter6/figures/cut_Berlino_ReroutePercVsZones_Policy_44_tt-25_100_4.pdf>
@@ -3127,7 +3141,7 @@ Package luatex.def Info: Chapter6/figures/cut_Berlino_ReroutePercVsZones_Policy_
 44_tt-25_100_4.pdf  used on input line 64.
 (luatex.def)             Requested size: 139.42653pt x 60.66147pt.
 <Chapter6/figures/cut_Berlino_AvgWalkedDistanceVsZones_Policy_44_tt-25_100_4.pdf
-, id=3399, 580.7227pt x 268.24748pt>
+, id=3242, 580.7227pt x 268.24748pt>
 File: Chapter6/figures/cut_Berlino_AvgWalkedDistanceVsZones_Policy_44_tt-25_100_
 4.pdf Graphic file (type pdf)
 <use Chapter6/figures/cut_Berlino_AvgWalkedDistanceVsZones_Policy_44_tt-25_100_4
@@ -3136,7 +3150,7 @@ Package luatex.def Info: Chapter6/figures/cut_Berlino_AvgWalkedDistanceVsZones_P
 olicy_44_tt-25_100_4.pdf  used on input line 65.
 (luatex.def)             Requested size: 139.42653pt x 64.40117pt.
 <Chapter6/figures/cut_Vancouver_AmountRechargePercVsZones_Policy_44_tt-25_100_4.
-pdf, id=3400, 574.9825pt x 265.29897pt>
+pdf, id=3243, 574.9825pt x 265.29897pt>
 File: Chapter6/figures/cut_Vancouver_AmountRechargePercVsZones_Policy_44_tt-25_1
 00_4.pdf Graphic file (type pdf)
 <use Chapter6/figures/cut_Vancouver_AmountRechargePercVsZones_Policy_44_tt-25_10
@@ -3145,7 +3159,7 @@ Package luatex.def Info: Chapter6/figures/cut_Vancouver_AmountRechargePercVsZone
 s_Policy_44_tt-25_100_4.pdf  used on input line 70.
 (luatex.def)             Requested size: 139.42653pt x 64.33289pt.
 <Chapter6/figures/cut_Vancouver_ReroutePercVsZones_Policy_44_tt-25_100_4.pdf, id
-=3401, 574.512pt x 249.95413pt>
+=3244, 574.512pt x 249.95413pt>
 File: Chapter6/figures/cut_Vancouver_ReroutePercVsZones_Policy_44_tt-25_100_4.pd
 f Graphic file (type pdf)
 <use Chapter6/figures/cut_Vancouver_ReroutePercVsZones_Policy_44_tt-25_100_4.pdf
@@ -3154,7 +3168,7 @@ Package luatex.def Info: Chapter6/figures/cut_Vancouver_ReroutePercVsZones_Polic
 y_44_tt-25_100_4.pdf  used on input line 71.
 (luatex.def)             Requested size: 139.42653pt x 60.66147pt.
 <Chapter6/figures/cut_Vancouver_AvgWalkedDistanceVsZones_Policy_44_tt-25_100_4.p
-df, id=3402, 580.7227pt x 268.24748pt>
+df, id=3245, 580.7227pt x 268.24748pt>
 File: Chapter6/figures/cut_Vancouver_AvgWalkedDistanceVsZones_Policy_44_tt-25_10
 0_4.pdf Graphic file (type pdf)
 <use Chapter6/figures/cut_Vancouver_AvgWalkedDistanceVsZones_Policy_44_tt-25_100
@@ -3162,24 +3176,27 @@ _4.pdf>
 Package luatex.def Info: Chapter6/figures/cut_Vancouver_AvgWalkedDistanceVsZones
 _Policy_44_tt-25_100_4.pdf  used on input line 72.
 (luatex.def)             Requested size: 139.42653pt x 64.40117pt.
- [64] [65<./Chapter6/figures/cut_Torino_AmountRechargePercVsZones_Policy_44_tt-2
-5_100_4.pdf><./Chapter6/figures/cut_Torino_ReroutePercVsZones_Policy_44_tt-25_10
-0_4.pdf><./Chapter6/figures/cut_Torino_AvgWalkedDistanceVsZones_Policy_44_tt-25_
-100_4.pdf><./Chapter6/figures/cut_Milano_AmountRechargePercVsZones_Policy_44_tt-
-25_100_4.pdf><./Chapter6/figures/cut_Milano_ReroutePercVsZones_Policy_44_tt-25_1
-00_4.pdf><./Chapter6/figures/cut_Milano_AvgWalkedDistanceVsZones_Policy_44_tt-25
-_100_4.pdf><./Chapter6/figures/cut_Berlino_AmountRechargePercVsZones_Policy_44_t
-t-25_100_4.pdf><./Chapter6/figures/cut_Berlino_ReroutePercVsZones_Policy_44_tt-2
-5_100_4.pdf><./Chapter6/figures/cut_Berlino_AvgWalkedDistanceVsZones_Policy_44_t
-t-25_100_4.pdf><./Chapter6/figures/cut_Vancouver_AmountRechargePercVsZones_Polic
-y_44_tt-25_100_4.pdf><./Chapter6/figures/cut_Vancouver_ReroutePercVsZones_Policy
-_44_tt-25_100_4.pdf><./Chapter6/figures/cut_Vancouver_AvgWalkedDistanceVsZones_P
-olicy_44_tt-25_100_4.pdf>] [66]
+ [64<./Chapter6/figures/DeathsVsZones_city.pdf><./Chapter6/figures/legenda.pdf><
+./Chapter6/figures/cut_Vancouver_DeathsVsZones_Policy_44_tt-25_100_4.pdf><./Chap
+ter6/figures/cut_Berlino_DeathsVsZones_Policy_44_tt-25_100_4.pdf>] [65<./Chapter
+6/figures/cut_Torino_AmountRechargePercVsZones_Policy_44_tt-25_100_4.pdf><./Chap
+ter6/figures/cut_Torino_ReroutePercVsZones_Policy_44_tt-25_100_4.pdf><./Chapter6
+/figures/cut_Torino_AvgWalkedDistanceVsZones_Policy_44_tt-25_100_4.pdf><./Chapte
+r6/figures/cut_Milano_AmountRechargePercVsZones_Policy_44_tt-25_100_4.pdf><./Cha
+pter6/figures/cut_Milano_ReroutePercVsZones_Policy_44_tt-25_100_4.pdf><./Chapter
+6/figures/cut_Milano_AvgWalkedDistanceVsZones_Policy_44_tt-25_100_4.pdf><./Chapt
+er6/figures/cut_Berlino_AmountRechargePercVsZones_Policy_44_tt-25_100_4.pdf><./C
+hapter6/figures/cut_Berlino_ReroutePercVsZones_Policy_44_tt-25_100_4.pdf><./Chap
+ter6/figures/cut_Berlino_AvgWalkedDistanceVsZones_Policy_44_tt-25_100_4.pdf><./C
+hapter6/figures/cut_Vancouver_AmountRechargePercVsZones_Policy_44_tt-25_100_4.pd
+f><./Chapter6/figures/cut_Vancouver_ReroutePercVsZones_Policy_44_tt-25_100_4.pdf
+><./Chapter6/figures/cut_Vancouver_AvgWalkedDistanceVsZones_Policy_44_tt-25_100_
+4.pdf>] [66]
 File: Chapter6/figures/legenda.pdf Graphic file (type pdf)
 <use Chapter6/figures/legenda.pdf>
 Package luatex.def Info: Chapter6/figures/legenda.pdf  used on input line 120.
 (luatex.def)             Requested size: 198.5766pt x 6.07857pt.
-<Chapter6/figures/cut_Vancouver_AvgSOCVsZones_Policy_44_tt-25_100_4.pdf, id=3894
+<Chapter6/figures/cut_Vancouver_AvgSOCVsZones_Policy_44_tt-25_100_4.pdf, id=3920
 , 570.43427pt x 244.48683pt>
 File: Chapter6/figures/cut_Vancouver_AvgSOCVsZones_Policy_44_tt-25_100_4.pdf Gra
 phic file (type pdf)
@@ -3188,7 +3205,7 @@ Package luatex.def Info: Chapter6/figures/cut_Vancouver_AvgSOCVsZones_Policy_44_
 tt-25_100_4.pdf  used on input line 125.
 (luatex.def)             Requested size: 198.5766pt x 85.10907pt.
 <Chapter6/figures/cut_Vancouver_TravelWithPenlatyVsZones_Policy_44_tt-25_100_4.p
-df, id=3895, 566.73294pt x 253.09714pt>
+df, id=3921, 566.73294pt x 253.09714pt>
 File: Chapter6/figures/cut_Vancouver_TravelWithPenlatyVsZones_Policy_44_tt-25_10
 0_4.pdf Graphic file (type pdf)
 <use Chapter6/figures/cut_Vancouver_TravelWithPenlatyVsZones_Policy_44_tt-25_100
@@ -3196,16 +3213,15 @@ _4.pdf>
 Package luatex.def Info: Chapter6/figures/cut_Vancouver_TravelWithPenlatyVsZones
 _Policy_44_tt-25_100_4.pdf  used on input line 130.
 (luatex.def)             Requested size: 198.5766pt x 88.68187pt.
-)
-(./Chapter6/6_8_poles_results.tex
-<Chapter6/figures/50_Deaths_vsZones_ACS.pdf, id=3896, 764.63008pt x 310.45656pt>
+) (./Chapter6/6_8_poles_results.tex
+<Chapter6/figures/50_Deaths_vsZones_ACS.pdf, id=3922, 764.63008pt x 310.45656pt>
 
 File: Chapter6/figures/50_Deaths_vsZones_ACS.pdf Graphic file (type pdf)
 <use Chapter6/figures/50_Deaths_vsZones_ACS.pdf>
 Package luatex.def Info: Chapter6/figures/50_Deaths_vsZones_ACS.pdf  used on inp
 ut line 4.
 (luatex.def)             Requested size: 207.02844pt x 84.0565pt.
-<Chapter6/figures/50_AvgTimeInStation_vsZones_ACS.pdf, id=3897, 747.66045pt x 28
+<Chapter6/figures/50_AvgTimeInStation_vsZones_ACS.pdf, id=3923, 747.66045pt x 28
 3.65724pt>
 File: Chapter6/figures/50_AvgTimeInStation_vsZones_ACS.pdf Graphic file (type pd
 f)
@@ -3213,14 +3229,14 @@ f)
 Package luatex.def Info: Chapter6/figures/50_AvgTimeInStation_vsZones_ACS.pdf  u
 sed on input line 9.
 (luatex.def)             Requested size: 207.02844pt x 78.54483pt.
-<Chapter6/figures/50_ReroutePerc_vsZones_ACS.pdf, id=3898, 747.66045pt x 283.657
+<Chapter6/figures/50_ReroutePerc_vsZones_ACS.pdf, id=3924, 747.66045pt x 283.657
 24pt>
 File: Chapter6/figures/50_ReroutePerc_vsZones_ACS.pdf Graphic file (type pdf)
 <use Chapter6/figures/50_ReroutePerc_vsZones_ACS.pdf>
 Package luatex.def Info: Chapter6/figures/50_ReroutePerc_vsZones_ACS.pdf  used o
 n input line 14.
 (luatex.def)             Requested size: 207.02844pt x 78.54483pt.
-<Chapter6/figures/50_AvgWalkedDistance_vsZones_ACS.pdf, id=3899, 738.07776pt x 2
+<Chapter6/figures/50_AvgWalkedDistance_vsZones_ACS.pdf, id=3925, 738.07776pt x 2
 85.86078pt>
 File: Chapter6/figures/50_AvgWalkedDistance_vsZones_ACS.pdf Graphic file (type p
 df)
@@ -3228,15 +3244,15 @@ df)
 Package luatex.def Info: Chapter6/figures/50_AvgWalkedDistance_vsZones_ACS.pdf  
 used on input line 19.
 (luatex.def)             Requested size: 207.02844pt x 80.1844pt.
- [67<./Chapter6/figures/cut_Vancouver_AvgSOCVsZones_Policy_44_tt-25_100_4.pdf><.
-/Chapter6/figures/cut_Vancouver_TravelWithPenlatyVsZones_Policy_44_tt-25_100_4.p
-df>] [68<./Chapter6/figures/50_Deaths_vsZones_ACS.pdf><./Chapter6/figures/50_Avg
-TimeInStation_vsZones_ACS.pdf><./Chapter6/figures/50_ReroutePerc_vsZones_ACS.pdf
-><./Chapter6/figures/50_AvgWalkedDistance_vsZones_ACS.pdf>]) (./Chapter6/6_9_co
-nclusion.tex [69])) [70]
-\openout2 = Chapter7/7_cs_optimization.aux
 
-(./Chapter7/7_cs_optimization.tex
+[67] [68<./Chapter6/figures/cut_Vancouver_AvgSOCVsZones_Policy_44_tt-25_100_4.pd
+f><./Chapter6/figures/cut_Vancouver_TravelWithPenlatyVsZones_Policy_44_tt-25_100
+_4.pdf><./Chapter6/figures/50_Deaths_vsZones_ACS.pdf><./Chapter6/figures/50_AvgT
+imeInStation_vsZones_ACS.pdf><./Chapter6/figures/50_ReroutePerc_vsZones_ACS.pdf>
+<./Chapter6/figures/50_AvgWalkedDistance_vsZones_ACS.pdf>] [69])
+(./Chapter6/6_9_conclusion.tex)) [70]
+\openout2 = Chapter7/7_cs_optimization.aux
+ (./Chapter7/7_cs_optimization.tex
 Chapter 7.
 (./Chapter7/7_0_abstract.tex) (./Chapter7/7_1_intro.tex [71
 
@@ -3257,25 +3273,25 @@ Overfull \hbox (2.35265pt too wide) in paragraph at lines 3--4
 on pipeline and the sim-u-la-tion sce-nario adopted
  []
 
-<Chapter7/figures/CDF_distance.pdf, id=4329, 543.81607pt x 411.11499pt>
+<Chapter7/figures/CDF_distance.pdf, id=4355, 543.81607pt x 411.11499pt>
 File: Chapter7/figures/CDF_distance.pdf Graphic file (type pdf)
 <use Chapter7/figures/CDF_distance.pdf>
 Package luatex.def Info: Chapter7/figures/CDF_distance.pdf  used on input line 1
 4.
 (luatex.def)             Requested size: 190.12474pt x 143.7293pt.
-<Chapter7/figures/CDF_duration.pdf, id=4330, 547.14883pt x 411.11499pt>
+<Chapter7/figures/CDF_duration.pdf, id=4356, 547.14883pt x 411.11499pt>
 File: Chapter7/figures/CDF_duration.pdf Graphic file (type pdf)
 <use Chapter7/figures/CDF_duration.pdf>
 Package luatex.def Info: Chapter7/figures/CDF_duration.pdf  used on input line 1
 9.
 (luatex.def)             Requested size: 190.12474pt x 142.85106pt.
-<Chapter7/figures/Torino_NParkings.pdf, id=4334, 498.43002pt x 629.06398pt>
+<Chapter7/figures/Torino_NParkings.pdf, id=4357, 498.43002pt x 629.06398pt>
 File: Chapter7/figures/Torino_NParkings.pdf Graphic file (type pdf)
 <use Chapter7/figures/Torino_NParkings.pdf>
 Package luatex.def Info: Chapter7/figures/Torino_NParkings.pdf  used on input li
 ne 32.
 (luatex.def)             Requested size: 147.87839pt x 186.63773pt.
-<Chapter7/figures/Torino_AvgTime.pdf, id=4335, 494.06894pt x 625.93924pt>
+<Chapter7/figures/Torino_AvgTime.pdf, id=4358, 494.06894pt x 625.93924pt>
 File: Chapter7/figures/Torino_AvgTime.pdf Graphic file (type pdf)
 <use Chapter7/figures/Torino_AvgTime.pdf>
 Package luatex.def Info: Chapter7/figures/Torino_AvgTime.pdf  used on input line
@@ -3292,202 +3308,113 @@ df>]
 LaTeX Warning: Reference `sec:5_5_simulation_scenario' on page 77 undefined on i
 nput line 21.
 
-) (./Chapter7/7_5_strategies_cs.tex [77]
-
-LaTeX Warning: Reference `fig:hm_max-parking' on page 78 undefined on input line
- 14.
-
-
-LaTeX Warning: Reference `fig:hm_avg-time' on page 78 undefined on input line 14
-.
-
-[78]
-Overfull \hbox (6.62166pt too wide) in paragraph at lines 26--27
-[]\TU/LibertinusSerif(0)/m/n/12 In our work, we con-sider a sim-ple local-search
- al-go-rithm based on a hill-climb method,
- []
-
-
-Overfull \hbox (3.02168pt too wide) in paragraph at lines 46--50
-[]\TU/LibertinusSerif(0)/m/n/12 Our hill-climbing al-go-rithm is very sim-i-lar to the co-or-di-nate de-scent ver-sion [][][]\TU/LibertinusSerif(0)/m/sc/12 W
-󰁄󰀼󰀺󰀻󰁆[][]\TU/LibertinusSerif(0)/m/n/12 ,
- []
-
-[79]) (./Chapter7/7_6_heuristic_placement_results.tex [80]
-<Chapter7/figures/Torino_FF_deaths_probs.pdf, id=4582, 570.60678pt x 251.26811pt
->
-File: Chapter7/figures/Torino_FF_deaths_probs.pdf Graphic file (type pdf)
-<use Chapter7/figures/Torino_FF_deaths_probs.pdf>
-Package luatex.def Info: Chapter7/figures/Torino_FF_deaths_probs.pdf  used on in
-put line 19.
-(luatex.def)             Requested size: 380.2495pt x 167.44391pt.
-<Chapter7/figures/CDF_parking_time_per_algorithm.pdf, id=4583, 540.89891pt x 408
-.19783pt>
-File: Chapter7/figures/CDF_parking_time_per_algorithm.pdf Graphic file (type pdf
-)
-<use Chapter7/figures/CDF_parking_time_per_algorithm.pdf>
-Package luatex.def Info: Chapter7/figures/CDF_parking_time_per_algorithm.pdf  us
-ed on input line 26.
-(luatex.def)             Requested size: 211.25116pt x 159.42073pt.
-
-
-LaTeX Warning: Reference `fig:hm_avg-time' on page 81 undefined on input line 31
-.
-
-
-LaTeX Warning: Reference `fig:hm_max-parking' on page 81 undefined on input line
- 31.
-
-[81<./Chapter7/figures/Torino_FF_deaths_probs.pdf>]
-<Chapter7/figures/Torino_H_N_FF_deaths_probs.pdf, id=4645, 567.76805pt x 243.142
-38pt>
-File: Chapter7/figures/Torino_H_N_FF_deaths_probs.pdf Graphic file (type pdf)
-<use Chapter7/figures/Torino_H_N_FF_deaths_probs.pdf>
-Package luatex.def Info: Chapter7/figures/Torino_H_N_FF_deaths_probs.pdf  used o
-n input line 50.
-(luatex.def)             Requested size: 401.3759pt x 171.89029pt.
-<Chapter7/figures/Taormina_Torino_AmountRechargePerc.pdf, id=4646, 522.04724pt x
- 405.87666pt>
-File: Chapter7/figures/Taormina_Torino_AmountRechargePerc.pdf Graphic file (type
- pdf)
-<use Chapter7/figures/Taormina_Torino_AmountRechargePerc.pdf>
-Package luatex.def Info: Chapter7/figures/Taormina_Torino_AmountRechargePerc.pdf
-  used on input line 61.
-(luatex.def)             Requested size: 190.12474pt x 147.8186pt.
-<Chapter7/figures/Taormina_Torino_ReroutePerc.pdf, id=4647, 522.04724pt x 405.87
-666pt>
-File: Chapter7/figures/Taormina_Torino_ReroutePerc.pdf Graphic file (type pdf)
-<use Chapter7/figures/Taormina_Torino_ReroutePerc.pdf>
-Package luatex.def Info: Chapter7/figures/Taormina_Torino_ReroutePerc.pdf  used 
-on input line 66.
-(luatex.def)             Requested size: 190.12474pt x 147.8186pt.
-<Chapter7/figures/Taormina_Torino_TravelWithPenlaty.pdf, id=4648, 534.81369pt x 
-405.87666pt>
-File: Chapter7/figures/Taormina_Torino_TravelWithPenlaty.pdf Graphic file (type 
-pdf)
-<use Chapter7/figures/Taormina_Torino_TravelWithPenlaty.pdf>
-Package luatex.def Info: Chapter7/figures/Taormina_Torino_TravelWithPenlaty.pdf 
- used on input line 71.
-(luatex.def)             Requested size: 190.12474pt x 144.2885pt.
-
-Overfull \hbox (174.8719pt too wide) in paragraph at lines 61--72
- [][][][] 
- []
-
-[82<./Chapter7/figures/CDF_parking_time_per_algorithm.pdf>] [83<./Chapter7/figur
-es/Torino_H_N_FF_deaths_probs.pdf><./Chapter7/figures/Taormina_Torino_AmountRech
-argePerc.pdf><./Chapter7/figures/Taormina_Torino_ReroutePerc.pdf><./Chapter7/fig
-ures/Taormina_Torino_TravelWithPenlaty.pdf>] [84])
+) (./Chapter7/7_5_strategies_cs.tex [77] [78] [79])
 (./Chapter7/7_7a_heuristic_vs_optimized.tex
-
-LaTeX Warning: Reference `sec:needed' on page 85 undefined on input line 9.
-
-<Chapter7/figures/Hybrid_Deaths.pdf, id=4895, 543.6906pt x 406.19818pt>
+<Chapter7/figures/Hybrid_Deaths.pdf, id=4595, 543.6906pt x 406.19818pt>
 File: Chapter7/figures/Hybrid_Deaths.pdf Graphic file (type pdf)
 <use Chapter7/figures/Hybrid_Deaths.pdf>
 Package luatex.def Info: Chapter7/figures/Hybrid_Deaths.pdf  used on input line 
-23.
+19.
 (luatex.def)             Requested size: 190.12474pt x 142.04132pt.
-<Chapter7/figures/Hybrid_TravelWithPenlaty.pdf, id=4896, 534.81369pt x 405.87666
+<Chapter7/figures/Hybrid_TravelWithPenlaty.pdf, id=4596, 534.81369pt x 405.87666
 pt>
 File: Chapter7/figures/Hybrid_TravelWithPenlaty.pdf Graphic file (type pdf)
 <use Chapter7/figures/Hybrid_TravelWithPenlaty.pdf>
 Package luatex.def Info: Chapter7/figures/Hybrid_TravelWithPenlaty.pdf  used on 
-input line 28.
+input line 24.
 (luatex.def)             Requested size: 190.12474pt x 144.2885pt.
-<Chapter7/figures/Hybrid_AmountRechargePerc.pdf, id=4897, 522.04724pt x 405.8766
+<Chapter7/figures/Hybrid_AmountRechargePerc.pdf, id=4597, 522.04724pt x 405.8766
 6pt>
 File: Chapter7/figures/Hybrid_AmountRechargePerc.pdf Graphic file (type pdf)
 <use Chapter7/figures/Hybrid_AmountRechargePerc.pdf>
 Package luatex.def Info: Chapter7/figures/Hybrid_AmountRechargePerc.pdf  used on
- input line 41.
-(luatex.def)             Requested size: 190.12474pt x 147.8186pt.
-<Chapter7/figures/AvgSOC_comparison.pdf, id=4898, 534.81369pt x 405.87666pt>
+ input line 32.
+(luatex.def)             Requested size: 207.02844pt x 160.96051pt.
+<Chapter7/figures/AvgSOC_comparison.pdf, id=4598, 534.81369pt x 405.87666pt>
 File: Chapter7/figures/AvgSOC_comparison.pdf Graphic file (type pdf)
 <use Chapter7/figures/AvgSOC_comparison.pdf>
 Package luatex.def Info: Chapter7/figures/AvgSOC_comparison.pdf  used on input l
-ine 46.
-(luatex.def)             Requested size: 190.12474pt x 144.2885pt.
-<Chapter7/figures/Hybrid_ReroutePerc.pdf, id=4899, 522.04724pt x 405.87666pt>
+ine 37.
+(luatex.def)             Requested size: 207.02844pt x 157.12074pt.
+<Chapter7/figures/Hybrid_ReroutePerc.pdf, id=4599, 522.04724pt x 405.87666pt>
 File: Chapter7/figures/Hybrid_ReroutePerc.pdf Graphic file (type pdf)
 <use Chapter7/figures/Hybrid_ReroutePerc.pdf>
 Package luatex.def Info: Chapter7/figures/Hybrid_ReroutePerc.pdf  used on input 
-line 51.
-(luatex.def)             Requested size: 190.12474pt x 147.8186pt.
-<Chapter7/figures/Hybrid_AvgWalkedDistance.pdf, id=4900, 547.58012pt x 405.87666
+line 43.
+(luatex.def)             Requested size: 207.02844pt x 160.96051pt.
+<Chapter7/figures/Hybrid_AvgWalkedDistance.pdf, id=4600, 547.58012pt x 405.87666
 pt>
 File: Chapter7/figures/Hybrid_AvgWalkedDistance.pdf Graphic file (type pdf)
 <use Chapter7/figures/Hybrid_AvgWalkedDistance.pdf>
 Package luatex.def Info: Chapter7/figures/Hybrid_AvgWalkedDistance.pdf  used on 
-input line 61.
-(luatex.def)             Requested size: 190.12474pt x 140.91942pt.
-
-Overfull \hbox (373.99664pt too wide) in paragraph at lines 41--62
- [][][][][] 
- []
+input line 48.
+(luatex.def)             Requested size: 207.02844pt x 153.4482pt.
 
 
-Package caption Warning: \label without proper reference on input line 29.
+Package caption Warning: \label without proper reference on input line 25.
 See the caption package documentation for explanation.
 
 
-LaTeX Warning: Reference `fig:optimized_metrics' on page 85 undefined on input l
-ine 67.
+LaTeX Warning: Reference `fig:7_7a_optimized_metrics' on page 80 undefined on in
+put line 90.
 
-[85] [86<./Chapter7/figures/Hybrid_Deaths.pdf><./Chapter7/figures/Hybrid_TravelW
-ithPenlaty.pdf><./Chapter7/figures/Hybrid_AmountRechargePerc.pdf><./Chapter7/fig
+[80]
+
+LaTeX Warning: Reference `fig:7_7a_asoc' on page 81 undefined on input line 102.
+
+
+[81<./Chapter7/figures/Hybrid_Deaths.pdf><./Chapter7/figures/Hybrid_TravelWithPe
+nlaty.pdf>] [82<./Chapter7/figures/Hybrid_AmountRechargePerc.pdf><./Chapter7/fig
 ures/AvgSOC_comparison.pdf><./Chapter7/figures/Hybrid_ReroutePerc.pdf><./Chapter
 7/figures/Hybrid_AvgWalkedDistance.pdf>]
-<Chapter7/figures/NP_hybrid_18_Torino_placement.pdf, id=5202, 499.18304pt x 626.
+<Chapter7/figures/NP_hybrid_18_Torino_placement.pdf, id=4907, 499.18304pt x 626.
 81972pt>
 File: Chapter7/figures/NP_hybrid_18_Torino_placement.pdf Graphic file (type pdf)
 
 <use Chapter7/figures/NP_hybrid_18_Torino_placement.pdf>
 Package luatex.def Info: Chapter7/figures/NP_hybrid_18_Torino_placement.pdf  use
-d on input line 114.
+d on input line 122.
 (luatex.def)             Requested size: 126.75198pt x 159.15305pt.
-<Chapter7/figures/LS_hybrid_18_Torino_placement.pdf, id=5203, 499.13808pt x 626.
+<Chapter7/figures/LS_hybrid_18_Torino_placement.pdf, id=4908, 499.13808pt x 626.
 1041pt>
 File: Chapter7/figures/LS_hybrid_18_Torino_placement.pdf Graphic file (type pdf)
 
 <use Chapter7/figures/LS_hybrid_18_Torino_placement.pdf>
 Package luatex.def Info: Chapter7/figures/LS_hybrid_18_Torino_placement.pdf  use
-d on input line 119.
+d on input line 127.
 (luatex.def)             Requested size: 126.75198pt x 158.99045pt.
-<Chapter7/figures/GN_hybrid_18_Torino_placement.pdf, id=5204, 488.87975pt x 630.
+<Chapter7/figures/GN_hybrid_18_Torino_placement.pdf, id=4909, 488.87975pt x 630.
 96352pt>
 File: Chapter7/figures/GN_hybrid_18_Torino_placement.pdf Graphic file (type pdf)
 
 <use Chapter7/figures/GN_hybrid_18_Torino_placement.pdf>
 Package luatex.def Info: Chapter7/figures/GN_hybrid_18_Torino_placement.pdf  use
-d on input line 124.
+d on input line 132.
 (luatex.def)             Requested size: 126.75198pt x 163.5845pt.
- [87<./Chapter7/figures/NP_hybrid_18_Torino_placement.pdf><./Chapter7/figures/LS
-_hybrid_18_Torino_placement.pdf><./Chapter7/figures/GN_hybrid_18_Torino_placemen
-t.pdf>]
-<Chapter7/figures/Deaths_comparison.pdf, id=5365, 543.6906pt x 406.19818pt>
+<Chapter7/figures/Deaths_comparison.pdf, id=4914, 543.6906pt x 406.19818pt>
 File: Chapter7/figures/Deaths_comparison.pdf Graphic file (type pdf)
 <use Chapter7/figures/Deaths_comparison.pdf>
 Package luatex.def Info: Chapter7/figures/Deaths_comparison.pdf  used on input l
-ine 145.
+ine 152.
 (luatex.def)             Requested size: 190.12474pt x 142.04132pt.
-<Chapter7/figures/TravelWithPenlaty_comparison.pdf, id=5366, 534.81369pt x 405.8
+<Chapter7/figures/TravelWithPenlaty_comparison.pdf, id=4915, 534.81369pt x 405.8
 7666pt>
 File: Chapter7/figures/TravelWithPenlaty_comparison.pdf Graphic file (type pdf)
 <use Chapter7/figures/TravelWithPenlaty_comparison.pdf>
 Package luatex.def Info: Chapter7/figures/TravelWithPenlaty_comparison.pdf  used
- on input line 150.
+ on input line 157.
 (luatex.def)             Requested size: 190.12474pt x 144.2885pt.
-) [88<./Chapter7/figures/Deaths_comparison.pdf><./Chapter7/figures/TravelWithPen
-laty_comparison.pdf>]
+ [83<./Chapter7/figures/NP_hybrid_18_Torino_placement.pdf><./Chapter7/figures/LS
+_hybrid_18_Torino_placement.pdf><./Chapter7/figures/GN_hybrid_18_Torino_placemen
+t.pdf>])
 (./Chapter7/7_7b_needed.tex
-<Chapter7/figures/Needed_Deaths.pdf, id=5461, 543.6906pt x 406.19818pt>
+<Chapter7/figures/Needed_Deaths.pdf, id=5073, 543.6906pt x 406.19818pt>
 File: Chapter7/figures/Needed_Deaths.pdf Graphic file (type pdf)
 <use Chapter7/figures/Needed_Deaths.pdf>
 Package luatex.def Info: Chapter7/figures/Needed_Deaths.pdf  used on input line 
 12.
 (luatex.def)             Requested size: 190.12474pt x 142.04132pt.
-<Chapter7/figures/Needed_TravelWithPenlaty.pdf, id=5462, 534.81369pt x 405.87666
+<Chapter7/figures/Needed_TravelWithPenlaty.pdf, id=5074, 534.81369pt x 405.87666
 pt>
 File: Chapter7/figures/Needed_TravelWithPenlaty.pdf Graphic file (type pdf)
 <use Chapter7/figures/Needed_TravelWithPenlaty.pdf>
@@ -3496,58 +3423,54 @@ input line 17.
 (luatex.def)             Requested size: 190.12474pt x 144.2885pt.
 
 
-LaTeX Warning: Reference `sec:opt' on page 89 undefined on input line 23.
+LaTeX Warning: `h' float specifier changed to `ht'.
 
-<Chapter7/figures/Needed_AmountRechargePerc.pdf, id=5465, 522.04724pt x 405.8766
+<Chapter7/figures/Needed_AmountRechargePerc.pdf, id=5078, 522.04724pt x 405.8766
 6pt>
 File: Chapter7/figures/Needed_AmountRechargePerc.pdf Graphic file (type pdf)
 <use Chapter7/figures/Needed_AmountRechargePerc.pdf>
 Package luatex.def Info: Chapter7/figures/Needed_AmountRechargePerc.pdf  used on
- input line 35.
-(luatex.def)             Requested size: 190.12474pt x 147.8186pt.
-<Chapter7/figures/AvgSOC_comparison_N.pdf, id=5466, 534.81369pt x 405.87666pt>
+ input line 29.
+(luatex.def)             Requested size: 207.02844pt x 160.96051pt.
+<Chapter7/figures/AvgSOC_comparison_N.pdf, id=5079, 534.81369pt x 405.87666pt>
 File: Chapter7/figures/AvgSOC_comparison_N.pdf Graphic file (type pdf)
 <use Chapter7/figures/AvgSOC_comparison_N.pdf>
 Package luatex.def Info: Chapter7/figures/AvgSOC_comparison_N.pdf  used on input
- line 40.
-(luatex.def)             Requested size: 190.12474pt x 144.2885pt.
-<Chapter7/figures/Needed_ReroutePerc.pdf, id=5467, 522.04724pt x 405.87666pt>
+ line 34.
+(luatex.def)             Requested size: 207.02844pt x 157.12074pt.
+<Chapter7/figures/Needed_ReroutePerc.pdf, id=5080, 522.04724pt x 405.87666pt>
 File: Chapter7/figures/Needed_ReroutePerc.pdf Graphic file (type pdf)
 <use Chapter7/figures/Needed_ReroutePerc.pdf>
 Package luatex.def Info: Chapter7/figures/Needed_ReroutePerc.pdf  used on input 
-line 45.
-(luatex.def)             Requested size: 190.12474pt x 147.8186pt.
-<Chapter7/figures/Needed_AvgWalkedDistance.pdf, id=5468, 547.58012pt x 405.87666
+line 39.
+(luatex.def)             Requested size: 207.02844pt x 160.96051pt.
+<Chapter7/figures/Needed_AvgWalkedDistance.pdf, id=5081, 547.58012pt x 405.87666
 pt>
 File: Chapter7/figures/Needed_AvgWalkedDistance.pdf Graphic file (type pdf)
 <use Chapter7/figures/Needed_AvgWalkedDistance.pdf>
 Package luatex.def Info: Chapter7/figures/Needed_AvgWalkedDistance.pdf  used on 
-input line 51.
-(luatex.def)             Requested size: 198.5766pt x 147.1869pt.
-
-Overfull \hbox (174.8719pt too wide) in paragraph at lines 35--52
-[][][][]
- []
-
-[89<./Chapter7/figures/Needed_Deaths.pdf><./Chapter7/figures/Needed_TravelWithPe
-nlaty.pdf>]) (./Chapter7/7_8_conclusion.tex [90<./Chapter7/figures/Needed_Amount
-RechargePerc.pdf><./Chapter7/figures/AvgSOC_comparison_N.pdf><./Chapter7/figures
-/Needed_ReroutePerc.pdf><./Chapter7/figures/Needed_AvgWalkedDistance.pdf>]
+input line 44.
+(luatex.def)             Requested size: 207.02844pt x 153.4482pt.
+[84<./Chapter7/figures/Deaths_comparison.pdf><./Chapter7/figures/TravelWithPenla
+ty_comparison.pdf>]) (./Chapter7/7_8_conclusion.tex [85<./Chapter7/figures/Neede
+d_Deaths.pdf><./Chapter7/figures/Needed_TravelWithPenlaty.pdf>] [86<./Chapter7/f
+igures/Needed_AmountRechargePerc.pdf><./Chapter7/figures/AvgSOC_comparison_N.pdf
+><./Chapter7/figures/Needed_ReroutePerc.pdf><./Chapter7/figures/Needed_AvgWalked
+Distance.pdf>]
 LaTeX Font Info:    Font shape `TU/LibertinusSerif(0)/m/sl' in size <12> not ava
 ilable
 (Font)              Font shape `TU/LibertinusSerif(0)/m/it' tried instead on inp
 ut line 22.
-
-[91])) [92]
+ [87])) [88]
 \openout2 = Chapter8/8_prediction.aux
  (./Chapter8/8_prediction.tex
 Chapter 8.
-(./Chapter8/8_0_abstract.tex) (./Chapter8/8_1_introduction.tex [93
+(./Chapter8/8_0_abstract.tex) (./Chapter8/8_1_introduction.tex [89
 
 
 
-] [94])
-(./Chapter8/8_2_related_works.tex [95]
+] [90])
+(./Chapter8/8_2_related_works.tex [91]
 Overfull \hbox (16.97769pt too wide) in paragraph at lines 11--13
 \TU/LibertinusSerif(0)/m/n/12 based micro-simulation to model how agents move ar
 ound in a city ([]).
@@ -3567,22 +3490,22 @@ Overfull \hbox (1.02702pt too wide) in paragraph at lines 17--18
 󰀺󰀸󰁄[][]\TU/LibertinusSerif(0)/m/n/12 , [][]2014[][]) con-
  []
 
-[96]) (./Chapter8/8_3_data_collecting_and_carachterization.tex [97]
+[92]) (./Chapter8/8_3_data_collecting_and_carachterization.tex [93]
 Underfull \hbox (badness 10000) in paragraph at lines 28--28
 [][][]\TU/LibertinusSerif(0)/m/n/10.00012 The list of fea-tures is avail-able at
  [][]$\TU/LibertinusMono(0)/m/n/10.00012 https://opendata.vancouver.ca/pages/
  []
 
-[98]
+[94]
 <Chapter8/figures/temporal_characterization/BookingsHourAnalysisPeriod.pdf, id=5
-892, 1084.05pt x 722.7pt>
+599, 1084.05pt x 722.7pt>
 File: Chapter8/figures/temporal_characterization/BookingsHourAnalysisPeriod.pdf 
 Graphic file (type pdf)
 <use Chapter8/figures/temporal_characterization/BookingsHourAnalysisPeriod.pdf>
 Package luatex.def Info: Chapter8/figures/temporal_characterization/BookingsHour
 AnalysisPeriod.pdf  used on input line 48.
 (luatex.def)             Requested size: 274.62392pt x 183.07854pt.
-<Chapter8/figures/temporal_characterization/AverageBookingsPeriod.pdf, id=5893, 
+<Chapter8/figures/temporal_characterization/AverageBookingsPeriod.pdf, id=5600, 
 1084.05pt x 722.7pt>
 File: Chapter8/figures/temporal_characterization/AverageBookingsPeriod.pdf Graph
 ic file (type pdf)
@@ -3590,7 +3513,7 @@ ic file (type pdf)
 Package luatex.def Info: Chapter8/figures/temporal_characterization/AverageBooki
 ngsPeriod.pdf  used on input line 57.
 (luatex.def)             Requested size: 274.62392pt x 183.07854pt.
-<Chapter8/figures/temporal_characterization/AverageBookingsWeekday.pdf, id=5894,
+<Chapter8/figures/temporal_characterization/AverageBookingsWeekday.pdf, id=5601,
  1084.05pt x 722.7pt>
 File: Chapter8/figures/temporal_characterization/AverageBookingsWeekday.pdf Grap
 hic file (type pdf)
@@ -3598,10 +3521,10 @@ hic file (type pdf)
 Package luatex.def Info: Chapter8/figures/temporal_characterization/AverageBooki
 ngsWeekday.pdf  used on input line 63.
 (luatex.def)             Requested size: 274.62392pt x 183.07854pt.
- [99<./Chapter8/figures/temporal_characterization/BookingsHourAnalysisPeriod.pdf
->] [100<./Chapter8/figures/temporal_characterization/AverageBookingsPeriod.pdf><
-./Chapter8/figures/temporal_characterization/AverageBookingsWeekday.pdf>]
-<Chapter8/figures/data_coll_char/morning_flow_n.pdf, id=6033, 1041.0678pt x 458.
+ [95<./Chapter8/figures/temporal_characterization/BookingsHourAnalysisPeriod.pdf
+>] [96<./Chapter8/figures/temporal_characterization/AverageBookingsPeriod.pdf><.
+/Chapter8/figures/temporal_characterization/AverageBookingsWeekday.pdf>]
+<Chapter8/figures/data_coll_char/morning_flow_n.pdf, id=5740, 1041.0678pt x 458.
 90675pt>
 File: Chapter8/figures/data_coll_char/morning_flow_n.pdf Graphic file (type pdf)
 
@@ -3609,7 +3532,7 @@ File: Chapter8/figures/data_coll_char/morning_flow_n.pdf Graphic file (type pdf)
 Package luatex.def Info: Chapter8/figures/data_coll_char/morning_flow_n.pdf  use
 d on input line 96.
 (luatex.def)             Requested size: 274.62392pt x 121.04951pt.
-<Chapter8/figures/data_coll_char/afternoon_flow_n.pdf, id=6034, 1041.0678pt x 45
+<Chapter8/figures/data_coll_char/afternoon_flow_n.pdf, id=5741, 1041.0678pt x 45
 8.90675pt>
 File: Chapter8/figures/data_coll_char/afternoon_flow_n.pdf Graphic file (type pd
 f)
@@ -3617,7 +3540,7 @@ f)
 Package luatex.def Info: Chapter8/figures/data_coll_char/afternoon_flow_n.pdf  u
 sed on input line 102.
 (luatex.def)             Requested size: 274.62392pt x 121.04951pt.
-<Chapter8/figures/data_coll_char/flows_per_zone.pdf, id=6035, 922.86783pt x 457.
+<Chapter8/figures/data_coll_char/flows_per_zone.pdf, id=5742, 922.86783pt x 457.
 40762pt>
 File: Chapter8/figures/data_coll_char/flows_per_zone.pdf Graphic file (type pdf)
 
@@ -3625,10 +3548,11 @@ File: Chapter8/figures/data_coll_char/flows_per_zone.pdf Graphic file (type pdf)
 Package luatex.def Info: Chapter8/figures/data_coll_char/flows_per_zone.pdf  use
 d on input line 113.
 (luatex.def)             Requested size: 274.62392pt x 136.1136pt.
-[101] [102<./Chapter8/figures/data_coll_char/morning_flow_n.pdf><./Chapter8/figu
-res/data_coll_char/afternoon_flow_n.pdf><./Chapter8/figures/data_coll_char/flows
-_per_zone.pdf>]
-<Chapter8/figures/temporal_characterization/WeatherPeriod2.pdf, id=6164, 1410.49
+
+[97] [98<./Chapter8/figures/data_coll_char/morning_flow_n.pdf><./Chapter8/figure
+s/data_coll_char/afternoon_flow_n.pdf><./Chapter8/figures/data_coll_char/flows_p
+er_zone.pdf>]
+<Chapter8/figures/temporal_characterization/WeatherPeriod2.pdf, id=5870, 1410.49
 333pt x 543.15799pt>
 File: Chapter8/figures/temporal_characterization/WeatherPeriod2.pdf Graphic file
  (type pdf)
@@ -3636,60 +3560,60 @@ File: Chapter8/figures/temporal_characterization/WeatherPeriod2.pdf Graphic file
 Package luatex.def Info: Chapter8/figures/temporal_characterization/WeatherPerio
 d2.pdf  used on input line 133.
 (luatex.def)             Requested size: 338.00314pt x 130.15338pt.
-<Chapter8/figures/data_coll_char/Richness_80k+.pdf, id=6165, 1024.2393pt x 458.9
+<Chapter8/figures/data_coll_char/Richness_80k+.pdf, id=5871, 1024.2393pt x 458.9
 0675pt>
 File: Chapter8/figures/data_coll_char/Richness_80k+.pdf Graphic file (type pdf)
 <use Chapter8/figures/data_coll_char/Richness_80k+.pdf>
 Package luatex.def Info: Chapter8/figures/data_coll_char/Richness_80k+.pdf  used
  on input line 142.
 (luatex.def)             Requested size: 274.62392pt x 123.04518pt.
-<Chapter8/figures/data_coll_char/emergencies.pdf, id=6166, 1011.47285pt x 458.90
+<Chapter8/figures/data_coll_char/emergencies.pdf, id=5872, 1011.47285pt x 458.90
 675pt>
 File: Chapter8/figures/data_coll_char/emergencies.pdf Graphic file (type pdf)
 <use Chapter8/figures/data_coll_char/emergencies.pdf>
 Package luatex.def Info: Chapter8/figures/data_coll_char/emergencies.pdf  used o
 n input line 148.
 (luatex.def)             Requested size: 274.62392pt x 124.5927pt.
-) (./Chapter8/8_4_temporal_analyses.tex [103<./Chapter8/figures/temporal_charact
-erization/WeatherPeriod2.pdf>] [104<./Chapter8/figures/data_coll_char/Richness_8
-0k+.pdf><./Chapter8/figures/data_coll_char/emergencies.pdf>]
+) (./Chapter8/8_4_temporal_analyses.tex [99<./Chapter8/figures/temporal_characte
+rization/WeatherPeriod2.pdf>] [100<./Chapter8/figures/data_coll_char/Richness_80
+k+.pdf><./Chapter8/figures/data_coll_char/emergencies.pdf>]
 Overfull \hbox (12.58041pt too wide) in paragraph at lines 50--57
 \TU/LibertinusSerif(0)/m/n/12 al-go-rithms in or-der to im-prove on the uni-vari
 -ate mod-els. Fol-low-ing cor-rect prac-tices ([][][]\TU/LibertinusSerif(0)/m/s
 c/12 J󰀴󰀼󰁀[][]\TU/LibertinusSerif(0)/m/n/12 ,
  []
 
-[105] [106]
-<Chapter8/figures/temporal_analyses/RandomForestStationaryPredictions.pdf, id=63
-23, 1084.05pt x 722.7pt>
+[101] [102]
+<Chapter8/figures/temporal_analyses/RandomForestStationaryPredictions.pdf, id=60
+30, 1084.05pt x 722.7pt>
 File: Chapter8/figures/temporal_analyses/RandomForestStationaryPredictions.pdf G
 raphic file (type pdf)
 <use Chapter8/figures/temporal_analyses/RandomForestStationaryPredictions.pdf>
 Package luatex.def Info: Chapter8/figures/temporal_analyses/RandomForestStationa
 ryPredictions.pdf  used on input line 121.
 (luatex.def)             Requested size: 274.62392pt x 183.07854pt.
- [107] [108<./Chapter8/figures/temporal_analyses/RandomForestStationaryPredictio
+ [103] [104<./Chapter8/figures/temporal_analyses/RandomForestStationaryPredictio
 ns.pdf>]
 Overfull \hbox (143.76976pt too wide) in paragraph at lines 142--158
  [][] 
  []
 
-<Chapter8/figures/temporal_analyses/MAPEEpochs.pdf, id=6376, 1084.05pt x 722.7pt
+<Chapter8/figures/temporal_analyses/MAPEEpochs.pdf, id=6083, 1084.05pt x 722.7pt
 >
 File: Chapter8/figures/temporal_analyses/MAPEEpochs.pdf Graphic file (type pdf)
 <use Chapter8/figures/temporal_analyses/MAPEEpochs.pdf>
 Package luatex.def Info: Chapter8/figures/temporal_analyses/MAPEEpochs.pdf  used
  on input line 164.
 (luatex.def)             Requested size: 274.62392pt x 183.07854pt.
-<Chapter8/figures/temporal_analyses/RandomForestExpandingPredictions.pdf, id=637
-7, 1084.05pt x 722.7pt>
+<Chapter8/figures/temporal_analyses/RandomForestExpandingPredictions.pdf, id=608
+4, 1084.05pt x 722.7pt>
 File: Chapter8/figures/temporal_analyses/RandomForestExpandingPredictions.pdf Gr
 aphic file (type pdf)
 <use Chapter8/figures/temporal_analyses/RandomForestExpandingPredictions.pdf>
 Package luatex.def Info: Chapter8/figures/temporal_analyses/RandomForestExpandin
 gPredictions.pdf  used on input line 172.
 (luatex.def)             Requested size: 274.62392pt x 183.07854pt.
-[109<./Chapter8/figures/temporal_analyses/MAPEEpochs.pdf>] [110<./Chapter8/figur
+[105<./Chapter8/figures/temporal_analyses/MAPEEpochs.pdf>] [106<./Chapter8/figur
 es/temporal_analyses/RandomForestExpandingPredictions.pdf>])
 (./Chapter8/8_5_spatyal_analyses.tex
 Overfull \hbox (20.90901pt too wide) in paragraph at lines 1--1
@@ -3697,8 +3621,8 @@ Overfull \hbox (20.90901pt too wide) in paragraph at lines 1--1
 o-demographic
  []
 
-[111]
-<Chapter8/figures/spatial_analyses/MAE_hist_svr_start_err_mean_perc.pdf, id=6484
+[107]
+<Chapter8/figures/spatial_analyses/MAE_hist_svr_start_err_mean_perc.pdf, id=6190
 , 909.15033pt x 521.76405pt>
 File: Chapter8/figures/spatial_analyses/MAE_hist_svr_start_err_mean_perc.pdf Gra
 phic file (type pdf)
@@ -3706,7 +3630,7 @@ phic file (type pdf)
 Package luatex.def Info: Chapter8/figures/spatial_analyses/MAE_hist_svr_start_er
 r_mean_perc.pdf  used on input line 28.
 (luatex.def)             Requested size: 274.62392pt x 157.60521pt.
-<Chapter8/figures/spatial_analyses/MAE_hist_svr_final_err_mean_perc.pdf, id=6485
+<Chapter8/figures/spatial_analyses/MAE_hist_svr_final_err_mean_perc.pdf, id=6191
 , 909.15033pt x 521.76405pt>
 File: Chapter8/figures/spatial_analyses/MAE_hist_svr_final_err_mean_perc.pdf Gra
 phic file (type pdf)
@@ -3714,7 +3638,7 @@ phic file (type pdf)
 Package luatex.def Info: Chapter8/figures/spatial_analyses/MAE_hist_svr_final_er
 r_mean_perc.pdf  used on input line 34.
 (luatex.def)             Requested size: 274.62392pt x 157.60521pt.
-<Chapter8/figures/spatial_analyses/MAE_hist_rfr_start_err_mean_perc.pdf, id=6486
+<Chapter8/figures/spatial_analyses/MAE_hist_rfr_start_err_mean_perc.pdf, id=6192
 , 909.15033pt x 521.76405pt>
 File: Chapter8/figures/spatial_analyses/MAE_hist_rfr_start_err_mean_perc.pdf Gra
 phic file (type pdf)
@@ -3722,7 +3646,7 @@ phic file (type pdf)
 Package luatex.def Info: Chapter8/figures/spatial_analyses/MAE_hist_rfr_start_er
 r_mean_perc.pdf  used on input line 47.
 (luatex.def)             Requested size: 274.62392pt x 157.60521pt.
-<Chapter8/figures/spatial_analyses/MAE_hist_rfr_final_err_mean_perc.pdf, id=6487
+<Chapter8/figures/spatial_analyses/MAE_hist_rfr_final_err_mean_perc.pdf, id=6193
 , 909.15033pt x 521.76405pt>
 File: Chapter8/figures/spatial_analyses/MAE_hist_rfr_final_err_mean_perc.pdf Gra
 phic file (type pdf)
@@ -3730,8 +3654,8 @@ phic file (type pdf)
 Package luatex.def Info: Chapter8/figures/spatial_analyses/MAE_hist_rfr_final_er
 r_mean_perc.pdf  used on input line 53.
 (luatex.def)             Requested size: 274.62392pt x 157.60521pt.
- [112<./Chapter8/figures/spatial_analyses/MAE_hist_svr_start_err_mean_perc.pdf><
-./Chapter8/figures/spatial_analyses/MAE_hist_svr_final_err_mean_perc.pdf>] [113
+ [108<./Chapter8/figures/spatial_analyses/MAE_hist_svr_start_err_mean_perc.pdf><
+./Chapter8/figures/spatial_analyses/MAE_hist_svr_final_err_mean_perc.pdf>] [109
 <./Chapter8/figures/spatial_analyses/MAE_hist_rfr_start_err_mean_perc.pdf><./Cha
 pter8/figures/spatial_analyses/MAE_hist_rfr_final_err_mean_perc.pdf>]
 Overfull \hbox (9.17233pt too wide) in paragraph at lines 88--91
@@ -3739,8 +3663,8 @@ Overfull \hbox (9.17233pt too wide) in paragraph at lines 88--91
  than oth-ers. Fig-ure [][]8.13[][] de-picts the heatmap
  []
 
-[114]
-<Chapter8/figures/spatial_analyses/LC_rfr_True_start.pdf, id=6675, 1040.688pt x 
+[110]
+<Chapter8/figures/spatial_analyses/LC_rfr_True_start.pdf, id=6381, 1040.688pt x 
 505.89pt>
 File: Chapter8/figures/spatial_analyses/LC_rfr_True_start.pdf Graphic file (type
  pdf)
@@ -3748,7 +3672,7 @@ File: Chapter8/figures/spatial_analyses/LC_rfr_True_start.pdf Graphic file (type
 Package luatex.def Info: Chapter8/figures/spatial_analyses/LC_rfr_True_start.pdf
   used on input line 127.
 (luatex.def)             Requested size: 274.62392pt x 133.4967pt.
-<Chapter8/figures/spatial_analyses/LC_rfr_True_final.pdf, id=6676, 1040.688pt x 
+<Chapter8/figures/spatial_analyses/LC_rfr_True_final.pdf, id=6382, 1040.688pt x 
 505.89pt>
 File: Chapter8/figures/spatial_analyses/LC_rfr_True_final.pdf Graphic file (type
  pdf)
@@ -3756,7 +3680,7 @@ File: Chapter8/figures/spatial_analyses/LC_rfr_True_final.pdf Graphic file (type
 Package luatex.def Info: Chapter8/figures/spatial_analyses/LC_rfr_True_final.pdf
   used on input line 133.
 (luatex.def)             Requested size: 274.62392pt x 133.4967pt.
-<Chapter8/figures/spatial_analyses/error_distirbution_map.png, id=6677, 1040.688
+<Chapter8/figures/spatial_analyses/error_distirbution_map.png, id=6383, 1040.688
 pt x 537.6085pt>
 File: Chapter8/figures/spatial_analyses/error_distirbution_map.png Graphic file 
 (type png)
@@ -3764,14 +3688,14 @@ File: Chapter8/figures/spatial_analyses/error_distirbution_map.png Graphic file
 Package luatex.def Info: Chapter8/figures/spatial_analyses/error_distirbution_ma
 p.png  used on input line 145.
 (luatex.def)             Requested size: 295.75032pt x 152.78523pt.
-) (./Chapter8/8_6_conclusion.tex [115] [116<./Chapter8/figures/spatial_analyses/
+) (./Chapter8/8_6_conclusion.tex [111] [112<./Chapter8/figures/spatial_analyses/
 LC_rfr_True_start.pdf><./Chapter8/figures/spatial_analyses/LC_rfr_True_final.pdf
->])) [117<./Chapter8/figures/spatial_analyses/error_distirbution_map.png>]
+>])) [113<./Chapter8/figures/spatial_analyses/error_distirbution_map.png>]
 \openout2 = Chapter9/9_relocation.aux
  (./C
 hapter9/9_relocation.tex
 Chapter 9.
-) [118
+) [114
 
 
 
@@ -3779,7 +3703,7 @@ Chapter 9.
 \openout2 = Chapter10/10_scalability.aux
  (./Chapter10/10_scalability.tex
 Chapter 10.
-) [119
+) [115
 
 
 
@@ -3787,7 +3711,7 @@ Chapter 10.
 \openout2 = Chapter11/11_conclusion.aux
  (./Chapter11/11_conclusion.tex
 Chapter 11.
-) [120
+) [116
 
 
 
@@ -3798,11 +3722,11 @@ usSerif(0)/m/n/12 (2017), “  A simulation-based heuris-tic for city-scale elec
 -tric ve-hi-cle charg-
  []
 
-[121
+[117
 
 
 
-] [122]
+] [118]
 Overfull \hbox (21.80075pt too wide) in paragraph at lines 331--331
 [][]\TU/LibertinusSerif(0)/m/sc/12 H󰀴󰀵󰀼󰀵󰀼\TU/LibertinusSerif(0)/
 m/n/12 , \TU/LibertinusSerif(0)/m/sc/12 S󰀻󰀼󰁈󰀴\TU/LibertinusSerif(0)
@@ -3815,7 +3739,7 @@ ertinusSerif(0)/m/sc/12 A󰀾󰀸󰁊 V󰁁󰁄󰁁󰁀󰁁󰁈\TU/LibertinusSe
 rif(0)/m/n/12 ,
  []
 
-[123]
+[119]
 Overfull \hbox (16.14967pt too wide) in paragraph at lines 331--331
 [][]\TU/LibertinusSerif(0)/m/sc/12 H󰀸󰁅󰁅\TU/LibertinusSerif(0)/m/n/12 , \TU/LibertinusSerif(0)/m/sc/12 A
 󰁀󰁯󰀷󰁄󰀸󰀴\TU/LibertinusSerif(0)/m/n/12 , \TU/LibertinusSerif(0)/
@@ -3838,7 +3762,7 @@ n/12 , \TU/LibertinusSerif(0)/m/sc/12 B󰀸󰁀󰁯󰀽󰀴󰀿󰀼󰁀 S󰁆
 /12 B󰀸󰁀󰁀󰁁 B󰁁󰀶󰀳󰀵 \TU/LibertinusSerif(0)/m/n/12 (2016),
  []
 
-[124]
+[120]
 Overfull \hbox (12.07262pt too wide) in paragraph at lines 331--331
 \TU/LibertinusSerif(0)/m/n/12 Car-Sharing Sys-tem,” in \TU/LibertinusSerif(0)
 /m/it/12 Big So-cial Data and Ur-ban Com-put-ing\TU/LibertinusSerif(0)/m/n/12 , Springer Na-ture Switzer-
@@ -3865,7 +3789,7 @@ TU/LibertinusSerif(0)/m/n/12 and \TU/LibertinusSerif(0)/m/sc/12 S󰁆󰀸󰁯
 -port for environmental-friendly
  []
 
-[125] [126] (./thesis.ind)
+[121] [122] (./thesis.ind)
 The property list \polyglossia@langsetup contains the pairs (without outer
 braces):
 >  {latex/script}  =>  {latin}
@@ -3928,7 +3852,7 @@ Underfull \hbox (badness 1460) in paragraph at lines 338--338
  []
 
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 338.
-[127
+[123
 
 
 ]
@@ -3956,24 +3880,14 @@ uage eng (./Chapter1/1_introduction.aux)
 (./Chapter10/10_scalability.aux) (./Chapter11/11_conclusion.aux))
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 338.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 338.
+Package rerunfilecheck Info: File `thesis.out' has not changed.
+(rerunfilecheck)             Checksum: 3F6BCC734950E523EE554B2FA4D1F261;7982.
 
-
-Package rerunfilecheck Warning: File `thesis.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `thesis.out':
-(rerunfilecheck)             Before: 54BD4ABF56014539815DE8CC504F8CCD;8318
-(rerunfilecheck)             After:  B32020973C20AD702F468B21C71E5509;8304.
 
 LaTeX Warning: There were undefined references.
 
 
 LaTeX Warning: There were multiply-defined labels.
-
-
-Package biblatex Warning: Please rerun LaTeX.
-(biblatex)                Page breaks have changed.
 
 Package logreq Info: Writing requests to 'thesis.run.xml'.
 
@@ -3981,16 +3895,16 @@ Package logreq Info: Writing requests to 'thesis.run.xml'.
 )
 
 Here is how much of LuaTeX's memory you used:
- 41701 strings out of 480992
+ 41591 strings out of 480992
  125171,2373549 words of node,token memory allocated
- 1888 words of node memory still in use:
-   9 hlist, 2 vlist, 2 rule, 50 glue, 4 kern, 1 glyph, 126 attribute, 97 glue_sp
-ec, 126 attribute_list, 1 write, 56 pdf_action nodes
-   avail lists: 1:4,2:1061,3:573,4:222,5:782,6:144,7:5319,8:98,9:512,10:32,11:37
-0
- 55643 multiletter control sequences out of 65536+600000
- 169 fonts using 58724999 bytes
- 83i,24n,121p,1224b,4185s stack positions out of 5000i,500n,10000p,200000b,100000s
+ 1880 words of node memory still in use:
+   9 hlist, 2 vlist, 2 rule, 52 glue, 4 kern, 1 glyph, 125 attribute, 97 glue_sp
+ec, 125 attribute_list, 1 write, 53 pdf_action nodes
+   avail lists: 1:4,2:1063,3:573,4:222,5:778,6:147,7:5319,8:98,9:512,10:32,11:38
+4
+ 55597 multiletter control sequences out of 65536+600000
+ 169 fonts using 58724627 bytes
+ 83i,24n,121p,1224b,4166s stack positions out of 5000i,500n,10000p,200000b,100000s
 </usr/local/texlive/2020/texmf-dist/fonts/opentype/public/libertinus-fonts/Liber
 tinusSerif-Regular.otf></usr/local/texlive/2020/texmf-dist/fonts/opentype/public
 /libertinus-fonts/LibertinusSerif-BoldItalic.otf></usr/local/texlive/2020/texmf-
@@ -4006,9 +3920,9 @@ ertinus-fonts/LibertinusSerif-Regular.otf></usr/local/texlive/2020/texmf-dist/fo
 nts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2020/texmf-dist/font
 s/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2020/texmf-dist/fonts/
 type1/public/amsfonts/cm/cmmi8.pfb>
-Output written on thesis.pdf (137 pages, 32133271 bytes).
+Output written on thesis.pdf (132 pages, 32035047 bytes).
 
-PDF statistics: 6952 PDF objects out of 7423 (max. 8388607)
- 456 named destinations out of 1000 (max. 131072)
- 882 words of extra memory for PDF output out of 10000 (max. 100000000)
+PDF statistics: 6659 PDF objects out of 7423 (max. 8388607)
+ 444 named destinations out of 1000 (max. 131072)
+ 858 words of extra memory for PDF output out of 10000 (max. 100000000)
 

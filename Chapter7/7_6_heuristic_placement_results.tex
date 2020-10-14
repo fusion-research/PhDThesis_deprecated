@@ -1,36 +1,30 @@
-\section{Impact of heuristic placements and return policies}
+\section{Heuristic placements impacts and return policies}
 \label{sec:7_6_heurstic_placement}
 
- %Indeed, this solution will be our baseline to evaluate the return policies.
+\subsection{Heuristic charging station placements impact}
 
-
-
-
-\subsection{Impact of heuristic charging station placements}
-
-In this first set of experiments we evaluate which heuristic placement performs better.
+In this first set of experiments I evaluate which heuristic placement performs better.
 Firstly, for each heuristic we consider the simple opportunistic \textit{Free Floating} car return policy, i.e., customers always return the car in the desired zone, and connect it to a charging pole if available. The goal is to check if this simple return mechanism is sustainable with electric cars, and gauge the impact of the three different heuristics for the charging station placement.
  
-Fig.~\ref{fig:deathsVsZones_algorithm} shows the performance in terms of infeasible trip percentage versus an increasing percentage of charging zones, ranging from  1\% to 30\%. In Turin, this corresponds to install from 2 to 78 charging stations overall (reported in the top x-axis).
-We observe notably different performances. First, the average parking time placement policy (\textit{Avg time}) performs the worst, with still 6\% of infeasible trips even when  more than 25\% of zones are equipped with charging stations. Even a simple random placement performs better (\textit{Mean rnd}, obtained as the average of 10 independent instances). The total number of parkings placement (\textit{Num parking}) reaches about 2\% of infeasible trips at 10\% coverage, reaching self-sustainability when more than 20\% of zones are equipped (no infeasible trips).
+Figure.~\ref{fig:7_6_deathsVsZones_algorithm} recalls from section \ref{sec:6_5_freefloating} the performance in terms of infeasible trip percentage versus an increasing percentage of charging zones, ranging from  1\% to 30\%. In Turin, this corresponds to install from 2 to 78 charging stations overall (reported in the top x-axis). 
 
 \begin{figure}[ht]
 	\centering
 	\includegraphics[width=0.9\columnwidth]{figures/Torino_FF_deaths_probs.pdf}
 	\caption{Percentage of unfeasible trips as function of charging stations (percentage and number of city zones), for the different heuristic placements.}
-	\label{fig:deathsVsZones_algorithm}
+	\label{fig:7_6_deathsVsZones_algorithm}
 \end{figure}
 
 \begin{figure}[ht]
 	\centering
 	\includegraphics[width=0.5\columnwidth]{figures/CDF_parking_time_per_algorithm.pdf}
 	\caption{CDF of the time spent by a car at a charging station (Z=40), for \textit{Num parking} and \textit{Avg time} placement algorithms. }
-		\label{fig:CDF_parking_time_per_algorithm}
+		\label{fig:7_6_CDF_parking_time_per_algorithm}
 \end{figure}
 
-The intuition of why such a striking difference is given by the different properties of areas where the heuristics place charging stations. \textit{Avg time} placement favours peripheral zones where few trips ends, and where cars stay parked for long time (see Fig. \ref{fig:hm_avg-time}). On the contrary, \textit{Num parking} favours city centre areas, where cars frequently are parked for short time (see Fig. \ref{fig:hm_max-parking}). Indeed, in the whole simulation, for $Z=40$ ($\approx 15\%$ of zones), only 7\,430 charges have been recorded for \textit{Avg time}, compared with 47\,628 charges of the \textit{Num parking}.
+The intuition of why such a striking difference is given by the different properties of areas where the heuristics place charging stations. \textit{Avg time} placement favours peripheral zones where few trips ends, and where cars stay parked for long time (see Fig. \ref{fig:7_3_hm_avg-time}). On the contrary, \textit{Num parking} favours city centre areas, where cars frequently are parked for short time (see Fig. \ref{fig:7_3_hm_max-parking}). Indeed, in the whole simulation, for $Z=40$ ($\approx 15\%$ of zones), only 7\,430 charges have been recorded for \textit{Avg time}, compared with 47\,628 charges of the \textit{Num parking}.
 Even if plugged time is shorter, the \textit{Num parking} policy allows the cars to charge the (little) energy consumed during the (short) trips.
-Moreover, as shown in Fig. \ref{fig:CDF_parking_time_per_algorithm} the \textit{Avg time} placement generates much longer plugged times, often much longer than the time needed for a full charge. Therefore, many cars occupy the charging poles when they are already charged, preventing other cars to use those poles and increasing the number of infeasible trips. 
+Moreover, as shown in figure. \ref{fig:7_6_CDF_parking_time_per_algorithm} the \textit{Avg time} placement generates much longer plugged times, often much longer than the time needed for a full charge. Therefore, many cars occupy the charging poles when they are already charged, preventing other cars to use those poles and increasing the number of infeasible trips. 
 
 In a nutshell the best approach among these three heuristics is to place charging stations in the central areas, in which the parkings last less but are more frequent. For this reason, we will use the \textit{Num parking} placement algorithm as best heuristic for the remaining of the paper.
 
@@ -38,7 +32,7 @@ In a nutshell the best approach among these three heuristics is to place chargin
 
 \subsection{Impact of return policy}
 
-We now investigate the impact of the three different return policies. We quantify the implications of forcing customers to return the car to a different zone than the desired one, when the battery is below a critical level (i.e., below the percentage threshold $\alpha=25\%$ of full battery capacity).
+I now investigate the impact of the three different return policies. We quantify the implications of forcing customers to return the car to a different zone than the desired one, when the battery is below a critical level (i.e., below the percentage threshold $\alpha=25\%$ of full battery capacity).
 
 We focus again on the infeasible trip percentage with respect to the charging station coverage.
 Fig. \ref{fig:deathsVsZones_policy} shows results, with \textit{Num Parking} placement. \textit{Needed} and \textit{Hybrid} policies perform much better than the opportunistic \textit{Free Floating}.
