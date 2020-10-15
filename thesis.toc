@@ -73,7 +73,7 @@
 \contentsline {section}{\numberline {7.5}Simulation scenarios }{76}{section.7.5}%
 \contentsline {subsection}{\numberline {7.5.1}Simulation parameters}{76}{subsection.7.5.1}%
 \contentsline {subsection}{\numberline {7.5.2}Key Performances Indicators}{77}{subsection.7.5.2}%
-\contentsline {section}{\numberline {7.6}Strategies for charging station placement}{77}{section.7.6}%
+\contentsline {section}{\numberline {7.6}Strategies for charging station placement}{78}{section.7.6}%
 \contentsline {subsection}{\numberline {7.6.1}Heuristic placements}{78}{subsection.7.6.1}%
 \contentsline {subsection}{\numberline {7.6.2}Simulation based advanced optimisation strategies}{78}{subsection.7.6.2}%
 \contentsline {subsubsection}{Hill-climbing local search}{79}{section*.49}%
@@ -82,29 +82,28 @@
 \contentsline {subsection}{\numberline {7.7.1}Charging station placement visualisation}{83}{subsection.7.7.1}%
 \contentsline {subsection}{\numberline {7.7.2}Validation of optimised configurations}{83}{subsection.7.7.2}%
 \contentsline {section}{\numberline {7.8}Placement optimisation for \textit {Needed} return policy}{84}{section.7.8}%
-\contentsline {section}{\numberline {7.9}Discussion and Implication}{85}{section.7.9}%
-\contentsline {subsection}{\numberline {7.9.1}\textbf {Scalability}}{86}{subsection.7.9.1}%
+\contentsline {section}{\numberline {7.9}Discussion and Implication}{86}{section.7.9}%
+\contentsline {subsection}{\numberline {7.9.1}\textbf {Scalability}}{87}{subsection.7.9.1}%
 \contentsline {subsection}{\numberline {7.9.2}\textbf {Economical Aspects}}{87}{subsection.7.9.2}%
 \contentsline {section}{\numberline {7.10}Conclusions}{87}{section.7.10}%
 \contentsline {chapter}{\numberline {8}Geo spatial prediction}{89}{chapter.8}%
 \contentsline {section}{\numberline {8.1}Abstract}{89}{section.8.1}%
-\contentsline {section}{\numberline {8.2}Introduction}{89}{section.8.2}%
+\contentsline {section}{\numberline {8.2}Introduction}{90}{section.8.2}%
 \contentsline {section}{\numberline {8.3}Related work}{92}{section.8.3}%
 \contentsline {section}{\numberline {8.4}Data gathering methodology}{93}{section.8.4}%
-\contentsline {subsection}{\numberline {8.4.1}FFCS data collection}{93}{subsection.8.4.1}%
-\contentsline {subsection}{\numberline {8.4.2}Socio-demographic, weather and other open data}{94}{subsection.8.4.2}%
-\contentsline {section}{\numberline {8.5}Dataset overview}{95}{section.8.5}%
-\contentsline {subsection}{\numberline {8.5.1}FFCS temporal characterization}{95}{subsection.8.5.1}%
-\contentsline {subsection}{\numberline {8.5.2}FFCS spatial characterization}{97}{subsection.8.5.2}%
-\contentsline {subsection}{\numberline {8.5.3}Socio-demographic and weather data characterisation}{97}{subsection.8.5.3}%
-\contentsline {section}{\numberline {8.6}Temporal predictions of rentals}{99}{section.8.6}%
+\contentsline {subsection}{\numberline {8.4.1}FFCS data collection and Socio-demographic, weather and other open data}{93}{subsection.8.4.1}%
+\contentsline {section}{\numberline {8.5}Dataset overview}{94}{section.8.5}%
+\contentsline {subsection}{\numberline {8.5.1}FFCS temporal characterization}{94}{subsection.8.5.1}%
+\contentsline {subsection}{\numberline {8.5.2}FFCS spatial characterization}{95}{subsection.8.5.2}%
+\contentsline {subsection}{\numberline {8.5.3}Socio-demographic and weather data characterisation}{98}{subsection.8.5.3}%
+\contentsline {section}{\numberline {8.6}Temporal predictions of rentals}{98}{section.8.6}%
 \contentsline {subsection}{\numberline {8.6.1}Prediction models}{101}{subsection.8.6.1}%
-\contentsline {subsection}{\numberline {8.6.2}Long-term predictions - Results}{103}{subsection.8.6.2}%
-\contentsline {subsection}{\numberline {8.6.3}Short-term predictions - Results}{104}{subsection.8.6.3}%
-\contentsline {subsection}{\numberline {8.6.4}The effect of weather information}{107}{subsection.8.6.4}%
+\contentsline {subsection}{\numberline {8.6.2}Long-term predictions - Results}{102}{subsection.8.6.2}%
+\contentsline {subsection}{\numberline {8.6.3}Short-term predictions - Results}{103}{subsection.8.6.3}%
+\contentsline {subsection}{\numberline {8.6.4}The effect of weather information}{106}{subsection.8.6.4}%
 \contentsline {section}{\numberline {8.7}Spatial prediction of rentals with socio-demographic data}{107}{section.8.7}%
-\contentsline {subsection}{\numberline {8.7.1}Feature ranking and selection}{110}{subsection.8.7.1}%
-\contentsline {section}{\numberline {8.8}Conclusions}{112}{section.8.8}%
+\contentsline {subsection}{\numberline {8.7.1}Feature ranking and selection}{109}{subsection.8.7.1}%
+\contentsline {section}{\numberline {8.8}Conclusions}{110}{section.8.8}%
 \contentsline {chapter}{\numberline {9}Relocation}{114}{chapter.9}%
 \contentsline {chapter}{\numberline {10}Scalability}{115}{chapter.10}%
 \contentsline {chapter}{\numberline {11}Conclusions}{116}{chapter.11}%

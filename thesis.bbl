@@ -1001,6 +1001,68 @@
       \field{title}{Free Floating Electric Car Sharing in Smart Cities: Data Driven System Dimensioning}
       \field{year}{2018}
     \endentry
+    \entry{cocca2020predictions}{article}{}
+      \name{author}{6}{ul=2}{%
+        {{un=2,uniquepart=given,hash=1f45dd40d27becda801878bf43d84c05}{%
+           family={Cocca},
+           familyi={C\bibinitperiod},
+           given={Michele},
+           giveni={M\bibinitperiod},
+           givenun=2}}%
+        {{un=0,uniquepart=base,hash=1c6b7a1f5383f1b3bdd21fc8fa3b5d61}{%
+           family={Teixeira},
+           familyi={T\bibinitperiod},
+           given={Douglas},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=69362c68b3c52789c8d71483f5891d86}{%
+           family={Vassio},
+           familyi={V\bibinitperiod},
+           given={Luca},
+           giveni={L\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=eb9a294b3de43f233bed8a0892fcf225}{%
+           family={Mellia},
+           familyi={M\bibinitperiod},
+           given={Marco},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=6bc6ceb6a7c592430bd49d63b09b65d8}{%
+           family={Almeida},
+           familyi={A\bibinitperiod},
+           given={Jussara\bibnamedelima M},
+           giveni={J\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=44bdec570e7cf9309a56a96b0859a666}{%
+           family={Couto\bibnamedelimb da\bibnamedelima Silva},
+           familyi={C\bibinitperiod\bibinitdelim d\bibinitperiod\bibinitdelim S\bibinitperiod},
+           given={Ana\bibnamedelima Paula},
+           giveni={A\bibinitperiod\bibinitdelim P\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Multidisciplinary Digital Publishing Institute}%
+      }
+      \strng{namehash}{f8f42e04c907204c1668a262f7351299}
+      \strng{fullhash}{e550d41502fa3c3f8d909651aa7762fc}
+      \strng{bibnamehash}{e550d41502fa3c3f8d909651aa7762fc}
+      \strng{authorbibnamehash}{e550d41502fa3c3f8d909651aa7762fc}
+      \strng{authornamehash}{f8f42e04c907204c1668a262f7351299}
+      \strng{authorfullhash}{e550d41502fa3c3f8d909651aa7762fc}
+      \field{sortinit}{C}
+      \field{sortinithash}{4c244ceae61406cdc0cc2ce1cb1ff703}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Electronics}
+      \field{number}{1}
+      \field{title}{On Car-Sharing Usage Prediction with Open Socio-Demographic Data}
+      \field{volume}{9}
+      \field{year}{2020}
+      \field{pages}{72}
+      \range{pages}{1}
+    \endentry
     \entry{4_Eisel_2015}{inproceedings}{}
       \name{author}{4}{}{%
         {{un=0,uniquepart=base,hash=356bebe8a716b44209c32ed3758d5677}{%
@@ -2819,14 +2881,6 @@
       \field{number}{just-accepted}
       \field{title}{Where No Cars Go: Free-Floating Carshare and Inequality of Access}
       \field{year}{2016}
-    \endentry
-    \entry{MicheleGithub}{misc}{}
-      \field{sortinit}{U}
-      \field{sortinithash}{77a6935510e008adcf5b555e7b4f0711}
-      \field{labeldatesource}{nodate}
-      \field{labeltitlesource}{title}
-      \field{howpublished}{\url{https://github.com/michelelt/sim3.0}}
-      \field{title}{{UMAP and electric car sharing simulator. Anonymized datasaset of 2 months of trips of car sharing users in the city of Turin}}
     \endentry
     \entry{Wagner2015}{inproceedings}{}
       \name{author}{3}{}{%
