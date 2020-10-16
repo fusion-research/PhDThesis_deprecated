@@ -19,7 +19,7 @@ In order to make clear the rest of the book, it necessary to univocally define t
 
 \begin{figure}
 \centering
- \includegraphics[width=0.85\columnwidth]{figures/bookings.pdf}
+ \includegraphics[ width=0.65\columnwidth]{figures/bookings.pdf}
  \caption{Total number of bookings and of rentals per day for car2go and for Enjoy \label{fig:bookings}}
 \end{figure}
 The providers, in this case study, allows the users to \textit{reserve} a car before the ride. More in details, the provider makes the reserved car unavailable for the other users without billing the customer who reserved the car. When the reservation time (that changes for each provider), the billing mechanism starts even if the engine it is still off. The customer can cancel the reservation without any expense if it happens before the reservation time. With this mechanism, the providers would let the possibility to the users to reach the cars by foot.
@@ -46,7 +46,7 @@ Moreover, some drops in bookings' values are noticeable. Those sudden changes ca
 
 \begin{figure}
 \centering
- \includegraphics[width=0.85\columnwidth]{figures/bookings_day.pdf}
+ \includegraphics[ width=0.65\columnwidth]{figures/bookings_day.pdf}
  \caption{Mean number of bookings in weekdays and weekends for car2go and Enjoy\label{fig:bookingsweek}}
 \end{figure}
 
@@ -89,7 +89,7 @@ Now, I show how users tend to use FFCS systems during weekdays and weekends. I s
 
 \begin{figure}
 	\centering
-	\includegraphics[width=0.85\columnwidth]{figures/no_rent.pdf}
+	\includegraphics[ width=0.65\columnwidth]{figures/no_rent.pdf}
 	\caption{ECDF of the booking duration when the booking does not produce a rental. Weekdays and weekends \label{fig:3_5_pdf_norent}}
 \end{figure}
 
@@ -103,7 +103,7 @@ To shed some lights on this phenomenon, I performed some active experiments with
 
 \begin{figure}
 	\centering
-	\includegraphics[width=0.85\columnwidth]{figures/duration.pdf}
+	\includegraphics[ width=0.65\columnwidth]{figures/duration.pdf}
 	\caption{ECDF of the rental duration. Weekdays and weekends\label{fig:3_5_cdf_duration}}
 \end{figure}
 
@@ -113,7 +113,7 @@ I next move to characterize the rental duration. Figure~\ref{fig:3_5_cdf_duratio
 
 \begin{figure}
 	\centering
-	\includegraphics[width=0.85\columnwidth]{figures/distance.pdf}
+	\includegraphics[ width=0.65\columnwidth]{figures/distance.pdf}
 	\caption{ECDF of the rental driven distance. Weekdays and weekends\label{fig:3_5_cdf_distance}}
 \end{figure}
 
@@ -123,10 +123,10 @@ To determine the driving distance of each trip we exploit the Google Direction A
 
 
 
-\begin{figure}[t!]
+\begin{figure}[h!]
 \centering
 \vspace{-10pt}
- \includegraphics[width=0.72\columnwidth]{figures/clorophlet_o_minus_o1.pdf}
+ \includegraphics[width=0.75\columnwidth]{figures/clorophlet_o_minus_o1.pdf}
  \vspace{-10pt}
  \caption{Heatmap of arrival - departure per area from 7~am to 12~am vs from 5~pm to 9~pm \label{fig:3_5_heatmap_arr_dep}}
 \end{figure}
@@ -145,11 +145,11 @@ I now characterize how users drive and what is the correlation between public tr
 To observe users' driving habits, I use the \textit{driving time} returned by the Google Directions APIs to {obtain} the estimated {driving} time from {rental initial position to the rental final position}. Intuitively, the {rental} time is longer than the driving time as it takes into account also the {reservation} time, and the time to find a final parking spot. Figure~\ref{fig:3_5_heatmap_driving} shows an heat map where the X axis represents the Google estimated driving time and the Y axis the actual booking time. Each cell counts the number of {observed} trips {for each (x,y) pairs}.
 For the ease of representation the values are rounded by minute. The diagonal line separates the area where the booking time is lower/greater than the driving time. As expected, most of the trip falls in the area where the booking time is greater then the driving time. However, a non negligible number of trips (12.1\%) falls in the area where the booking time lasts less than the driving time. 
 
-\begin{figure}[h!]
-	\centering
-	\includegraphics[width=0.85\columnwidth]{figures/car2go_faster_driving.pdf}
-	\caption{Heatmap of booking time vs estimated driving time by Google\label{fig:3_5_heatmap_driving}}
-\end{figure}
+%\begin{figure}[h!]
+%	\centering
+%	\includegraphics[ width=0.65\columnwidth]{figures/car2go_faster_driving.pdf}
+%	\caption{Heatmap of booking time vs estimated driving time by Google\label{fig:3_5_heatmap_driving}}
+%\end{figure}
 
 
 This may be due to several factors: Google Directions possibly overestimating the average trip duration, or users driving faster than expected.
@@ -157,47 +157,71 @@ To better quantify how much faster users drive the car in those cases, I  comput
 
 This analysis hints that the current pricing policy, which depends only by the booking time, may have some drawbacks as it may encourage users to drive fast. An hybrid pricing policy, which takes into account both the time and the distance, may be effective in solving this problem, e.g., by increasing the price in case of an user drive faster than expected, or by reducing the fee in case of traffic congestion.
 
+%\begin{figure}[h!]
+%	\centering
+%	\includegraphics[ width=0.65\columnwidth]{figures/faster_driving.pdf}
+%	\caption{ECDF of the difference between the expected driving time and the actual driving time\label{fig:3_5_cdf_faster_google}}
+%\end{figure}
+
+
+\begin{figure}[t!]
+\centering     %%% not \center
+\subfloat[][Heatmap of booking time vs estimated driving time by Google]{\label{fig:heatmap_driving}\includegraphics[width=0.45\columnwidth]{figures/car2go_faster_driving.pdf}}
+\subfloat[][ECDF of the difference between the expected driving time and the actual driving time]{\label{fig:cdf_faster_google}\includegraphics[width=0.55\columnwidth]{figures/faster_driving.pdf}}
+\caption{Users' driving habits}
+\end{figure}
+
+Another aspect that Google Direction data can help to resolve is to estimate the real travelled distance. In particular, the system computes the Euclidean / Haversine \footnote{\url{https://en.wikipedia.org/wiki/Haversine_formula\#cite_note-Brummelen_2013-1}} distance between starting and final position to which I add the Google Direction path estimation (see section \ref{sec:2_4_data_normalization} for more details) for each ride present in the dataset. Given that it is possible to track in real time the cars, I study how derive the total amount of travelled kilometres correlating only the straight and Google distances. 
+
+
 \begin{figure}[h!]
 	\centering
-	\includegraphics[width=0.85\columnwidth]{figures/faster_driving.pdf}
-	\caption{ECDF of the difference between the expected driving time and the actual driving time\label{fig:3_5_cdf_faster_google}}
+	\includegraphics[ width=0.65\columnwidth]{figures/CDF_corrective_factor.pdf}
+	\caption{ECDF of the ratio between the Google Distance and the straight rental distance \label{fig:3_5_cdf_corrective_factors}}
 \end{figure}
 
 
-%\begin{figure}[t!]
-%\centering     %%% not \center
-%\subfloat[][Heatmap of booking time vs estimated driving time by Google]{\label{fig:heatmap_driving}\includegraphics[width=0.5\columnwidth]{figures/car2go_faster_driving.pdf}}
-%\subfloat[][ECDF of the difference between the expected driving time and the actual driving time]{\label{fig:cdf_faster_google}\includegraphics[width=0.5\columnwidth]{figures/faster_driving.pdf}}
-%\caption{Users' driving habits}
-%\end{figure}
+Figure~\ref{fig:3_5_cdf_corrective_factors} reports the ECDF of the ratio between the Google Distance and the straight distance. The plot shows how, in the 95\% of rides, the Google distance is about twice time bigger than the straight distance. However, in average it is possible to observe a multiplicative factor of 1.5 for and enjoy. Anyway, in the following chapters and in particular in chapters \ref{chap:5_simulator}, \ref{chap:6_4cities} and \ref{chap:7_cs_optimization} I used the median value, of 1,4. Notice that the bigger values in car2go are due to a bigger operative area. The table \ref{tab:3_5_corrective_factor} resumes the main ECDF values.
+
+\begin{table}[h!]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|}
+		
+		\hline
+		\textbf{Provider} & \textbf{Mean} & \textbf{Std} & \textbf{Min} & \textbf{25\%} & \textbf{50\%} & \textbf{75\%} & \textbf{90\%} & \textbf{95\%} & \textbf{99\%} \\ \hline
+		car2go            & 1.5           & 0.54         & 0.53         & 1.27          & 1.40          & 1.59          & 1.90          & 2.21          & 3.47          \\ \hline
+		enjoy             & 1.48          & 0.52         & 0.87         & 1.26          & 1.37          & 1.54          & 1.81          & 2.12          & 3.38          \\ \hline
+	\end{tabular}
+	\label{tab:3_5_corrective_factor}	
+\end{table}
 
 
 At last, I leverage Google Directions APIs to extract public transport travel information for each vehicle's trip. I want to analyse another way of mobility in the urban area, and compare car sharing usage with respect to public transport. Results are shown in Figure~\ref{fig:3_5_public_transport}.
 %The public transport duration includes both the time of travel and time of wait.
 As one could expect, the majority of trips last less than public transport. The higher density is for bookings that last between 10 and 20 minutes. For longer trips, the discrepancy in terms of duration is higher, probably due to the longer path and the higher number of stops of the public transport. Conversely, I can interpret the points where the booking time is greater than  the public transport duration as trips where the customers spent a lot of time in reaching the car or finding a parking spot for the drop-off.
 
-\begin{figure}[h!]
-	\centering
-	\includegraphics[width=0.85\columnwidth]{figures/car2go_faster_public.pdf}
-	\caption{heatmap of the booking time  vs the estimated public transport time by Google\label{fig:3_5_public_transport}}
-\end{figure}
+%\begin{figure}[h!]
+%	\centering
+%	\includegraphics[ width=0.65\columnwidth]{figures/car2go_faster_public.pdf}
+%	\caption{heatmap of the booking time  vs the estimated public transport time by Google\label{fig:3_5_public_transport}}
+%\end{figure}
 
-To help to visualize the juxtaposition of car sharing and public transport, we extract from the data the probability of booking a car, conditioned to the public transport travel time. Figure~\ref{fig:pdf_transport}, reports on the X axis the public transport duration (as predicted by Google) in intervals of 5 minutes, and on the Y axis the probability of booking a car for each interval.
+To help to visualize the juxtaposition of car sharing and public transport, we extract from the data the probability of booking a car, conditioned to the public transport travel time. Figure~\ref{fig:3_5_pdf_transport}, reports on the X axis the public transport duration (as predicted by Google) in intervals of 5 minutes, and on the Y axis the probability of booking a car for each interval.
 The distribution of probability is similar for both car2go and Enjoy. Higher values are reported for trips that can be covered by public transport between 15 and 35 minutes. Interestingly, car sharing mobility is not preferred for very short trips, while the distribution shows a significant tail for duration greater than 30 minutes. This behavior can be justified by the significant amount of time that can be saved with cars haring with respect to public transport.
 
-\begin{figure}[h!]
-	\centering
-	\includegraphics[width=0.85\columnwidth]{figures/public_tranport_probability.pdf}
-	\caption{Public transportation vs car sharing\label{fig:3_5_public_tranport_probabilityt}}
-\end{figure}
+%\begin{figure}[h!]
+%	\centering
+%	\includegraphics[ width=0.65\columnwidth]{figures/public_tranport_probability.pdf}
+%	\caption{Public transportation vs car sharing\label{fig:3_5_public_tranport_probabilityt}}
+%\end{figure}
   
-%  \begin{figure}[t!]
-%  \centering     %%% not \center
-%  \subfloat[][heatmap of the booking time  vs the estimated public tranport time by Google]{\label{fig:heatmap_transport}\includegraphics[width=0.5\columnwidth]{figures/car2go_faster_public.pdf}}
-%  \subfloat[][Probability of using car sharing based on public transport time by Google]{\label{fig:pdf_transport}\includegraphics[width=0.5\columnwidth]{figures/public_tranport_probability.pdf}}
-%  \caption{Public transportation vs car sharing \label{fig:public_transport}}
-%  \end{figure}
-%  
+  \begin{figure}[t!]
+  \centering     %%% not \center
+  \subfloat[][heatmap of the booking time  vs the estimated public tranport time by Google]{\label{fig:3_5_heatmap_transport}\includegraphics[width=0.45\columnwidth]{figures/car2go_faster_public.pdf}}
+  \subfloat[][Probability of using car sharing based on public transport time by Google]{\label{fig:3_5_pdf_transport}\includegraphics[width=0.55\columnwidth]{figures/public_tranport_probability.pdf}}
+  \caption{Public transportation vs car sharing \label{fig:3_5_public_transport}}
+  \end{figure}
+  
   
  
 Finally, to globally understand how users tend to use the different services we report in Figure~\ref{fig:avg_comparison} the average time for: the Enjoy rentals (red curve), the car2go bookings (blue curve), the driving time (green curve), and public transport time (orange curve). To compute this value, for each hour we take all the rentals of interest, and then we compute the average value and report it. A first interesting aspect is that the average time of Enjoy is always greater then the car2go ones and for the pure driving time. Secondly, both show a similar trend with, a decreasing average duration during the night. As a consequence, it is unjustifiable ascribe this trend with traffic jam, instead, but more likely with an increase time in the reservation time and in the parking time. Finally, it is possible to appreciate how during the night the public transport takes more than 1 hour for trips which last less then 20 minutes by car. Instead, during the daytime the average public transport time get close to the car sharing time. 
@@ -207,7 +231,7 @@ Finally, to globally understand how users tend to use the different services we 
 
 \begin{figure}[h!]
 \centering
- \includegraphics[width=0.85\columnwidth]{figures/average_duration.pdf}
+ \includegraphics[ width=0.65\columnwidth]{figures/average_duration.pdf}
  \caption{Average Time per transport solution per hour \label{fig:avg_comparison}}
 \end{figure}
 
