@@ -22,7 +22,7 @@
 
 %other data sources
 \subsection{FFCS data collection and Socio-demographic, weather and other open data}
-We collect data from Car2go, a popular FFCS system that offers its services in more than 25 cities and 3.6 million customers in 2019. A detailed description of data collection is reported in chapter \ref{chap:2_dataset}. In particular we focused our considerations in Vancouver. We recall an indeed characterization in chapter \ref{chap:4_cscomparison}, but some brief key point are reported later in this chapter.
+In this work we used real car2go users' data, a popular FFCS system that offers its services in more than 25 cities and 3.6 million customers in 2019. A detailed description of data collection is reported in chapter \ref{chap:2_dataset}. In particular we focused our considerations in Vancouver. A deep characterization is depicted chapter \ref{chap:4_cscomparison}, but some brief key points are reported later in this chapter.
 
 In addition to information about rentals in the city of Vancouver, we also use socio-demographic data as input to car usage prediction algorithms. Specifically, we consider the Vancouver census open data, which\footnote{\url{https://opendata.vancouver.ca/pages/home/}} divides the city in 22 official neighborhoods. This work uses this same spatial division. For each neighborhood, the census dataset provides detailed socio-demographic information such as number of residents in a given age range, their income, household compositions, and commuting habits. The census also reports information about services that are located in the neighborhoods, e.g., shops, bus stops, and parking places. In total, the census presents more than 800 socio-demographic and other spatial features. Among those, we manually selected 83 features that might be related to human mobility.\footnote{The list of features is available at \url{https://opendata.vancouver.ca/pages/census-local-area-profiles-2016-attributes/}} 
 In addition, we also consider i) the distance to downtown -- computed as the distance from the neighborhood to the downtown neighborhood (considered as the central area);\footnote{We use the neighborhoods central points for distance computation.} ii) an indicator of human activity, measured by the number of emergency calls per time bin (obtained from the Vancouver census);   and iii) the hourly weather for Vancouver -- as directly available from the OpenWeather project.\footnote{\url{https://openweathermap.org/history-bulk}} 
@@ -64,12 +64,11 @@ In this section I first provide an overview of the data at our disposal offering
 \end{figure}
 
 
-I start by showing the temporal evolution of rentals over time.  Figure~\ref{fig:8_3_time_series} shows the total number of starting rentals per hour in the whole city during part of September 2017. Even if it is possible to spot some periodicity, there is a lot of variability that makes the prediction problem not straightforward. 
+I start by showing the temporal evolution of rentals over time. Figure~\ref{fig:8_3_time_series} shows the total number of starting rentals per hour in the whole city during part of September 2017. Even if it is possible to spot some periodicity, there is a lot of variability that makes the prediction problem not straightforward. 
 For the analyses, from now on we aggregate rentals both in time and in space. Specifically, given a neighborhood we consider the fraction of rentals \textit{starting} and \textit{ending} there. We aggregate the time series of rentals into 7 time bins per each day, namely from midnight to 6am (night period), and then every 3 hours. 
 This time granularity is typically used for system design and control~\citep{schmoller2015empirical}. The rationale is to provide the FFCS company that actionable information on the demand for cars, e.g., to schedule car maintenance or implement relocation policies. A one-hour period is often too short for the company to be able to respond to changes in demand.
 
-To give more details about the variability of the data, figure~\ref{fig:8_3_rentals-per-period} shows boxplots of the  numbers of rentals starting in each time bin. 
-Each boxplot represents the quartiles of the distribution, with outliers shown as points.\footnote{We consider as outliers measures that are outside the mean $\pm$ 2.698 times the standard deviation range.} 
+To give more details about the variability of the data, figure~\ref{fig:8_3_rentals-per-period} shows boxplots of the  numbers of rentals starting in each time bin. Each boxplot represents the quartiles of the distribution, with outliers shown as points.\footnote{We consider as outliers measures that are outside the mean $\pm$ 2.698 times the standard deviation range.} 
 The series shows large variability, with peaks during early mornings (6am-9am) and afternoon (3pm-6pm and 6pm-9pm), and with low values during nighttime (12am-6am). 
 Figure~\ref{fig:8_3_rentals-per-weekday} shows boxplots of the total number of rentals grouped per day of the week. The number of rentals peaks on Fridays, with significantly lower values registered on Sundays and Mondays. 
 Again, we observe a quite sizeable variability over the days, as observed by in the sizes of the boxplots. 
@@ -119,7 +118,7 @@ Similarly, figures~\ref{fig:8_3_richness-per-zone} and ~\ref{fig:8_3_calls-per-z
 
 Despite the non-linear correlations between the socio-demographic data and rentals, it is possible that the combination of multiple features help the prediction of car rentals, as we will discuss in the next sections. 
 This is exactly what the machine learning algorithms aim at, i.e., building a model from data, leveraging correlation from multiple variables that, considered together, carry enough information to predict system usage.
-Thus, I let the machine learning model decide if and how to factor different features in the prediction model.
+Thus, we let the machine learning model decide if and how to factor different features in the prediction model.
 
 \begin{figure}
     \centering

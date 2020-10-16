@@ -95,8 +95,8 @@
 \contentsline {section}{\numberline {8.5}Dataset overview}{94}{section.8.5}%
 \contentsline {subsection}{\numberline {8.5.1}FFCS temporal characterization}{94}{subsection.8.5.1}%
 \contentsline {subsection}{\numberline {8.5.2}FFCS spatial characterization}{95}{subsection.8.5.2}%
-\contentsline {subsection}{\numberline {8.5.3}Socio-demographic and weather data characterisation}{98}{subsection.8.5.3}%
-\contentsline {section}{\numberline {8.6}Temporal predictions of rentals}{98}{section.8.6}%
+\contentsline {subsection}{\numberline {8.5.3}Socio-demographic and weather data characterisation}{97}{subsection.8.5.3}%
+\contentsline {section}{\numberline {8.6}Temporal predictions of rentals}{99}{section.8.6}%
 \contentsline {subsection}{\numberline {8.6.1}Prediction models}{101}{subsection.8.6.1}%
 \contentsline {subsection}{\numberline {8.6.2}Long-term predictions - Results}{102}{subsection.8.6.2}%
 \contentsline {subsection}{\numberline {8.6.3}Short-term predictions - Results}{103}{subsection.8.6.3}%
@@ -104,7 +104,7 @@
 \contentsline {section}{\numberline {8.7}Spatial prediction of rentals with socio-demographic data}{107}{section.8.7}%
 \contentsline {subsection}{\numberline {8.7.1}Feature ranking and selection}{109}{subsection.8.7.1}%
 \contentsline {section}{\numberline {8.8}Conclusions}{110}{section.8.8}%
-\contentsline {chapter}{\numberline {9}Relocation}{114}{chapter.9}%
-\contentsline {chapter}{\numberline {10}Scalability}{115}{chapter.10}%
-\contentsline {chapter}{\numberline {11}Conclusions}{116}{chapter.11}%
-\contentsline {chapter}{Bibliography}{117}{chapter.11}%
+\contentsline {chapter}{\numberline {9}Relocation}{113}{chapter.9}%
+\contentsline {chapter}{\numberline {10}Scalability}{114}{chapter.10}%
+\contentsline {chapter}{\numberline {11}Conclusions}{115}{chapter.11}%
+\contentsline {chapter}{Bibliography}{116}{chapter.11}%

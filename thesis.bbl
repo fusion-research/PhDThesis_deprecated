@@ -130,63 +130,6 @@
       \field{pages}{17\bibrangedash 29}
       \range{pages}{13}
     \endentry
-    \entry{bi2017simulation}{inproceedings}{}
-      \name{author}{6}{}{%
-        {{un=0,uniquepart=base,hash=5080a199da3ecf49ee55aa0771f4d53e}{%
-           family={Bi},
-           familyi={B\bibinitperiod},
-           given={Ran},
-           giveni={R\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=dd971f3bcbe3487cdc604b0b2232abb4}{%
-           family={Xiao},
-           familyi={X\bibinitperiod},
-           given={Jiajian},
-           giveni={J\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=d808f589f0ea8e2d770df26440fec652}{%
-           family={Pelzer},
-           familyi={P\bibinitperiod},
-           given={Dominik},
-           giveni={D\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=4ebb0e936cf272e93a10d903d413c759}{%
-           family={Ciechanowicz},
-           familyi={C\bibinitperiod},
-           given={David},
-           giveni={D\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=e82f99690a8fe0c8252f64d300938a19}{%
-           family={Eckhoff},
-           familyi={E\bibinitperiod},
-           given={David},
-           giveni={D\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=c45d8c33e4ef56b7d84b362173fe9d96}{%
-           family={Knoll},
-           familyi={K\bibinitperiod},
-           given={Alois},
-           giveni={A\bibinitperiod},
-           givenun=0}}%
-      }
-      \strng{namehash}{cae19103fbca37cf49dd97da0cb49c1d}
-      \strng{fullhash}{0adeb26992501ce4eb88f0f111fbc8f8}
-      \strng{bibnamehash}{0adeb26992501ce4eb88f0f111fbc8f8}
-      \strng{authorbibnamehash}{0adeb26992501ce4eb88f0f111fbc8f8}
-      \strng{authornamehash}{cae19103fbca37cf49dd97da0cb49c1d}
-      \strng{authorfullhash}{0adeb26992501ce4eb88f0f111fbc8f8}
-      \field{sortinit}{B}
-      \field{sortinithash}{8de16967003c7207dae369d874f1456e}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{year}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{booktitle}{Intelligent Transportation Systems (ITSC), 2017 IEEE 20th International Conference on}
-      \field{title}{A simulation-based heuristic for city-scale electric vehicle charging station placement}
-      \field{year}{2017}
-      \field{pages}{1\bibrangedash 7}
-      \range{pages}{7}
-    \endentry
     \entry{Bishop:2006}{book}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=9dfd0135a5e80aa6d81cea2c10fb7f73}{%
@@ -2064,6 +2007,32 @@
       \field{pages}{328\bibrangedash 340}
       \range{pages}{13}
     \endentry
+    \entry{EvaluatingCarsharingBenefits}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=a68d5b20f83b2b6f66b59121728b35e9}{%
+           family={Litman},
+           familyi={L\bibinitperiod},
+           given={Todd\bibnamedelima Alexander},
+           giveni={T\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{a68d5b20f83b2b6f66b59121728b35e9}
+      \strng{fullhash}{a68d5b20f83b2b6f66b59121728b35e9}
+      \strng{bibnamehash}{a68d5b20f83b2b6f66b59121728b35e9}
+      \strng{authorbibnamehash}{a68d5b20f83b2b6f66b59121728b35e9}
+      \strng{authornamehash}{a68d5b20f83b2b6f66b59121728b35e9}
+      \strng{authorfullhash}{a68d5b20f83b2b6f66b59121728b35e9}
+      \field{sortinit}{L}
+      \field{sortinithash}{dad3efd0836470093a7b4a7bb756eb8c}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{GeoJournal}
+      \field{title}{Evaluating Carsharing Benefits}
+      \field{volume}{1702}
+      \field{year}{2015}
+    \endentry
     \entry{Ma:2013}{inproceedings}{}
       \name{author}{3}{}{%
         {{un=0,uniquepart=base,hash=5e538d7c5ab3d9762c299955fb081ce2}{%
@@ -3132,14 +3101,9 @@
       \range{pages}{32}
     \endentry
   \enddatalist
-  \missing{12_LitmanCSbenefits}
-  \missing{13_firnkorn2012selling}
-  \missing{14_firnkorn2011will}
-  \missing{14_firnkorn2012selling}
-  \missing{18_becker2017comparing}
-  \missing{UMAP}
   \missing{becker2017comparing}
-  \missing{ciari2013estimation}
+  \missing{bi2017simulation}
+  \missing{firnkorn2011}
   \missing{schmoller2015empirical}
 \endrefsection
 \endinput
